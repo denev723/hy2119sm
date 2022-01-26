@@ -101,27 +101,141 @@
       content="./src/favicon/favicon-192x192.png"
     />
 
-    <link rel="stylesheet" href="./src/css/styles.min.css" />
-    <link rel="stylesheet" href="./src/core/css/phone.min.css" />
     <link
       rel="stylesheet"
-      href="./src/core/css/tablet.min.css"
-      media="screen and (min-width: 640px)"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
     />
+    <link rel="stylesheet" href="./src/vendor/css/slick.css" />
+    <link rel="stylesheet" href="./src/vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/css/phone-addon.min.css" />
     <link
       rel="stylesheet"
-      href="./src/core/css/desktop.min.css"
-      media="screen and (min-width: 1024px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./src/core/css/largedesktop.min.css"
+      href="./src/css/desktop-addon.css"
       media="screen and (min-width: 1280px)"
     />
   </head>
-  <body class="layout-primary page-main">
+  <body class="layout-primary page-sub">
+    <header class="site-header navbar">
+      <div class="header-wrapper">
+        <div class="main-logo">
+          <a href="/" class="navbar-brand">
+            <span class="sr-only">한양대학교 스마트 종합상황실</span>
+          </a>
+        </div>
+        <div class="gnb">
+          <a href="#open" class="ico-my">
+            <span class="sr-only">프로필</span>
+          </a>
+          <a href="#notiOpen" class="ico-noti">
+            <span class="sr-only">알림</span>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid lnb">
+        <ul class="navbar navbar-client">
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">신청하기</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">신청현황</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+          </li>
+        </ul>
+        <ul class="navbar navbar-admin"></ul>
+      </div>
+    </header>
+    <main class="site-content container-fluid">
+      <div class="conts-wrap">
+        <div class="sub-wrap">
+          <header class="sub-header">
+            <div class="site-logo">
+              <span class="sr-only">사이트로고</span>
+            </div>
+          </header>
+          <div class="login-content">
+            <div class="text-box">
+              <p class="text">
+                서비스 이용을 위해<br />
+                아래 로그인을 선택해주세요
+              </p>
+            </div>
+            <div
+              class="btn-group-vertical"
+              role="group"
+              aria-label="로그인버튼"
+            >
+              <a href="./main.html" class="btn btn-lg btn-primary">
+                <span class="logo"></span>
+                <span class="title">한양인 로그인</span>
+              </a>
+              <a href="./signup.html" class="btn btn-lg btn-naver">
+                <span class="logo"></span>
+                <span class="title">네이버 로그인</span>
+              </a>
+              <a href="void(0)" class="btn btn-lg btn-kakao">
+                <span class="logo"></span>
+                <span class="title">카카오 로그인</span>
+              </a>
+              <a href="void(0)" class="btn btn-lg btn-google">
+                <span class="logo"></span>
+                <span class="title">구글 로그인</span>
+              </a>
+              <a href="void(0)" class="btn btn-lg btn-facebook">
+                <span class="logo"></span>
+                <span class="title">페이스북 로그인</span>
+              </a>
+            </div>
+          </div>
+          <footer class="sub-footer">
+            <div class="copyright">
+              &copy;&nbsp;
+              <span class="year">2020</span>
+              &nbsp;Hanyang University. All Rights Reserved.
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container-fluid">
+        <div class="copyright">
+          &copy;&nbsp;
+          <span class="year">2020</span>
+          &nbsp;Hanyang University. All Rights Reserved.
+        </div>
+        <div class="btn-group">
+          <a href="javascript:void(0)" class="btn btn-link">
+            <span>이용약관</span>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link">
+            <span>개인정보처리방침</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="mypage-box">
+      <div class="my-dropdown">
+        <div class="btn-wrapper">
+          <a href="#close" class="btn-close">닫기</a>
+        </div>
+        <div class="content">
+          <span class="user-logo"></span>
+          <p class="user-name">이민석 님</p>
+          <p class="login-time">2022-01-03 14:33</p>
+          <div class="btn-group">
+            <a href="/" class="btn btn-primary"> 로그아웃 </a>
+            <a href="./mypage.html" class="btn btn-primary"> 내정보 보기 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/vendor/js/jquery-3.6.0.min.js"></script>
+    <script src="./src/vendor/js/bootstrap.min.js"></script>
+    <script src="./src/vendor/js/jquery.bxslider.js"></script>
+    <script src="./src/vendor/js/slick.min.js"></script>
     <script src="./src/js/page.js"></script>
-    <script src="./src/core/js/vendor/jquery.min.js"></script>
-    <script src="./src/core/js/script.min.js"></script>
   </body>
 </html>

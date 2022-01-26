@@ -35,4 +35,44 @@ $(document).ready(function () {
     centerMode: true,
     arrows: false
   });
+
+  if ($(".login-content").length > 0) {
+    $("body").addClass("page-login");
+  } else if ($(".signup-content").length > 0) {
+    $("body").addClass("page-signup");
+  }
+
+  if ($(".box-body").length > 1) {
+    $(".box-body").each(function (i, item) {
+      var numText = String(i + 1);
+      $(this).addClass("box-body" + "-" + numText);
+    });
+  }
+
+  $("label").each(function () {
+    var radioBtn = $(this).children("input[type='radio']");
+    if (radioBtn.is(":checked")) {
+      $(this).addClass("check");
+    }
+
+    radioBtn.change(function () {
+      $(this).parent().addClass("check").siblings().removeClass("check");
+    });
+  });
+
+  $("input[type='checkbox']")
+    .each(function () {
+      $(this).parent().addClass("checkbox-label");
+    })
+    .change(function () {
+      if ($(this).is(":checked")) {
+        $(this).parent().addClass("check");
+      } else {
+        $(this).parent().removeClass("check");
+      }
+    });
+
+  $(".signup-content .btn-success").click(function () {
+    location.href = "./main.html";
+  });
 });

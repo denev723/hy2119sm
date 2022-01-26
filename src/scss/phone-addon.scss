@@ -101,50 +101,57 @@ body {
   max-width: 1400px;
   width: 100%;
   margin: auto;
-  padding: 22px 0;
+  padding: 11px 0;
   position: relative;
 
-  .main-logo {
-    width: 206px;
-    height: 52px;
-    float: left;
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .navbar-brand {
-      display: block;
-      background-image: url(../images/main-logo.png);
-      background-size: 206px 52px;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+    .main-logo {
+      width: 206px;
+      height: 52px;
+
+      .navbar-brand {
+        display: block;
+        background-image: url(../images/main-logo.png);
+        background-size: 206px 52px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .gnb {
+      margin-top: 16px;
+
+      .ico-my {
+        display: inline-block;
+        background-image: url(../images/user-logo-black.png);
+        background-size: 22px 27px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: #eeeeee;
+        }
+      }
+
+      .ico-noti {
+        display: inline-block;
+        background-image: url(../images/alram-logo.png);
+        background-size: 24px 27px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 50px;
+        height: 50px;
+      }
     }
   }
-
-  .gnb {
-    float: right;
-    margin-top: 16px;
-
-    .ico-my {
-      display: inline-block;
-      background-image: url(../images/user-logo-black.png);
-      background-size: 22px 27px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      width: 27px;
-      height: 27px;
-      margin-right: 15px;
-    }
-
-    .ico-noti {
-      display: inline-block;
-      background-image: url(../images/alram-logo.png);
-      background-size: 24px 27px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      width: 27px;
-      height: 27px;
-    }
-  }
-
   .lnb {
     position: absolute;
     top: 50%;
@@ -186,6 +193,8 @@ body {
 
 .site-content {
   border-top: 1px solid $main-visual-top;
+  min-height: calc(100vh - 95px - 111px);
+
   .visual {
     position: relative;
 
@@ -438,6 +447,29 @@ body {
       }
     }
   }
+
+  .conts-wrap {
+    .sub-header {
+      margin-bottom: 40px;
+      .site-logo {
+        display: inline-block;
+        background-image: url(../images/login-site-logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 206px;
+        height: 52px;
+      }
+    }
+
+    .sub-footer {
+      .copyright {
+        font-size: 13px;
+        letter-spacing: -0.04em;
+        color: #aaaaaa;
+      }
+    }
+  }
 }
 
 .site-footer {
@@ -478,6 +510,493 @@ body {
             transform: translateY(-50%);
             right: 0;
           }
+        }
+      }
+    }
+  }
+}
+
+.page-main {
+  .site-content {
+    padding: 0;
+  }
+}
+
+.page-login {
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  .site-content {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .conts-wrap {
+      max-width: 720px;
+      width: 100%;
+
+      .sub-wrap {
+        width: 468px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .login-content {
+          width: 100%;
+          text-align: center;
+          border: 1px solid #e5e5e5;
+          border-radius: 12px;
+          padding: 70px;
+          margin-bottom: 60px;
+
+          .text {
+            text-align: left;
+            font-family: "NanumSquare";
+            font-size: 22px;
+            line-height: 28px;
+            letter-spacing: -0.08em;
+            position: relative;
+            margin-bottom: 40px;
+
+            &::after {
+              content: "";
+              display: block;
+              background-image: url(../images/login-user-logo-rect.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 62px;
+              height: 62px;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+
+          .btn-group-vertical {
+            width: 100%;
+
+            .btn {
+              border-radius: 6px;
+              background-color: transparent;
+              color: #333;
+              border: 1px solid #aaaaaa;
+              border-radius: 6px;
+              padding: 21px 90px;
+              margin: 8px 0;
+              font-family: "NanumSquare";
+              font-weight: bold;
+              font-size: 18px;
+              letter-spacing: -0.08em;
+              color: $main-black;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              &:active {
+                box-shadow: none;
+              }
+
+              &:hover {
+                border-color: #333333;
+              }
+
+              span {
+                display: inline-block;
+              }
+
+              .logo {
+                background-repeat: no-repeat;
+                background-position: center center;
+              }
+            }
+
+            .btn-primary {
+              border-color: #093c71;
+              background-color: #093c71;
+              color: #fff;
+
+              &:hover {
+                border-color: #333333;
+                background-color: #333333;
+              }
+
+              .logo {
+                background-image: url(../images/login-hy-logo.png);
+                background-size: 32px 32px;
+                width: 32px;
+                height: 32px;
+              }
+
+              .title {
+                margin-left: 10px;
+              }
+            }
+
+            .btn-naver {
+              .logo {
+                background-image: url(../images/login-naver-logo.png);
+                background-size: 23px 23px;
+                width: 32px;
+                height: 32px;
+              }
+
+              .title {
+                margin-left: 10px;
+              }
+            }
+
+            .btn-kakao {
+              .logo {
+                background-image: url(../images/login-kakao-logo.png);
+                background-size: 27px 27px;
+                width: 32px;
+                height: 32px;
+              }
+
+              .title {
+                margin-left: 10px;
+              }
+            }
+
+            .btn-google {
+              .logo {
+                background-image: url(../images/login-google-logo.png);
+                background-size: 23px 23px;
+                width: 32px;
+                height: 32px;
+              }
+
+              .title {
+                margin-left: 15px;
+              }
+            }
+
+            .btn-facebook {
+              .logo {
+                background-image: url(../images/login-fb-logo.png);
+                background-size: 14px 30px;
+                width: 32px;
+                height: 32px;
+              }
+
+              .title {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-signup {
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  .conts-wrap {
+    .sub-wrap {
+      .sub-header {
+        text-align: center;
+        padding: 21px 0;
+        border-bottom: 1px solid #e2e2e2;
+        margin-bottom: 70px;
+      }
+
+      .signup-content {
+        max-width: 720px;
+        margin: auto;
+
+        .summary {
+          text-align: center;
+          border-bottom: 3px solid #333;
+
+          .title {
+            display: inline-block;
+            font-family: "NanumSquare";
+            font-size: 19px;
+            letter-spacing: -0.08em;
+            color: $main-black;
+            padding: 23px 22px;
+            border-radius: 30px;
+            background-color: #eeeeee;
+            margin-bottom: 23px;
+          }
+
+          p {
+            font-family: "NanumSquare";
+            font-size: 48px;
+            font-weight: 400;
+            letter-spacing: -0.08em;
+            margin-bottom: 43px;
+
+            strong {
+              color: $base-color;
+              font-weight: 800;
+            }
+          }
+        }
+
+        .cms-form {
+          .box-body-1 {
+            padding: 20px 0 5px;
+            border-bottom: 1px solid #e5e5e5;
+
+            .form-group {
+              margin: 0 0 25px 0;
+
+              .col-sm-3,
+              .col-sm-9 {
+                width: 100%;
+                padding: 0;
+              }
+
+              .control-label {
+                text-align: left;
+                font-family: "NanumSquare";
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: -0.08em;
+                margin-bottom: 6px;
+              }
+
+              .col-sm-9 {
+                input {
+                  height: 70px;
+                  border-radius: 8px;
+                  background-color: #f8f8f8;
+                  border: 1px solid #e2e2e2;
+
+                  &::placeholder {
+                    font-family: "NanumSquare";
+                    font-size: 18px;
+                    letter-spacing: -0.08em;
+                  }
+                }
+
+                .important {
+                  display: inline-block;
+                  margin-top: 15px;
+                  position: relative;
+                  padding-left: 35px;
+
+                  &::before {
+                    content: "";
+                    background-image: url(../images/imp-mark.png);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                  }
+                }
+              }
+
+              &:nth-child(2) {
+                .col-sm-9 {
+                  input {
+                    max-width: 470px;
+                    border-color: #f2f2f2;
+                    background-color: #f2f2f2;
+                    box-shadow: none;
+
+                    &::placeholder {
+                      color: $main-black;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(4) {
+                .col-sm-9 {
+                  input {
+                    max-width: 470px;
+                  }
+                }
+              }
+
+              &:nth-child(5) {
+                .col-sm-3 {
+                  margin-bottom: 11px;
+                }
+
+                .col-sm-9 {
+                  label {
+                    font-family: "NanumSquare";
+                    font-size: 18px;
+                    letter-spacing: -0.08em;
+                    font-weight: 400;
+                    position: relative;
+                    padding-left: 50px;
+                    margin-right: 40px;
+
+                    &:before {
+                      content: "";
+                      background-image: url(../images/signup-radio.png);
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      background-position: center center;
+                      width: 38px;
+                      height: 38px;
+                      position: absolute;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      left: 0;
+                    }
+
+                    &.check::before {
+                      background-image: url(../images/signup-radio-check.png);
+                    }
+
+                    input {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .box-body-2 {
+            padding: 25px 0 17px;
+            border-bottom: 1px solid #e5e5e5;
+
+            div {
+              strong {
+                display: inline-block;
+                font-family: "NanumSquare";
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: -0.08em;
+                margin-bottom: 10px;
+              }
+
+              div:first-child {
+                border-radius: 8px;
+                border: 1px solid #e2e2e2;
+                background-color: #f8f8f8;
+                padding: 27px 22px;
+                height: 298px;
+                overflow: scroll;
+
+                p {
+                  font-size: 16px;
+                  font-family: "NanumSquare";
+                  letter-spacing: -0.08em;
+                  line-height: 24px;
+                  color: #999999;
+                }
+              }
+
+              div:last-child {
+                label {
+                  font-family: "NanumSquare";
+                  font-size: 18px;
+                  line-height: 48px;
+                  letter-spacing: -0.08em;
+                  color: $main-black;
+                  position: relative;
+                  padding-left: 42px;
+                  display: inline-block;
+                  margin-top: 11px;
+
+                  &::before {
+                    content: "";
+                    background-image: url(../images/signup-checkbox.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                  }
+
+                  &.check::before {
+                    background-image: url(../images/signup-checkbox-check.png);
+                  }
+
+                  input {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            & > div:first-child {
+              margin-bottom: 10px;
+            }
+          }
+
+          .box-footer {
+            text-align: center;
+            padding: 50px 0;
+
+            .btn-success {
+              padding: 0;
+              background-image: url(../images/signup-success.png);
+              width: 200px;
+              height: 90px;
+              background-color: transparent;
+              border: none;
+              margin-right: 3px;
+
+              &:active,
+              &:focus {
+                box-shadow: none;
+                border: none;
+                outline: none;
+              }
+
+              &:hover {
+                background-image: url(../images/signup-success-on.png);
+              }
+            }
+
+            .btn-warning {
+              padding: 0;
+              background-image: url(../images/signup-cancel.png);
+              width: 200px;
+              height: 90px;
+              background-color: transparent;
+              border: none;
+
+              &:active,
+              &:focus {
+                box-shadow: none;
+                border: none;
+                outline: none;
+              }
+
+              &:hover {
+                background-image: url(../images/signup-cancel-on.png);
+              }
+            }
+          }
+        }
+      }
+
+      .sub-footer {
+        padding: 30px 0 84px;
+
+        .copyright {
+          text-align: center;
         }
       }
     }
