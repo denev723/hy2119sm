@@ -102,6 +102,11 @@ body {
   margin-right: 4px;
 }
 
+.mypage-box .my-dropdown .content .btn-group .btn-primary:hover {
+  background-color: #467aff;
+  color: #fff;
+}
+
 .site-header {
   max-width: 1400px;
   width: 100%;
@@ -483,6 +488,8 @@ body {
   font-size: 13px;
   letter-spacing: -0.04em;
   color: #aaaaaa;
+  text-align: center;
+  margin-bottom: 84px;
 }
 
 .site-footer {
@@ -799,6 +806,9 @@ body {
   border-radius: 8px;
   background-color: #f8f8f8;
   border: 1px solid #e2e2e2;
+  font-family: "NanumSquare";
+  font-size: 18px;
+  letter-spacing: -0.08em;
 }
 
 .page-signup .conts-wrap .sub-wrap .signup-content .cms-form .box-body-1 .form-group .col-sm-9 input::-webkit-input-placeholder {
@@ -1029,9 +1039,143 @@ body {
 }
 
 .page-signup .conts-wrap .sub-wrap .sub-footer {
-  padding: 30px 0 84px;
+  padding: 30px 0 0;
 }
 
 .page-signup .conts-wrap .sub-wrap .sub-footer .copyright {
   text-align: center;
+}
+
+.page-mypage .sub-header,
+.page-mypage .site-footer {
+  display: none;
+}
+
+.page-mypage .sub-wrap {
+  margin-top: 69px;
+}
+
+.page-mypage .sub-wrap .mypage-content {
+  margin: 0 auto 80px;
+  max-width: 720px;
+}
+
+.page-mypage .sub-wrap .mypage-content .summary {
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.page-mypage .sub-wrap .mypage-content .summary .title {
+  font-family: "NanumSquare";
+  font-weight: bold;
+  font-size: 19px;
+  letter-spacing: -0.08em;
+  width: 110px;
+  height: 60px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 30px;
+  background-color: #eeeeee;
+  color: #222222;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body {
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30px 0;
+  margin-bottom: 50px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group:nth-child(1) .col-sm-9 {
+  max-width: 470px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group:nth-child(5) .col-sm-9 {
+  max-width: 470px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group .col-sm-3,
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group .col-sm-9 {
+  width: 100%;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group .control-label {
+  text-align: left;
+  font-family: "NanumSquare";
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -0.08em;
+  color: #222222;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group .col-sm-9 {
+  height: 70px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-body .form-group .col-sm-9 .form-control-static {
+  font-family: "NanumSquare";
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: -0.08em;
+  color: #222222;
+  padding: 0 0 0 20px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer {
+  text-align: center;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer .btn {
+  border: none;
+  text-indent: -9999px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer .btn-default {
+  background-image: url(../images/mypage-success.png);
+  width: 200px;
+  height: 90px;
+  margin-right: 3px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer .btn-default:hover {
+  background-image: url(../images/mypage-success-on.png);
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer .btn-danger {
+  background-image: url(../images/mypage-back.png);
+  width: 200px;
+  height: 90px;
+}
+
+.page-mypage .sub-wrap .mypage-content .box-primary .box-footer .btn-danger:hover {
+  background-image: url(../images/mypage-back-on.png);
 }

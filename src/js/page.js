@@ -40,6 +40,8 @@ $(document).ready(function () {
     $("body").addClass("page-login");
   } else if ($(".signup-content").length > 0) {
     $("body").addClass("page-signup");
+  } else if ($(".mypage-content").length > 0) {
+    $("body").addClass("page-mypage");
   }
 
   if ($(".box-body").length > 1) {
