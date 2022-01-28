@@ -36,14 +36,6 @@ $(document).ready(function () {
     arrows: false
   });
 
-  if ($(".login-content").length > 0) {
-    $("body").addClass("page-login");
-  } else if ($(".signup-content").length > 0) {
-    $("body").addClass("page-signup");
-  } else if ($(".mypage-content").length > 0) {
-    $("body").addClass("page-mypage");
-  }
-
   if ($(".box-body").length > 1) {
     $(".box-body").each(function (i, item) {
       var numText = String(i + 1);
@@ -77,4 +69,33 @@ $(document).ready(function () {
   $(".signup-content .btn-success").click(function () {
     location.href = "./main.html";
   });
+
+  var navItem = $(".navbar-client .nav-item");
+  var loca = location.pathname;
+  navItem.each(function () {
+    var href = $(this).children().attr("href");
+    if (href.substring(1) === loca) {
+      $(this).siblings().addClass("gray");
+    }
+  });
+
+  if (
+    loca === "/apply/apply-step1.html" ||
+    loca === "/apply/apply-step1-detail.html"
+  ) {
+    $("body").addClass("page-apply1");
+  }
+
+  if (loca === "/apply/apply-step1.html") {
+    $(".go-prev").hide();
+  }
+
+  if ($("div[aria-label='로그인버튼']").length > 0) {
+    $("body").addClass("page-login");
+  }
+  if ($(".summary .title").text().trim() === "회원가입") {
+    $("body").addClass("page-signup");
+  } else if ($(".summary .title").text().trim() === "내정보") {
+    $("body").addClass("page-mypage");
+  }
 });

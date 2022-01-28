@@ -172,6 +172,12 @@ body {
       .nav-item {
         display: inline-block;
 
+        &.gray {
+          .nav-link {
+            color: #cccccc;
+          }
+        }
+
         .nav-link {
           display: block;
           font-size: 21px;
@@ -554,7 +560,7 @@ body {
         flex-direction: column;
         align-items: center;
 
-        .login-content {
+        .sub-content {
           width: 100%;
           text-align: center;
           border: 1px solid #e5e5e5;
@@ -720,7 +726,7 @@ body {
         margin-bottom: 70px;
       }
 
-      .signup-content {
+      .sub-content {
         max-width: 720px;
         margin: auto;
 
@@ -1022,7 +1028,7 @@ body {
   .sub-wrap {
     margin-top: 69px;
 
-    .mypage-content {
+    .sub-content {
       margin: 0 auto 80px;
       max-width: 720px;
 
@@ -1138,6 +1144,229 @@ body {
             &:hover {
               background-image: url(../images/mypage-back-on.png);
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-apply1 {
+  .conts-wrap {
+    margin-top: 70px;
+    margin-bottom: 340px;
+
+    .page-title {
+      text-align: center;
+
+      .title {
+        width: 110px;
+        height: 60px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "NanumSquare";
+        font-size: 19px;
+        font-weight: bold;
+        letter-spacing: -0.08em;
+        color: $main-black;
+        background-color: #eeeeee;
+        border-radius: 30px;
+      }
+
+      .desc {
+        font-weight: 300;
+        font-family: "NanumSquare";
+        font-size: 48px;
+        color: $main-black;
+        letter-spacing: -0.08em;
+        margin-top: 22px;
+
+        strong {
+          color: $base-color;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .step {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin: auto;
+      width: 400px;
+      height: 50px;
+      margin-top: 33px;
+
+      &::before {
+        content: "";
+        background-image: url(../images/step-1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 344px;
+        height: 28px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      p {
+        font-family: "NanumSquare";
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: -0.08em;
+        color: #aaaaaa;
+        padding-top: 43px;
+
+        &.on {
+          color: $base-color;
+        }
+      }
+    }
+
+    .btn-group {
+      display: block;
+      &[aria-label="이전및다음버튼"] {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-primary {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 200px;
+        height: 90px;
+        margin: 4px;
+
+        &:active {
+          box-shadow: none;
+        }
+      }
+
+      .go-prev {
+        background-image: url(../images/prev-btn.png);
+
+        &:hover {
+          background-image: url(../images/prev-btn-on.png);
+        }
+      }
+
+      .go-next {
+        background-image: url(../images/next-btn.png);
+
+        &:hover {
+          background-image: url(../images/next-btn-on.png);
+        }
+      }
+    }
+
+    .complaints-group {
+      max-width: 720px;
+      margin: 57px auto 30px;
+
+      div {
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:nth-child(odd) {
+          padding-right: 15px;
+        }
+
+        .btn-default {
+          display: block;
+          width: 100%;
+          height: 80px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f6f6f6;
+          border: none;
+          border-radius: 8px;
+          padding: 6px 15px;
+
+          &.on {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: $base-color;
+
+            .title {
+              color: #fff;
+            }
+          }
+
+          .title {
+            font-family: "NanumSquare";
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -0.08em;
+            color: $main-black;
+          }
+        }
+      }
+    }
+
+    .complaints-group-detail {
+      max-width: 720px;
+      margin: 57px auto 30px;
+
+      div {
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:nth-child(3n - 1) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .btn-default {
+          display: block;
+          width: 100%;
+          height: 80px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f6f6f6;
+          border: none;
+          border-radius: 8px;
+          padding: 6px 15px;
+
+          &.on {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: $base-color;
+
+            .title {
+              color: #fff;
+            }
+
+            .check-logo {
+              display: block;
+            }
+          }
+
+          .title {
+            font-family: "NanumSquare";
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -0.08em;
+            color: $main-black;
+          }
+
+          .check-logo {
+            display: none;
+            background-image: url(../images/check-logo-w.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 20px;
+            height: 17px;
           }
         }
       }
