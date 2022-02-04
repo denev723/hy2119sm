@@ -154,39 +154,40 @@
           <p class="desc">접수된 <strong>민원내용</strong>을 확인해주세요</p>
         </h3>
         <div class="filter-wrapper">
-          <a href="#filter-open" class="btn" role="button">필터</a>
+          <a href="#filter-open" class="btn filter-btn" role="button">필터</a>
           <ul>
             <li>
               <label for="all">
+                <input type="radio" name="filter" id="all" checked />
                 전체
-                <input type="checkbox" name="filter" id="all" />
               </label>
             </li>
             <li>
               <label for="reg">
+                <input type="radio" name="filter" id="reg" />
                 신청
-                <input type="checkbox" name="filter" id="reg" />
               </label>
             </li>
             <li>
               <label for="ing">
+                <input type="radio" name="filter" id="ing" />
                 진행
-                <input type="checkbox" name="filter" id="ing" />
               </label>
             </li>
             <li>
               <label for="complete">
+                <input type="radio" name="filter" id="complete" />
                 처리완료
-                <input type="checkbox" name="filter" id="complete" />
               </label>
             </li>
           </ul>
         </div>
         <div class="list-group-type1">
           <div class="list-group">
-            <a href="#nothing" class="list-group-item">
+            <a href="./apply-history-detail.html" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">reg</span>
                   <span class="badge badge-reg"></span>
                 </div>
                 <div class="content">
@@ -211,6 +212,7 @@
             <a href="#nothing" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">reg</span>
                   <span class="badge badge-reg"></span>
                 </div>
                 <div class="content">
@@ -231,17 +233,19 @@
                 <p class="charge"></p>
               </div>
             </a>
-            <a href="#nothing" class="list-group-item">
+            <a href="./apply-history-detail-ing.html" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">ing</span>
                   <span class="badge badge-ing"></span>
                 </div>
                 <div class="content">
                   <p class="title">
-                    <span class="category">[주차]</span> 주차 무인정산기 오류
+                    <span class="category">[사건사고 신고]</span> 업무차량
+                    입출차(VIP)
                   </p>
                   <small class="location"
-                    >대운동장 지하주차장 > 주차장 입구</small
+                    >정몽구미래자동차연구센터 > 지하편의점 앞</small
                   >
                 </div>
               </div>
@@ -257,6 +261,7 @@
             <a href="#nothing" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">trans</span>
                   <span class="badge badge-trans"></span>
                 </div>
                 <div class="content">
@@ -278,6 +283,7 @@
             <a href="#nothing" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">cancel</span>
                   <span class="badge badge-cancel"></span>
                 </div>
                 <div class="content">
@@ -299,6 +305,7 @@
             <a href="#nothing" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">complete</span>
                   <span class="badge badge-complete"></span>
                 </div>
                 <div class="content">
@@ -320,6 +327,7 @@
             <a href="#nothing" class="list-group-item">
               <div class="left">
                 <div class="status">
+                  <span class="sr-only">c-cancel</span>
                   <span class="badge badge-c-cancel"></span>
                 </div>
                 <div class="content">

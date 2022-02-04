@@ -637,6 +637,15 @@ body {
   .go-cancel {
     background-image: url(../images/cancel-btn.png);
 
+    &.small {
+      background-image: url(../images/cancel-small-btn.png);
+      width: 170px;
+    }
+
+    &.small:hover {
+      background-image: url(../images/cancel-small-btn-on.png);
+    }
+
     &:hover {
       background-image: url(../images/cancel-btn-on.png);
     }
@@ -648,6 +657,62 @@ body {
 
     &:hover {
       background-image: url(../images/history-btn-on.png);
+    }
+  }
+
+  .go-list {
+    background-image: url(../images/list-btn.png);
+    width: 170px;
+    margin-right: 6px;
+
+    &:hover {
+      background-image: url(../images/list-btn-on.png);
+    }
+  }
+
+  .go-edit {
+    background-image: url(../images/edit-btn.png);
+    width: 170px;
+    margin-right: 6px;
+
+    &:hover {
+      background-image: url(../images/edit-btn-on.png);
+    }
+  }
+
+  .go-app-cancel {
+    background-image: url(../images/app-cancel-btn.png);
+    width: 170px;
+
+    &.request {
+      background-image: url(../images/app-cancel-req-btn.png);
+      width: 170px;
+    }
+
+    &.blue {
+      background-image: url(../images/app-cancel-blue-btn-on.png);
+      width: 170px;
+    }
+
+    &.blue:hover {
+      background-image: url(../images/app-cancel-blue-btn.png);
+    }
+
+    &.request:hover {
+      background-image: url(../images/app-cancel-req-btn-on.png);
+    }
+
+    &:hover {
+      background-image: url(../images/app-cancel-btn-on.png);
+    }
+  }
+
+  .go-confirm {
+    background-image: url(../images/confirm-btn.png);
+    width: 170px;
+
+    &:hover {
+      background-image: url(../images/confirm-btn-on.png);
     }
   }
 }
@@ -666,6 +731,7 @@ body {
 
   .site-content {
     width: 100vw;
+    height: 100vh;
     padding: 0;
     display: flex;
     align-items: center;
@@ -673,8 +739,7 @@ body {
 
     .conts-wrap {
       max-width: 720px;
-      width: 100%;
-      padding: 152px 0 203px;
+      margin: 0;
 
       .sub-wrap {
         width: 468px;
@@ -829,6 +894,12 @@ body {
             }
           }
         }
+
+        .sub-footer {
+          .copyright {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
@@ -840,157 +911,229 @@ body {
     display: none;
   }
 
-  .conts-wrap {
-    .sub-wrap {
-      .sub-header {
-        text-align: center;
-        padding: 21px 0;
-        border-bottom: 1px solid #e2e2e2;
-        margin-bottom: 70px;
-      }
-
-      .sub-content {
-        max-width: 720px;
-        margin: auto;
-
-        .summary {
+  .site-content {
+    .conts-wrap {
+      margin: 0 auto;
+      .sub-wrap {
+        .sub-header {
           text-align: center;
-          border-bottom: 3px solid #333;
-
-          .title {
-            display: inline-block;
-            font-family: "NanumSquare";
-            font-size: 19px;
-            letter-spacing: -0.08em;
-            color: $main-black;
-            padding: 23px 22px;
-            border-radius: 30px;
-            background-color: #eeeeee;
-            margin-bottom: 23px;
-          }
-
-          p {
-            font-family: "NanumSquare";
-            font-size: 48px;
-            font-weight: 400;
-            letter-spacing: -0.08em;
-            margin-bottom: 43px;
-
-            strong {
-              color: $base-color;
-              font-weight: 800;
-            }
-          }
+          padding: 21px 0;
+          border-bottom: 1px solid #e2e2e2;
+          margin-bottom: 70px;
         }
 
-        .cms-form {
-          .box-body-1 {
-            padding: 20px 0 5px;
-            border-bottom: 1px solid #e5e5e5;
+        .sub-content {
+          max-width: 720px;
+          margin: auto;
 
-            .form-group {
-              margin: 0 0 25px 0;
+          .summary {
+            text-align: center;
+            border-bottom: 3px solid #333;
 
-              .col-sm-3,
-              .col-sm-9 {
-                width: 100%;
-                padding: 0;
+            .title {
+              display: inline-block;
+              font-family: "NanumSquare";
+              font-size: 19px;
+              letter-spacing: -0.08em;
+              color: $main-black;
+              padding: 23px 22px;
+              border-radius: 30px;
+              background-color: #eeeeee;
+              margin-bottom: 23px;
+            }
+
+            p {
+              font-family: "NanumSquare";
+              font-size: 48px;
+              font-weight: 400;
+              letter-spacing: -0.08em;
+              margin-bottom: 43px;
+
+              strong {
+                color: $base-color;
+                font-weight: 800;
               }
+            }
+          }
 
-              .control-label {
-                text-align: left;
-                font-family: "NanumSquare";
-                font-size: 20px;
-                font-weight: bold;
-                letter-spacing: -0.08em;
-                margin-bottom: 6px;
-              }
+          .cms-form {
+            .box-body-1 {
+              padding: 20px 0 5px;
+              border-bottom: 1px solid #e5e5e5;
 
-              .col-sm-9 {
-                input {
-                  height: 70px;
-                  border-radius: 8px;
-                  background-color: #f8f8f8;
-                  border: 1px solid #e2e2e2;
+              .form-group {
+                margin: 0 0 25px 0;
+
+                .col-sm-3,
+                .col-sm-9 {
+                  width: 100%;
+                  padding: 0;
+                }
+
+                .control-label {
+                  text-align: left;
                   font-family: "NanumSquare";
-                  font-size: 18px;
+                  font-size: 20px;
+                  font-weight: bold;
                   letter-spacing: -0.08em;
+                  margin-bottom: 6px;
+                }
 
-                  &::placeholder {
+                .col-sm-9 {
+                  input {
+                    height: 70px;
+                    border-radius: 8px;
+                    background-color: #f8f8f8;
+                    border: 1px solid #e2e2e2;
                     font-family: "NanumSquare";
                     font-size: 18px;
                     letter-spacing: -0.08em;
-                  }
-                }
-
-                .important {
-                  display: inline-block;
-                  margin-top: 15px;
-                  position: relative;
-                  padding-left: 35px;
-
-                  &::before {
-                    content: "";
-                    background-image: url(../images/imp-mark.png);
-                    background-size: cover;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    width: 28px;
-                    height: 28px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 0;
-                  }
-                }
-              }
-
-              &:nth-child(2) {
-                .col-sm-9 {
-                  input {
-                    max-width: 470px;
-                    border-color: #f2f2f2;
-                    background-color: #f2f2f2;
-                    box-shadow: none;
 
                     &::placeholder {
-                      color: $main-black;
+                      font-family: "NanumSquare";
+                      font-size: 18px;
+                      letter-spacing: -0.08em;
+                    }
+                  }
+
+                  .important {
+                    display: inline-block;
+                    margin-top: 15px;
+                    position: relative;
+                    padding-left: 35px;
+
+                    &::before {
+                      content: "";
+                      background-image: url(../images/imp-mark.png);
+                      background-size: cover;
+                      background-position: center center;
+                      background-repeat: no-repeat;
+                      width: 28px;
+                      height: 28px;
+                      position: absolute;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      left: 0;
+                    }
+                  }
+                }
+
+                &:nth-child(2) {
+                  .col-sm-9 {
+                    input {
+                      max-width: 470px;
+                      border-color: #f2f2f2;
+                      background-color: #f2f2f2;
+                      box-shadow: none;
+
+                      &::placeholder {
+                        color: $main-black;
+                      }
+                    }
+                  }
+                }
+
+                &:nth-child(4) {
+                  .col-sm-9 {
+                    input {
+                      max-width: 470px;
+                    }
+                  }
+                }
+
+                &:nth-child(5) {
+                  .col-sm-3 {
+                    margin-bottom: 11px;
+                  }
+
+                  .col-sm-9 {
+                    label {
+                      font-family: "NanumSquare";
+                      font-size: 18px;
+                      letter-spacing: -0.08em;
+                      font-weight: 400;
+                      position: relative;
+                      padding-left: 50px;
+                      margin-right: 40px;
+
+                      &:before {
+                        content: "";
+                        background-image: url(../images/signup-radio.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center center;
+                        width: 38px;
+                        height: 38px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                      }
+
+                      &.check::before {
+                        background-image: url(../images/signup-radio-check.png);
+                      }
+
+                      input {
+                        display: none;
+                      }
                     }
                   }
                 }
               }
+            }
 
-              &:nth-child(4) {
-                .col-sm-9 {
-                  input {
-                    max-width: 470px;
+            .box-body-2 {
+              padding: 25px 0 17px;
+              border-bottom: 1px solid #e5e5e5;
+
+              div {
+                strong {
+                  display: inline-block;
+                  font-family: "NanumSquare";
+                  font-weight: bold;
+                  font-size: 20px;
+                  letter-spacing: -0.08em;
+                  margin-bottom: 10px;
+                }
+
+                div:first-child {
+                  border-radius: 8px;
+                  border: 1px solid #e2e2e2;
+                  background-color: #f8f8f8;
+                  padding: 27px 22px;
+                  height: 298px;
+                  overflow: scroll;
+
+                  p {
+                    font-size: 16px;
+                    font-family: "NanumSquare";
+                    letter-spacing: -0.08em;
+                    line-height: 24px;
+                    color: #999999;
                   }
                 }
-              }
 
-              &:nth-child(5) {
-                .col-sm-3 {
-                  margin-bottom: 11px;
-                }
-
-                .col-sm-9 {
+                div:last-child {
                   label {
                     font-family: "NanumSquare";
                     font-size: 18px;
+                    line-height: 48px;
                     letter-spacing: -0.08em;
-                    font-weight: 400;
+                    color: $main-black;
                     position: relative;
-                    padding-left: 50px;
-                    margin-right: 40px;
+                    padding-left: 42px;
+                    display: inline-block;
+                    margin-top: 11px;
 
-                    &:before {
+                    &::before {
                       content: "";
-                      background-image: url(../images/signup-radio.png);
-                      background-repeat: no-repeat;
+                      background-image: url(../images/signup-checkbox.png);
                       background-size: cover;
+                      background-repeat: no-repeat;
                       background-position: center center;
-                      width: 38px;
-                      height: 38px;
+                      width: 32px;
+                      height: 32px;
                       position: absolute;
                       top: 50%;
                       transform: translateY(-50%);
@@ -998,7 +1141,7 @@ body {
                     }
 
                     &.check::before {
-                      background-image: url(../images/signup-radio-check.png);
+                      background-image: url(../images/signup-checkbox-check.png);
                     }
 
                     input {
@@ -1007,135 +1150,66 @@ body {
                   }
                 }
               }
-            }
-          }
 
-          .box-body-2 {
-            padding: 25px 0 17px;
-            border-bottom: 1px solid #e5e5e5;
-
-            div {
-              strong {
-                display: inline-block;
-                font-family: "NanumSquare";
-                font-weight: bold;
-                font-size: 20px;
-                letter-spacing: -0.08em;
+              & > div:first-child {
                 margin-bottom: 10px;
               }
+            }
 
-              div:first-child {
-                border-radius: 8px;
-                border: 1px solid #e2e2e2;
-                background-color: #f8f8f8;
-                padding: 27px 22px;
-                height: 298px;
-                overflow: scroll;
+            .box-footer {
+              text-align: center;
+              padding: 50px 0;
 
-                p {
-                  font-size: 16px;
-                  font-family: "NanumSquare";
-                  letter-spacing: -0.08em;
-                  line-height: 24px;
-                  color: #999999;
+              .btn-success {
+                padding: 0;
+                background-image: url(../images/signup-success.png);
+                width: 200px;
+                height: 90px;
+                background-color: transparent;
+                border: none;
+                margin-right: 3px;
+
+                &:active,
+                &:focus {
+                  box-shadow: none;
+                  border: none;
+                  outline: none;
+                }
+
+                &:hover {
+                  background-image: url(../images/signup-success-on.png);
                 }
               }
 
-              div:last-child {
-                label {
-                  font-family: "NanumSquare";
-                  font-size: 18px;
-                  line-height: 48px;
-                  letter-spacing: -0.08em;
-                  color: $main-black;
-                  position: relative;
-                  padding-left: 42px;
-                  display: inline-block;
-                  margin-top: 11px;
+              .btn-warning {
+                padding: 0;
+                background-image: url(../images/signup-cancel.png);
+                width: 200px;
+                height: 90px;
+                background-color: transparent;
+                border: none;
 
-                  &::before {
-                    content: "";
-                    background-image: url(../images/signup-checkbox.png);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    width: 32px;
-                    height: 32px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 0;
-                  }
-
-                  &.check::before {
-                    background-image: url(../images/signup-checkbox-check.png);
-                  }
-
-                  input {
-                    display: none;
-                  }
+                &:active,
+                &:focus {
+                  box-shadow: none;
+                  border: none;
+                  outline: none;
                 }
-              }
-            }
 
-            & > div:first-child {
-              margin-bottom: 10px;
-            }
-          }
-
-          .box-footer {
-            text-align: center;
-            padding: 50px 0;
-
-            .btn-success {
-              padding: 0;
-              background-image: url(../images/signup-success.png);
-              width: 200px;
-              height: 90px;
-              background-color: transparent;
-              border: none;
-              margin-right: 3px;
-
-              &:active,
-              &:focus {
-                box-shadow: none;
-                border: none;
-                outline: none;
-              }
-
-              &:hover {
-                background-image: url(../images/signup-success-on.png);
-              }
-            }
-
-            .btn-warning {
-              padding: 0;
-              background-image: url(../images/signup-cancel.png);
-              width: 200px;
-              height: 90px;
-              background-color: transparent;
-              border: none;
-
-              &:active,
-              &:focus {
-                box-shadow: none;
-                border: none;
-                outline: none;
-              }
-
-              &:hover {
-                background-image: url(../images/signup-cancel-on.png);
+                &:hover {
+                  background-image: url(../images/signup-cancel-on.png);
+                }
               }
             }
           }
         }
-      }
 
-      .sub-footer {
-        padding: 30px 0 0;
+        .sub-footer {
+          padding: 30px 0 0;
 
-        .copyright {
-          text-align: center;
+          .copyright {
+            text-align: center;
+          }
         }
       }
     }
@@ -1246,6 +1320,10 @@ body {
             text-indent: -9999px;
             padding: 0;
             background-color: transparent;
+
+            &:active {
+              box-shadow: none;
+            }
           }
 
           .btn-default {
@@ -1747,6 +1825,536 @@ body {
   .conts-wrap .step {
     &::before {
       background-image: url(../images/step-3.png);
+    }
+  }
+}
+
+.page-history {
+  .site-content {
+    .conts-wrap {
+      .page-title {
+        margin-bottom: 40px;
+      }
+
+      .filter-wrapper {
+        position: relative;
+        text-align: right;
+
+        &.on {
+          .filter-btn::after {
+            background-image: url(../images/up-arr.png);
+          }
+
+          ul {
+            display: block;
+          }
+        }
+
+        .filter-btn {
+          color: $main-black;
+          font-family: "NanumSquare";
+          font-size: 22px;
+          letter-spacing: -0.08em;
+          font-weight: bold;
+          position: relative;
+          padding: 0 25px 0 33px;
+          z-index: 10;
+
+          &:active {
+            box-shadow: none;
+          }
+
+          &::before {
+            content: "";
+            background-image: url(../images/filter-logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            content: "";
+            background-image: url(../images/down-arr.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 14px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          top: 48px;
+          right: 0;
+          z-index: 9;
+          border: 2px solid $main-black;
+          border-radius: 10px;
+          background-color: #fff;
+          text-align: left;
+          list-style: none;
+          padding: 23px;
+
+          li {
+            &:not(:last-child) {
+              padding: 0;
+              margin-bottom: 22px;
+            }
+
+            &.checked {
+              label::before {
+                background-image: url(../images/filter-check.png);
+              }
+            }
+
+            label {
+              font-family: "NanumSquare";
+              font-size: 18px;
+              letter-spacing: -0.08em;
+              color: $main-black;
+              font-weight: 400;
+              margin: 0;
+              padding-left: 42px;
+              position: relative;
+
+              &::before {
+                content: "";
+                width: 32px;
+                height: 32px;
+                background-image: url(../images/filter-non-check.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+
+              input[name="filter"] {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .list-group-type1 {
+        margin-top: 15px;
+        margin-bottom: 37px;
+
+        .list-group-item {
+          padding: 24px;
+          border: 1px solid #f2f2f2;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "NanumSquare";
+          letter-spacing: -0.08em;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          &:hover {
+            border-color: #222;
+          }
+
+          .left {
+            display: flex;
+            align-items: center;
+
+            .badge {
+              display: block;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 70px;
+              height: 70px;
+              border-radius: 50%;
+              margin-right: 14px;
+            }
+
+            .badge-reg {
+              background-image: url(../images/badge-reg.png);
+            }
+
+            .badge-ing {
+              background-image: url(../images/badge-ing.png);
+            }
+
+            .badge-trans {
+              background-image: url(../images/badge-trans.png);
+            }
+
+            .badge-cancel {
+              background-image: url(../images/badge-cancel.png);
+            }
+
+            .badge-complete {
+              background-image: url(../images/badge-complete.png);
+            }
+
+            .badge-c-cancel {
+              background-image: url(../images/badge-c-cancel.png);
+            }
+
+            .title {
+              font-size: 22px;
+              font-weight: bold;
+              margin-bottom: 0;
+            }
+
+            .location {
+              font-size: 16px;
+              position: relative;
+              padding-left: 25px;
+
+              &::before {
+                content: "";
+                width: 18px;
+                height: 21px;
+                background-image: url(../images/location-logo.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+
+          .right {
+            text-align: right;
+
+            span {
+              font-size: 16px;
+              color: #999999;
+              font-weight: bold;
+            }
+
+            .charge {
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+
+        .page-item {
+          &.active {
+            .page-link {
+              background-color: $main-black;
+              color: #fff;
+            }
+          }
+
+          .page-link {
+            width: 58px;
+            height: 58px;
+            border: 2px solid $main-black;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "NanumSquare";
+            font-size: 22px;
+            letter-spacing: -0.08em;
+            color: $main-black;
+            margin: 3px;
+
+            &:focus,
+            &:hover {
+              background-color: #fff;
+            }
+          }
+
+          .page-prev {
+            background-image: url(../images/prev-logo.png);
+            background-size: 11px 17px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+          }
+
+          .page-next {
+            background-image: url(../images/next-logo.png);
+            background-size: 11px 17px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-history-detail {
+  .site-content {
+    .conts-wrap {
+      .page-title {
+        .desc {
+          display: none;
+        }
+      }
+
+      .badge {
+        width: 70px;
+        height: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .badge-reg {
+        background-image: url(../images/badge-reg-rect.png);
+      }
+
+      .badge-ing {
+        background-image: url(../images/badge-ing-rect.png);
+      }
+
+      .badge-trans {
+        background-image: url(../images/badge-trans-rect.png);
+      }
+
+      .badge-cancel {
+        background-image: url(../images/badge-cancel-rect.png);
+      }
+
+      .badge-complete {
+        background-image: url(../images/badge-complete-rect.png);
+      }
+
+      .badge-c-cancel {
+        background-image: url(../images/badge-c-cancel-rect.png);
+      }
+
+      .detail-wrapper {
+        margin-bottom: 45px;
+
+        .detail-row {
+          font-family: "NanumSquare";
+          letter-spacing: -0.08em;
+          color: $main-black;
+
+          &:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-top: 2px solid #222;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 25px !important;
+          }
+
+          &:nth-child(2) {
+            div {
+              width: 100%;
+              display: flex;
+              align-items: center;
+
+              div:first-child {
+                margin-right: 10px;
+              }
+            }
+          }
+
+          &:nth-child(5) {
+            div {
+              padding: 27px 24px;
+              background-color: #f2f2f2;
+              border-radius: 8px;
+            }
+          }
+
+          &:last-child {
+            div {
+              div {
+                background-color: #ffe347;
+              }
+            }
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          .cms-type-internal-time-date-time-absolute {
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 37px;
+
+            &::before {
+              content: "";
+              width: 27px;
+              height: 26px;
+              background-image: url(../images/calendar-logo.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 6px;
+          }
+
+          div {
+            p {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 26px;
+              margin-bottom: 0;
+            }
+
+            div {
+              height: 70px;
+              display: flex;
+              align-items: center;
+              padding-left: 20px;
+              border-radius: 8px;
+              background-color: #f2f2f2;
+
+              .form-control-static {
+                font-size: 18px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+
+      .cms-form {
+        font-family: "NanumSquare";
+        color: $main-black;
+        letter-spacing: -0.08em;
+
+        .form-group {
+          &:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-top: 2px solid $main-black;
+            border-bottom: 1px solid #dddddd;
+
+            .cms-type-internal-time-date-time-absolute {
+              font-size: 16px;
+              font-weight: bold;
+              position: relative;
+              padding-left: 35px;
+
+              &::before {
+                content: "";
+                width: 27px;
+                height: 26px;
+                background-image: url(../images/calendar-logo.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+              }
+            }
+          }
+
+          .control-label {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+
+          textarea[name="cancel-editor"] {
+            width: 100%;
+            height: 600px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            border: 1px solid #e2e2e2;
+            font-size: 18px;
+            resize: none;
+            padding: 26px 22px;
+
+            &::placeholder {
+              font-family: "NanumSquare";
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: -0.08em;
+              color: #aaaaaa;
+            }
+          }
+        }
+      }
+
+      .alert-success {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f6f6;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 45px;
+
+        p {
+          margin-bottom: 0;
+          font-family: "NanumSquare";
+          font-size: 24px;
+          font-size: bold;
+          line-height: 34px;
+          letter-spacing: -0.08em;
+          color: $main-black;
+          text-align: center;
+          position: relative;
+          padding-top: calc(35px + 98px);
+
+          &::before {
+            content: "";
+            width: 98px;
+            height: 98px;
+            background-image: url(../images/check-logo-round.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
     }
   }
 }

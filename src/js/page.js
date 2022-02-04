@@ -100,6 +100,71 @@ $(document).ready(function () {
     }
   });
 
+  var filterBtn = $("a[href='#filter-open']");
+  filterBtn.click(function () {
+    $(this).parent().toggleClass("on");
+  });
+
+  var filterRadio = $("input[name='filter']");
+  filterRadio.each(function () {
+    if ($(this).is(":checked")) {
+      $(this).parent().parent().addClass("checked");
+    }
+  });
+
+  filterRadio.change(function () {
+    var filterValue = $(this).attr("id");
+    var status = $(".status");
+    status.each(function () {
+      var statusItem = $(this).parent().parent();
+      var statusText = $(this).children().text();
+      if (filterValue !== statusText) {
+        statusItem.hide();
+      } else {
+        statusItem.show();
+      }
+
+      if (filterValue === "all") {
+        statusItem.show();
+      }
+    });
+    var checked = $(this).prop("checked");
+    var parentItem = $(this).parent().parent();
+    if (checked) {
+      parentItem.addClass("checked");
+      parentItem.siblings().removeClass("checked");
+    }
+  });
+
+  var chargeArr = $("p.charge");
+  chargeArr.each(function () {
+    var chargeText = $(this).text().trim();
+    if (chargeText === "") {
+      $(this).text("담당자 미정");
+    } else {
+      $(this).text("담당자 " + chargeText);
+    }
+  });
+
+  var detailStatus = $(".badge");
+  if (detailStatus.length === 1) {
+    if (detailStatus.text().trim() === "진행") {
+      $(".go-edit").hide();
+      $(".go-app-cancel").addClass("request");
+    } else if (detailStatus.text().trim() !== "신청") {
+      $(".go-edit").hide();
+      $(".go-app-cancel").hide();
+    }
+  }
+
+  $(".detail-row .title").each(function () {
+    if ($(this).text().trim() === "담당 근무자") {
+      if ($(this).next().text().trim() === "") {
+        $(this).parent().hide();
+      }
+    }
+  });
+
   if (
     loca === "/apply/apply-step1.html" ||
     loca === "/apply/apply-step1-detail.html"
@@ -109,8 +174,20 @@ $(document).ready(function () {
     $("body").addClass("page-apply page-apply-detail");
   } else if (loca === "/apply/apply-final.html") {
     $("body").addClass("page-apply page-apply-final");
+  } else if (loca === "/signup.html") {
+    $("body").addClass("page-signup");
+  } else if (loca === "/mypage.html") {
+    $("body").addClass("page-mypage");
   } else if (loca === "/history/apply-history.html") {
     $("body").addClass("page-history");
+  } else if (
+    loca === "/history/apply-history-detail.html" ||
+    loca === "/history/apply-history-detail-ing.html" ||
+    loca === "/history/apply-history-detail-cancel.html" ||
+    loca === "/history/apply-history-detail-cancel-success.html" ||
+    loca === "/history/apply-history-detail-edit.html"
+  ) {
+    $("body").addClass("page-history page-history-detail");
   }
 
   if (loca === "/apply/apply-step1.html") {
@@ -119,11 +196,5 @@ $(document).ready(function () {
 
   if ($("div[aria-label='로그인버튼']").length > 0) {
     $("body").addClass("page-login");
-  }
-
-  if ($(".summary .title").text().trim() === "회원가입") {
-    $("body").addClass("page-signup");
-  } else if ($(".summary .title").text().trim() === "내정보") {
-    $("body").addClass("page-mypage");
   }
 });
