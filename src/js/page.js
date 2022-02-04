@@ -70,12 +70,33 @@ $(document).ready(function () {
     location.href = "./main.html";
   });
 
-  var navItem = $(".navbar-client .nav-item");
   var loca = location.pathname;
-  navItem.each(function () {
-    var href = $(this).children().attr("href");
-    if (href.substring(1) === loca) {
-      $(this).siblings().addClass("gray");
+  var cateBtn = $(".btn-default");
+  cateBtn.each(function () {
+    $(this).click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass("on");
+      $(this).parent().siblings().children().removeClass("on");
+    });
+  });
+
+  var userName = $(".l-info .name").text().trim();
+  $(".l-info .name").text(userName + " 님");
+
+  var agreeCheckbox = $(".agree input[type='checkbox']");
+  if (agreeCheckbox.is(":checked")) {
+    agreeCheckbox.parent().addClass("on");
+  }
+
+  var agreeLabel = $(".agree label");
+  agreeLabel.click(function (e) {
+    e.preventDefault();
+    if (!$(this).children().is(":checked")) {
+      $(this).children().prop("checked", true);
+      $(this).addClass("on");
+    } else {
+      $(this).children().prop("checked", false);
+      $(this).removeClass("on");
     }
   });
 
@@ -83,7 +104,13 @@ $(document).ready(function () {
     loca === "/apply/apply-step1.html" ||
     loca === "/apply/apply-step1-detail.html"
   ) {
-    $("body").addClass("page-apply1");
+    $("body").addClass("page-apply");
+  } else if (loca === "/apply/apply-step2.html") {
+    $("body").addClass("page-apply page-apply-detail");
+  } else if (loca === "/apply/apply-final.html") {
+    $("body").addClass("page-apply page-apply-final");
+  } else if (loca === "/history/apply-history.html") {
+    $("body").addClass("page-history");
   }
 
   if (loca === "/apply/apply-step1.html") {
@@ -93,6 +120,7 @@ $(document).ready(function () {
   if ($("div[aria-label='로그인버튼']").length > 0) {
     $("body").addClass("page-login");
   }
+
   if ($(".summary .title").text().trim() === "회원가입") {
     $("body").addClass("page-signup");
   } else if ($(".summary .title").text().trim() === "내정보") {
