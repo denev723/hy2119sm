@@ -70,7 +70,6 @@ $(document).ready(function () {
     location.href = "./main.html";
   });
 
-  var loca = location.pathname;
   var cateBtn = $(".btn-default");
   cateBtn.each(function () {
     $(this).click(function (e) {
@@ -165,32 +164,39 @@ $(document).ready(function () {
     }
   });
 
+  var loca = location.pathname;
+  var classification = loca.split("/");
+  console.log(classification);
+  if (classification[1] === "client") {
+    $(".navbar-employee").hide();
+  }
+
   if (
-    loca === "/apply/apply-step1.html" ||
-    loca === "/apply/apply-step1-detail.html"
+    loca === "/client/apply/apply-step1.html" ||
+    loca === "/client/apply/apply-step1-detail.html"
   ) {
     $("body").addClass("page-apply");
-  } else if (loca === "/apply/apply-step2.html") {
+  } else if (loca === "/client/apply/apply-step2.html") {
     $("body").addClass("page-apply page-apply-detail");
-  } else if (loca === "/apply/apply-final.html") {
+  } else if (loca === "/client/apply/apply-final.html") {
     $("body").addClass("page-apply page-apply-final");
   } else if (loca === "/signup.html") {
     $("body").addClass("page-signup");
   } else if (loca === "/mypage.html") {
     $("body").addClass("page-mypage");
-  } else if (loca === "/history/apply-history.html") {
+  } else if (loca === "/client/history/apply-history.html") {
     $("body").addClass("page-history");
   } else if (
-    loca === "/history/apply-history-detail.html" ||
-    loca === "/history/apply-history-detail-ing.html" ||
-    loca === "/history/apply-history-detail-cancel.html" ||
-    loca === "/history/apply-history-detail-cancel-success.html" ||
-    loca === "/history/apply-history-detail-edit.html"
+    loca === "/client/history/apply-history-detail.html" ||
+    loca === "/client/history/apply-history-detail-ing.html" ||
+    loca === "/client/history/apply-history-detail-cancel.html" ||
+    loca === "/client/history/apply-history-detail-cancel-success.html" ||
+    loca === "/client/history/apply-history-detail-edit.html"
   ) {
     $("body").addClass("page-history page-history-detail");
   }
 
-  if (loca === "/apply/apply-step1.html") {
+  if (loca === "/client/apply/apply-step1.html") {
     $(".go-prev").hide();
   }
 

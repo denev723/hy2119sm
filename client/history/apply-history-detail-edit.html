@@ -24,81 +24,81 @@
     <meta name="twitter:description" content="민원접수, 불편신고" />
     <link
       rel="apple-touch-startup-image"
-      href="../src/favicon/favicon-192x192.png"
+      href="../../src/favicon/favicon-192x192.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
-      href="../src/favicon/apple-touch-icon-57x57.png"
+      href="../../src/favicon/apple-touch-icon-57x57.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="60x60"
-      href="../src/favicon/apple-touch-icon-60x60.png"
+      href="../../src/favicon/apple-touch-icon-60x60.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="72x72"
-      href="../src/favicon/apple-touch-icon-72x72.png"
+      href="../../src/favicon/apple-touch-icon-72x72.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="../src/favicon/apple-touch-icon-76x76.png"
+      href="../../src/favicon/apple-touch-icon-76x76.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
-      href="../src/favicon/apple-touch-icon-114x114.png"
+      href="../../src/favicon/apple-touch-icon-114x114.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="../src/favicon/apple-touch-icon-120x120.png"
+      href="../../src/favicon/apple-touch-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="144x144"
-      href="../src/favicon/apple-touch-icon-144x144.png"
+      href="../../src/favicon/apple-touch-icon-144x144.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="../src/favicon/apple-touch-icon-152x152.png"
+      href="../../src/favicon/apple-touch-icon-152x152.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../src/favicon/apple-touch-icon-180x180.png"
+      href="../../src/favicon/apple-touch-icon-180x180.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../src/favicon/favicon-16x16.png"
+      href="../../src/favicon/favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../src/favicon/favicon-32x32.png"
+      href="../../src/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="96x96"
-      href="../src/favicon/favicon-96x96.png"
+      href="../../src/favicon/favicon-96x96.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="../src/favicon/favicon-192x192.png"
+      href="../../src/favicon/favicon-192x192.png"
     />
-    <link rel="shortcut icon" href="../src/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="../../src/favicon/favicon.ico" />
     <meta
       name="msapplication-TileImage"
-      content="../src/favicon/favicon-192x192.png"
+      content="../../src/favicon/favicon-192x192.png"
     />
 
     <link
@@ -106,12 +106,12 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
     />
-    <link rel="stylesheet" href="../src/vendor/css/slick.css" />
-    <link rel="stylesheet" href="../src/vendor/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../src/css/phone-addon.min.css" />
+    <link rel="stylesheet" href="../../src/vendor/css/slick.css" />
+    <link rel="stylesheet" href="../../src/vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../src/css/phone-addon.min.css" />
     <link
       rel="stylesheet"
-      href="../src/css/desktop-addon.css"
+      href="../../src/css/desktop-addon.css"
       media="screen and (min-width: 1280px)"
     />
   </head>
@@ -138,13 +138,29 @@
             <a href="../apply/apply-step1.html" class="nav-link">민원접수</a>
           </li>
           <li class="nav-item on">
-            <a href="./history/apply-history.html" class="nav-link">접수내역</a>
+            <a href="./apply-history.html" class="nav-link">접수내역</a>
           </li>
           <li class="nav-item">
             <a href="javascript:void(0)" class="nav-link">공지사항</a>
           </li>
         </ul>
-        <ul class="navbar navbar-admin"></ul>
+        <ul class="navbar navbar-employee">
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">민원콜현황</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">민원처리</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">민원접수</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">접수내역</a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="site-content container-fluid">
@@ -164,7 +180,7 @@
               >2022-01-03 17:35</span
             >
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <span class="control-label col-sm-3">민원유형</span>
             <div class="col-sm-9">
               <select class="form-control">
@@ -185,18 +201,19 @@
                 <option>실험실 사고</option>
                 <option>위험물 신고</option>
                 <option>긴급누수</option>
-                <option selected>분실물(신고,습득)</option>
+                <option selected>업무차량 입출차(VIP)</option>
+                <option>분실물(신고,습득)</option>
                 <option>금연구역 흡연</option>
                 <option>수상자 신고</option>
                 <option>기타현장확인 요청</option>
               </select>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <span class="control-label col-sm-3">건물</span>
             <div class="col-sm-9">
               <select class="form-control">
-                <option selected>미선택</option>
+                <option>미선택</option>
                 <option>FTC관</option>
                 <option>HIT관</option>
                 <option>IT.BC관</option>
@@ -204,31 +221,35 @@
                 <option>건축관</option>
                 <option>경영관</option>
                 <option>경제금융관</option>
+                <option selected>정몽구미래자동차연구센터</option>
               </select>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <span class="control-label col-sm-3">상세위치</span>
             <div class="col-sm-9">
               <input
                 type="text"
                 class="form-control"
                 placeholder="자세한 위치를 입력해주세요"
+                value="지하편의점 앞"
               />
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <span class="control-label col-sm-3">민원내용</span>
             <div class="col-sm-9">
-              <textarea
-                class="form-control"
-                placeholder="민원내용을 간략하게 입력해주세요"
-                cols="30"
-                rows="10"
-              ></textarea>
+              <div class="textarea form-control" contenteditable="true">
+                <p>긴급처리 요청</p>
+                <p>정몽구미래자동차연구센터 건물 지하편의점 앞에서</p>
+                <p>업무차량이 진입불가 중입니다.</p>
+                <p>빠른 업무처리 바랍니다.</p>
+                <br />
+                <img src="../../src/images/temp/accident.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
             <span class="control-label hidden">파일첨부</span>
             <div class="col-sm-9 cms-file-md-upload-inner">
               <label for="pic-file">
@@ -243,8 +264,8 @@
         </form>
         <div class="btn-group" role="group">
           <a
-            href="./apply-history-detail-cancel-success.html"
-            class="btn btn-primary go-app-cancel blue"
+            href="./apply-history-detail.html"
+            class="btn btn-primary go-edit blue"
           >
             <span class="sr-only">신청취소</span>
           </a>
@@ -290,10 +311,10 @@
         </div>
       </div>
     </div>
-    <script src="../src/vendor/js/jquery-3.6.0.min.js"></script>
-    <script src="../src/vendor/js/bootstrap.min.js"></script>
-    <script src="../src/vendor/js/jquery.bxslider.js"></script>
-    <script src="../src/vendor/js/slick.min.js"></script>
-    <script src="../src/js/page.js"></script>
+    <script src="../../src/vendor/js/jquery-3.6.0.min.js"></script>
+    <script src="../../src/vendor/js/bootstrap.min.js"></script>
+    <script src="../../src/vendor/js/jquery.bxslider.js"></script>
+    <script src="../../src/vendor/js/slick.min.js"></script>
+    <script src="../../src/js/page.js"></script>
   </body>
 </html>
