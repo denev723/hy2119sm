@@ -3,6 +3,7 @@
 
 body {
   font-family: "Nanum Gothic";
+  position: relative;
 }
 
 .mypage-box {
@@ -163,7 +164,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    .navbar-client {
+    .navbar-employee {
+      white-space: nowrap;
+    }
+
+    .navbar-client,
+    .navbar-employee {
       min-height: auto;
       margin-bottom: 0;
       border: none;
@@ -201,6 +207,7 @@ body {
 .site-content {
   border-top: 1px solid $main-visual-top;
   min-height: calc(100vh - 95px - 111px);
+  position: relative;
 
   .visual {
     position: relative;
@@ -438,21 +445,6 @@ body {
         }
       }
     }
-
-    .top-btn {
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
-      a {
-        display: block;
-        width: 68px;
-        height: 68px;
-        background-image: url(../images/up-arr-round-b.png);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-    }
   }
 
   .conts-wrap {
@@ -479,10 +471,67 @@ body {
       }
     }
   }
+
+  .top-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    a {
+      display: block;
+      width: 68px;
+      height: 68px;
+      background-image: url(../images/up-arr-round-b.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.employee-btn-wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe347;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  p {
+    font-family: "NanumSquare";
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    color: $main-black;
+    position: relative;
+    padding-left: 64px;
+
+    &::before {
+      content: "";
+      background-image: url(../images/work-play-btn.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .timestamp {
+      font-size: 30px;
+      color: #e6aa28;
+    }
+  }
 }
 
 .site-footer {
   background-color: $main-color;
+  margin-bottom: 90px;
   .container-fluid {
     padding: 37px 40px;
     .copyright {
@@ -601,8 +650,10 @@ body {
     height: 90px;
     margin: 0 7px;
 
-    &:active {
+    &:active,
+    &:focus {
       box-shadow: none;
+      outline: none;
     }
   }
 
@@ -717,6 +768,16 @@ body {
 
     &:hover {
       background-image: url(../images/confirm-btn-on.png);
+    }
+  }
+
+  .rate-btn {
+    background-image: url(../images/rate-btn.png);
+    width: 110px;
+    height: 60px;
+
+    &:hover {
+      background-image: url(../images/rate-btn-on.png);
     }
   }
 }
@@ -1005,6 +1066,10 @@ body {
                     margin-top: 15px;
                     position: relative;
                     padding-left: 35px;
+                    font-family: "NanumSquare";
+                    font-size: 16px;
+                    letter-spacing: -0.08em;
+                    color: $main-black;
 
                     &::before {
                       content: "";
@@ -1836,6 +1901,7 @@ body {
 .page-history {
   .site-content {
     .conts-wrap {
+      margin: 70px auto 190px;
       .page-title {
         margin-bottom: 40px;
       }
@@ -2089,7 +2155,8 @@ body {
 
             &:focus,
             &:hover {
-              background-color: #fff;
+              background-color: #222;
+              color: #fff;
             }
           }
 
@@ -2305,7 +2372,8 @@ body {
             }
           }
 
-          &:nth-child(5) {
+          &:nth-child(5),
+          &:nth-child(8) {
             div {
               padding: 27px 24px;
               background-color: #f2f2f2;
@@ -2313,7 +2381,7 @@ body {
             }
           }
 
-          &:last-child {
+          &.employee {
             div {
               div {
                 background-color: #ffe347;
@@ -2321,8 +2389,127 @@ body {
             }
           }
 
+          &.rating {
+            div {
+              .cms-form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 120px;
+                padding: 0 30px 0 40px;
+                border-radius: 8px;
+                background-color: #f2f2f2;
+                margin-bottom: 15px;
+
+                fieldset {
+                  direction: rtl;
+                  legend {
+                    display: none;
+                  }
+
+                  label {
+                    background-image: url(../images/rate-logo.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 48px;
+                    height: 44px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                  }
+
+                  input[type="radio"] {
+                    display: none;
+                  }
+
+                  label:hover,
+                  label:hover ~ label,
+                  input[type="radio"]:checked ~ label {
+                    background-image: url(../images/rate-logo-check.png);
+                  }
+                }
+              }
+              .warning {
+                font-size: 16px;
+                color: $main-black;
+                position: relative;
+                padding-left: 36px;
+
+                &::before {
+                  content: "";
+                  background-image: url(../images/important-logo-small.png);
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  width: 28px;
+                  height: 28px;
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  transform: translateY(-50%);
+                }
+              }
+
+              .rate-result {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 120px;
+                padding: 0 30px 0 40px;
+                border-radius: 8px;
+                background-color: #f2f2f2;
+                margin-bottom: 15px;
+
+                .star-wrapper {
+                  padding-left: 0;
+
+                  .star-logo {
+                    background-image: url(../images/rate-logo.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 48px;
+                    height: 44px;
+                    margin-right: 5px;
+
+                    &.on {
+                      background-image: url(../images/rate-logo-check.png);
+                    }
+                  }
+                }
+
+                .score-wrapper {
+                  display: block;
+                  p {
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: -0.08em;
+
+                    .gray {
+                      color: #999999;
+                    }
+
+                    &.score {
+                      font-size: 50px;
+                      font-weight: 800;
+                      margin-top: 14px;
+                      text-align: right;
+
+                      .p-score {
+                        font-size: 26px;
+                        color: #999999;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
           &:not(:last-child) {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
           }
 
           .cms-type-internal-time-date-time-absolute {
@@ -2382,6 +2569,7 @@ body {
         font-family: "NanumSquare";
         color: $main-black;
         letter-spacing: -0.08em;
+        margin-bottom: 50px;
 
         .form-group {
           &:nth-child(1) {

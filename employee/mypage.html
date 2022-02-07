@@ -24,81 +24,81 @@
     <meta name="twitter:description" content="민원접수, 불편신고" />
     <link
       rel="apple-touch-startup-image"
-      href="../../src/favicon/favicon-192x192.png"
+      href="../src/favicon/favicon-192x192.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
-      href="../../src/favicon/apple-touch-icon-57x57.png"
+      href="../src/favicon/apple-touch-icon-57x57.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="60x60"
-      href="../../src/favicon/apple-touch-icon-60x60.png"
+      href="../src/favicon/apple-touch-icon-60x60.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="72x72"
-      href="../../src/favicon/apple-touch-icon-72x72.png"
+      href="../src/favicon/apple-touch-icon-72x72.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="../../src/favicon/apple-touch-icon-76x76.png"
+      href="../src/favicon/apple-touch-icon-76x76.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="114x114"
-      href="../../src/favicon/apple-touch-icon-114x114.png"
+      href="../src/favicon/apple-touch-icon-114x114.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="../../src/favicon/apple-touch-icon-120x120.png"
+      href="../src/favicon/apple-touch-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="144x144"
-      href="../../src/favicon/apple-touch-icon-144x144.png"
+      href="../src/favicon/apple-touch-icon-144x144.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="../../src/favicon/apple-touch-icon-152x152.png"
+      href="../src/favicon/apple-touch-icon-152x152.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="../../src/favicon/apple-touch-icon-180x180.png"
+      href="../src/favicon/apple-touch-icon-180x180.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="../../src/favicon/favicon-16x16.png"
+      href="../src/favicon/favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="../../src/favicon/favicon-32x32.png"
+      href="../src/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="96x96"
-      href="../../src/favicon/favicon-96x96.png"
+      href="../src/favicon/favicon-96x96.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
-      href="../../src/favicon/favicon-192x192.png"
+      href="../src/favicon/favicon-192x192.png"
     />
-    <link rel="shortcut icon" href="../../src/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="../src/favicon/favicon.ico" />
     <meta
       name="msapplication-TileImage"
-      content="../../src/favicon/favicon-192x192.png"
+      content="../src/favicon/favicon-192x192.png"
     />
 
     <link
@@ -106,12 +106,12 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
     />
-    <link rel="stylesheet" href="../../src/vendor/css/slick.css" />
-    <link rel="stylesheet" href="../../src/vendor/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../src/css/phone-addon.min.css" />
+    <link rel="stylesheet" href="../src/vendor/css/slick.css" />
+    <link rel="stylesheet" href="../src/vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/css/phone-addon.min.css" />
     <link
       rel="stylesheet"
-      href="../../src/css/desktop-addon.css"
+      href="../src/css/desktop-addon.css"
       media="screen and (min-width: 1280px)"
     />
   </head>
@@ -135,14 +135,12 @@
       <div class="container-fluid lnb">
         <ul class="navbar navbar-client">
           <li class="nav-item on">
-            <a href="./apply-step1.html" class="nav-link">민원접수</a>
+            <a href="./apply/apply-step1.html" class="nav-link">민원접수</a>
           </li>
-          <li class="nav-item">
-            <a href="../history/apply-history.html" class="nav-link"
-              >접수내역</a
-            >
+          <li class="nav-item on">
+            <a href="./history/apply-history.html" class="nav-link">접수내역</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item on">
             <a href="javascript:void(0)" class="nav-link">공지사항</a>
           </li>
         </ul>
@@ -167,86 +165,67 @@
     </header>
     <main class="site-content container-fluid">
       <div class="conts-wrap">
-        <h3 class="page-title">
-          <span class="title">민원접수</span>
-          <p class="desc">원하시는 <strong>민원유형</strong>을 선택해주세요</p>
-        </h3>
-        <div class="step">
-          <p class="step-1 on">민원유형 선택</p>
-          <p class="step-2">상세정보 입력</p>
-          <p class="step-3">민원접수 완료</p>
+        <div class="sub-wrap">
+          <header class="sub-header">
+            <div class="site-logo">
+              <span class="sr-only">사이트로고</span>
+            </div>
+          </header>
+          <div class="sub-content">
+            <h3 class="summary">
+              <span class="title">내정보</span>
+            </h3>
+            <div class="box box-primary">
+              <div class="box-body form-horizontal">
+                <div class="form-group">
+                  <span class="control-label col-sm-3">이름</span>
+                  <div class="col-sm-9">
+                    <p class="form-control-static">이민석</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="control-label col-sm-3">이메일(필수)</span>
+                  <div class="col-sm-9">
+                    <p class="form-control-static">smart2022@naver.com</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="control-label col-sm-3">휴대폰 번호(선택)</span>
+                  <div class="col-sm-9">
+                    <p class="form-control-static">010-2220-1234</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="control-label col-sm-3">소속</span>
+                  <div class="col-sm-9">
+                    <p class="form-control-static">한양대학교 관재팀</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="control-label col-sm-3"
+                    >개인정보 보유기간(년)</span
+                  >
+                  <div class="col-sm-9">
+                    <p class="form-control-static">3년</p>
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer with-border">
+                <a href="void(0)" class="btn btn-default">회원정보 수정</a>
+                <a href="javascript: history.back()" class="btn btn-danger"
+                  >이전화면</a
+                >
+              </div>
+            </div>
+          </div>
+          <footer class="sub-footer">
+            <div class="copyright">
+              &copy;&nbsp;
+              <span class="year">2020</span>
+              &nbsp;Hanyang University. All Rights Reserved.
+            </div>
+          </footer>
         </div>
-        <div
-          class="btn-group complaints-group row"
-          role="group"
-          aria-label="민원유형"
-        >
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">사건사고 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">출입보안 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">안전시설 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">엘리베이터 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">일반시설 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">주차관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">행사지원 관련</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">자료요청</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-          <div class="col-sm-6">
-            <label class="btn btn-default">
-              <span class="title">기타문의</span>
-              <span class="logo"></span>
-            </label>
-          </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="이전및다음버튼">
-          <a href="javascript:history.back()" class="btn btn-primary go-prev">
-            <span class="sr-only">이전단계</span>
-          </a>
-          <a href="./apply-step1-detail.html" class="btn btn-primary go-next">
-            <span class="sr-only">다음단계</span>
-          </a>
-        </div>
-      </div>
-      <div class="top-btn">
-        <a href="#top"></a>
       </div>
     </main>
     <footer class="site-footer">
@@ -266,7 +245,7 @@
         </div>
       </div>
     </footer>
-    <div class="employee-btn-wrapper btn btn-block">
+    <div class="employee-btn-wrapper btn btn-block" id="workTime">
       <p>근무시작&nbsp;&nbsp;<span class="timestamp">00:00:00</span></p>
     </div>
     <div class="mypage-box">
@@ -280,15 +259,15 @@
           <p class="login-time">2022-01-03 14:33</p>
           <div class="btn-group">
             <a href="/" class="btn btn-primary"> 로그아웃 </a>
-            <a href="../mypage.html" class="btn btn-primary"> 내정보 보기 </a>
+            <a href="./mypage.html" class="btn btn-primary"> 내정보 보기 </a>
           </div>
         </div>
       </div>
     </div>
-    <script src="../../src/vendor/js/jquery-3.6.0.min.js"></script>
-    <script src="../../src/vendor/js/bootstrap.min.js"></script>
-    <script src="../../src/vendor/js/jquery.bxslider.js"></script>
-    <script src="../../src/vendor/js/slick.min.js"></script>
-    <script src="../../src/js/page.js"></script>
+    <script src="../src/vendor/js/jquery-3.6.0.min.js"></script>
+    <script src="../src/vendor/js/bootstrap.min.js"></script>
+    <script src="../src/vendor/js/jquery.bxslider.js"></script>
+    <script src="../src/vendor/js/slick.min.js"></script>
+    <script src="../src/js/page.js"></script>
   </body>
 </html>

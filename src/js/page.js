@@ -135,6 +135,19 @@ $(document).ready(function () {
     }
   });
 
+  var listArray = $(".list-group-item");
+  listArray.each(function () {
+    if ($(this).attr("href") === "#nothing") {
+      $(this).click(function () {
+        alert("준비중입니다.");
+      });
+    }
+    var status = $(this).children(".left").children(".status").text().trim();
+    if (status === "cancel") {
+      $(this).css({ color: "#aaaaaa" });
+    }
+  });
+
   var chargeArr = $("p.charge");
   chargeArr.each(function () {
     var chargeText = $(this).text().trim();
@@ -156,19 +169,33 @@ $(document).ready(function () {
     }
   }
 
-  $(".detail-row .title").each(function () {
-    if ($(this).text().trim() === "담당 근무자") {
-      if ($(this).next().text().trim() === "") {
-        $(this).parent().hide();
-      }
+  if (
+    $(".badge").text().trim() === "진행" &&
+    $(".employee .form-control-static").text().trim() !== ""
+  ) {
+    $(".employee").show();
+    $(".finish-date, .finish-content, .rating").hide();
+  } else if ($(".badge").text().trim() === "완료") {
+    $(".employee, .finish-date, .finish-content, .rating").show();
+  } else {
+    $(".employee, .finish-date, .finish-content, .rating").hide();
+  }
+
+  var sScore = Number($(".r-score").text().trim());
+  var star = $(".star-logo");
+  star.each(function (index, item) {
+    if (index < sScore) {
+      $(this).addClass("on");
     }
   });
 
   var loca = location.pathname;
   var classification = loca.split("/");
-  console.log(classification);
   if (classification[1] === "client") {
-    $(".navbar-employee").hide();
+    $(".navbar-employee, .employee-btn-wrapper").hide();
+    $(".site-footer").css({ "margin-bottom": "0" });
+  } else if (classification[1] === "employee") {
+    $(".navbar-client").hide();
   }
 
   if (
@@ -182,13 +209,18 @@ $(document).ready(function () {
     $("body").addClass("page-apply page-apply-final");
   } else if (loca === "/signup.html") {
     $("body").addClass("page-signup");
-  } else if (loca === "/mypage.html") {
+  } else if (
+    loca === "/client/mypage.html" ||
+    loca === "/employee/mypage.html"
+  ) {
     $("body").addClass("page-mypage");
   } else if (loca === "/client/history/apply-history.html") {
     $("body").addClass("page-history");
   } else if (
     loca === "/client/history/apply-history-detail.html" ||
     loca === "/client/history/apply-history-detail-ing.html" ||
+    loca === "/client/history/apply-history-detail-finish.html" ||
+    loca === "/client/history/apply-history-detail-finish-rated.html" ||
     loca === "/client/history/apply-history-detail-cancel.html" ||
     loca === "/client/history/apply-history-detail-cancel-success.html" ||
     loca === "/client/history/apply-history-detail-edit.html"
