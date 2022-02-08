@@ -135,13 +135,14 @@ $(document).ready(function () {
     }
   });
 
+  $("a[href='#nothing']").click(function () {
+    alert("준비중입니다.");
+    location.reload();
+  });
+
   var listArray = $(".list-group-item");
+
   listArray.each(function () {
-    if ($(this).attr("href") === "#nothing") {
-      $(this).click(function () {
-        alert("준비중입니다.");
-      });
-    }
     var status = $(this).children(".left").children(".status").text().trim();
     if (status === "cancel") {
       $(this).css({ color: "#aaaaaa" });
@@ -181,6 +182,40 @@ $(document).ready(function () {
     $(".employee, .finish-date, .finish-content, .rating").hide();
   }
 
+  var time = 0;
+  var hour = 0;
+  var min = 0;
+  var sec = 0;
+  var timer;
+  var confirm = false;
+
+  $("#workTime").click(function () {
+    if (confirm === false) {
+      $("#workTime .text").html("근무종료&nbsp;&nbsp;");
+      $("#workTime .timestamp").addClass("start");
+      timer = setInterval(function () {
+        time++;
+        hour = Math.floor(min / 60);
+        min = Math.floor(time / 60);
+        sec = time % 60;
+
+        var th = hour < 10 ? "0" + hour : hour;
+        var tm = min < 10 ? "0" + min : min;
+        var ts = sec < 10 ? "0" + sec : sec;
+
+        $("#workTime .timestamp")
+          .text(th + ":" + tm + ":" + ts)
+          .addClass("start");
+      }, 1000);
+      confirm = true;
+    } else {
+      clearInterval(timer);
+      confirm = false;
+      $("#workTime .timestamp").removeClass("start");
+      $("#workTime .text").html("근무시작&nbsp;&nbsp;");
+    }
+  });
+
   var sScore = Number($(".r-score").text().trim());
   var star = $(".star-logo");
   star.each(function (index, item) {
@@ -189,43 +224,60 @@ $(document).ready(function () {
     }
   });
 
+  var body = $("body");
   var loca = location.pathname;
   var classification = loca.split("/");
+  var pageNameSplit = classification[classification.length - 1];
+  var result;
+
+  $(".navbar .nav-item a").each(function () {
+    var href = $(this).attr("href").split("/");
+    if (pageNameSplit.includes("-")) {
+      if (href[1] === pageNameSplit.split("-")[0]) {
+        $(this).parent().addClass("on").siblings().removeClass("on");
+      }
+    } else {
+      if (href[1] === pageNameSplit.split(".")[0]) {
+        $(this).parent().addClass("on").siblings().removeClass("on");
+      }
+    }
+  });
+
+  if (pageNameSplit.split(".")[0] === "signup") {
+    body.addClass("page-" + pageNameSplit.split(".")[0]);
+  } else if (pageNameSplit && !pageNameSplit.includes("index.html")) {
+    if (!classification[2].includes(".")) {
+      result = classification[2];
+      body.addClass("page-" + result);
+    }
+    if (pageNameSplit.includes(".") && !pageNameSplit.includes("-")) {
+      result = pageNameSplit.split(".")[0];
+      body.addClass("page-" + result);
+    } else {
+      var removeDot = pageNameSplit.split(".")[0];
+      result = removeDot.split("-");
+      console.log(result);
+      if (result[result.length - 1] === "2") {
+        body.addClass("page-apply-middle");
+      } else if (result[result.length - 1] === "final") {
+        body.addClass("page-apply-final");
+      } else if (result.length >= 3 || result[1] === "detail") {
+        console.log(result);
+        body.addClass("page-" + result[0] + "-detail");
+        $(".page-title .desc").hide();
+      }
+
+      if (result[1] === "step") {
+        $(".page-title .desc").show();
+      }
+    }
+  }
+
   if (classification[1] === "client") {
     $(".navbar-employee, .employee-btn-wrapper").hide();
     $(".site-footer").css({ "margin-bottom": "0" });
   } else if (classification[1] === "employee") {
     $(".navbar-client").hide();
-  }
-
-  if (
-    loca === "/client/apply/apply-step1.html" ||
-    loca === "/client/apply/apply-step1-detail.html"
-  ) {
-    $("body").addClass("page-apply");
-  } else if (loca === "/client/apply/apply-step2.html") {
-    $("body").addClass("page-apply page-apply-detail");
-  } else if (loca === "/client/apply/apply-final.html") {
-    $("body").addClass("page-apply page-apply-final");
-  } else if (loca === "/signup.html") {
-    $("body").addClass("page-signup");
-  } else if (
-    loca === "/client/mypage.html" ||
-    loca === "/employee/mypage.html"
-  ) {
-    $("body").addClass("page-mypage");
-  } else if (loca === "/client/history/apply-history.html") {
-    $("body").addClass("page-history");
-  } else if (
-    loca === "/client/history/apply-history-detail.html" ||
-    loca === "/client/history/apply-history-detail-ing.html" ||
-    loca === "/client/history/apply-history-detail-finish.html" ||
-    loca === "/client/history/apply-history-detail-finish-rated.html" ||
-    loca === "/client/history/apply-history-detail-cancel.html" ||
-    loca === "/client/history/apply-history-detail-cancel-success.html" ||
-    loca === "/client/history/apply-history-detail-edit.html"
-  ) {
-    $("body").addClass("page-history page-history-detail");
   }
 
   if (loca === "/client/apply/apply-step1.html") {

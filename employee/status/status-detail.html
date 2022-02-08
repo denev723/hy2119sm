@@ -135,30 +135,34 @@
       <div class="container-fluid lnb">
         <ul class="navbar navbar-client">
           <li class="nav-item">
-            <a href="../apply/apply-step1.html" class="nav-link">민원접수</a>
+            <a href="../../client/apply/apply-step.html" class="nav-link"
+              >민원접수</a
+            >
           </li>
           <li class="nav-item on">
-            <a href="./apply-history.html" class="nav-link">접수내역</a>
+            <a href="../../client/history/history.html" class="nav-link"
+              >접수내역</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
         <ul class="navbar navbar-employee">
-          <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원콜현황</a>
+          <li class="nav-item on">
+            <a href="../status/status-list.html" class="nav-link">민원콜현황</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원처리</a>
+            <a href="../doing/doing-list.html" class="nav-link">민원처리</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원접수</a>
+            <a href="../apply/apply-step.html" class="nav-link">민원접수</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">접수내역</a>
+            <a href="../history/history.html" class="nav-link">접수내역</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
       </div>
@@ -166,13 +170,13 @@
     <main class="site-content container-fluid">
       <div class="conts-wrap">
         <h3 class="page-title">
-          <span class="title">접수내역</span>
-          <p class="desc">접수된 <strong>민원내용</strong>을 확인해주세요</p>
+          <span class="title">민원콜</span>
+          <p class="desc"><strong>민원콜</strong> 현황을 확인해주세요</p>
         </h3>
         <div class="detail-wrapper">
           <div class="detail-row">
-            <span class="badge badge-complete">
-              <span class="sr-only">완료</span>
+            <span class="badge badge-reg">
+              <span class="sr-only">신청</span>
             </span>
             <span
               class="cms-type-internal-time-date-time-absolute"
@@ -222,7 +226,7 @@
             <span class="title">담당 근무자</span>
             <div>
               <div>
-                <p class="form-control-static">이민석</p>
+                <p class="form-control-static"></p>
               </div>
             </div>
           </div>
@@ -230,60 +234,28 @@
             <span class="title">처리완료 일시</span>
             <div>
               <div>
-                <p class="form-control-static">2022-01-03 19:17</p>
+                <p class="form-control-static"></p>
               </div>
             </div>
           </div>
           <div class="detail-row finish-content">
             <span class="title">민원내용</span>
-            <div>
-              <p>확인했습니다.</p>
-              <p>차량 진입이 완료되었습니다.</p>
-              <br />
-              <img src="../../src/images/temp/accident-finish.png" alt="" />
-            </div>
+            <div></div>
           </div>
           <div class="detail-row rating">
             <span class="title">만족도 평가</span>
-            <div>
-              <div class="rate-result">
-                <div class="star-wrapper">
-                  <span class="star-logo"></span>
-                  <span class="star-logo"></span>
-                  <span class="star-logo"></span>
-                  <span class="star-logo"></span>
-                  <span class="star-logo"></span>
-                </div>
-                <div class="score-wrapper">
-                  <p>만족도<span class="gray">(최고 평점)</span></p>
-                  <p class="score">
-                    <span class="r-score">4.0</span>
-                    <span class="p-score">/&nbsp;&nbsp;&nbsp;5.0 </span>
-                  </p>
-                </div>
-              </div>
-              <span class="warning"
-                >처리결과에 대한 만족도를 선택해주세요.(만족도 평가는 1회만
-                가능합니다.)</span
-              >
-            </div>
+            <div></div>
           </div>
         </div>
         <div class="btn-group" role="group">
-          <a href="./apply-history.html" class="btn btn-primary go-list">
+          <a
+            href="./status-detail-accept-success.html"
+            class="btn btn-primary go-accept"
+          >
+            <span class="sr-only">콜수락</span>
+          </a>
+          <a href="./status-list.html" class="btn btn-primary go-list gray">
             <span class="sr-only">목록보기</span>
-          </a>
-          <a
-            href="./apply-history-detail-edit.html"
-            class="btn btn-primary go-edit"
-          >
-            <span class="sr-only">수정하기</span>
-          </a>
-          <a
-            href="./apply-history-detail-cancel.html"
-            class="btn btn-primary go-app-cancel"
-          >
-            <span class="sr-only">신청취소</span>
           </a>
         </div>
       </div>
@@ -299,17 +271,18 @@
           &nbsp;Hanyang University. All Rights Reserved.
         </div>
         <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>이용약관</span>
           </a>
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>개인정보처리방침</span>
           </a>
         </div>
       </div>
     </footer>
-    <div class="employee-btn-wrapper btn btn-block">
-      <p>근무시작&nbsp;&nbsp;<span class="timestamp">00:00:00</span></p>
+    <div class="employee-btn-wrapper btn btn-block" id="workTime">
+      <span class="text">근무시작&nbsp;&nbsp;</span>
+      <span class="timestamp">00:00:00</span>
     </div>
     <div class="mypage-box">
       <div class="my-dropdown">

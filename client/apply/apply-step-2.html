@@ -175,21 +175,119 @@
       <div class="conts-wrap">
         <h3 class="page-title">
           <span class="title">민원접수</span>
-          <p class="desc"><strong>민원접수</strong>가 완료되었습니다.</p>
+          <p class="desc"><strong>민원정보</strong>를 입력해주세요</p>
         </h3>
         <div class="step">
           <p class="step-1">민원유형 선택</p>
-          <p class="step-2">상세정보 입력</p>
-          <p class="step-3 on">민원접수 완료</p>
+          <p class="step-2 on">상세정보 입력</p>
+          <p class="step-3">민원접수 완료</p>
         </div>
-        <div class="finish">
-          <p class="text">
-            <strong>민원처리</strong>가 시작되면 알려 드리겠습니다.
-          </p>
+        <div class="info">
+          <div class="left">
+            <div class="avatar"></div>
+            <div class="l-info">
+              <p class="name">이민석</p>
+              <p class="email">smart2022@naver.com</p>
+            </div>
+          </div>
+          <div class="right">
+            <p class="phone-img"></p>
+            <p class="tel">010-2220-1234</p>
+          </div>
         </div>
-        <div class="btn-group" role="group" aria-label="접수내역바로가기버튼">
-          <a href="../history/history.html" class="btn btn-primary go-history">
-            <span class="sr-only">접수내역 바로가기</span>
+        <form class="cms-form">
+          <div class="box box-primary">
+            <div class="box-body form-horizontal">
+              <div class="form-group">
+                <span class="control-label col-sm-3">민원유형</span>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option selected>사건사고 신고</option>
+                    <option>출입보안 관련</option>
+                    <option>안전시설 관련</option>
+                    <option>엘리베이터 관련</option>
+                    <option>일반시설 관련</option>
+                    <option>주차 관련</option>
+                    <option>행사지원 관련</option>
+                    <option>자료요청</option>
+                    <option>기타문의</option>
+                  </select>
+                  <select class="form-control">
+                    <option>화재발생</option>
+                    <option>교통사고</option>
+                    <option>인명피해</option>
+                    <option>실험실 사고</option>
+                    <option>위험물 신고</option>
+                    <option>긴급누수</option>
+                    <option selected>분실물(신고,습득)</option>
+                    <option>금연구역 흡연</option>
+                    <option>수상자 신고</option>
+                    <option>기타현장확인 요청</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="control-label col-sm-3">건물</span>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option selected>미선택</option>
+                    <option>FTC관</option>
+                    <option>HIT관</option>
+                    <option>IT.BC관</option>
+                    <option>개나리관</option>
+                    <option>건축관</option>
+                    <option>경영관</option>
+                    <option>경제금융관</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="control-label col-sm-3">상세위치</span>
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="자세한 위치를 입력해주세요"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="control-label col-sm-3">민원내용</span>
+                <div class="col-sm-9">
+                  <textarea
+                    class="form-control"
+                    placeholder="민원내용을 간략하게 입력해주세요"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="control-label hidden">파일첨부</span>
+                <div class="col-sm-9 cms-file-md-upload-inner">
+                  <label for="pic-file">
+                    <span
+                      ><strong>사진파일 업로드</strong
+                      >&nbsp;&nbsp;&nbsp;마우스로 이미지파일을 끌어오세요</span
+                    >
+                  </label>
+                  <input type="file" id="pic-file" multiple />
+                </div>
+              </div>
+              <div class="agree">
+                <label class="btn btn-lg">
+                  <input type="checkbox" class="sr-only" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="btn-group" role="group" aria-label="신청및취소버튼">
+          <a href="./apply-final.html" class="btn btn-primary go-apply">
+            <span class="sr-only">신청하기</span>
+          </a>
+          <a href="../main.html" class="btn btn-primary go-cancel">
+            <span class="sr-only">취소하기</span>
           </a>
         </div>
       </div>

@@ -134,31 +134,39 @@
       </div>
       <div class="container-fluid lnb">
         <ul class="navbar navbar-client">
-          <li class="nav-item">
-            <a href="../apply/apply-step1.html" class="nav-link">민원접수</a>
-          </li>
           <li class="nav-item on">
-            <a href="./apply-history.html" class="nav-link">접수내역</a>
+            <a href="../apply/apply-step.html" class="nav-link">민원접수</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="../history/history.html" class="nav-link">접수내역</a>
+          </li>
+          <li class="nav-item">
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
         <ul class="navbar navbar-employee">
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원콜현황</a>
+            <a href="../../employee/status/status-list.html" class="nav-link"
+              >민원콜현황</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원처리</a>
+            <a href="../../employee/doing/doing-list.html" class="nav-link"
+              >민원처리</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원접수</a>
+            <a href="../../employee/apply/apply-step.html" class="nav-link"
+              >민원접수</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">접수내역</a>
+            <a href="../../employee/history/history.html" class="nav-link"
+              >접수내역</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
       </div>
@@ -200,7 +208,7 @@
         </div>
         <div class="list-group-type1">
           <div class="list-group">
-            <a href="./apply-history-detail.html" class="list-group-item">
+            <a href="./history-detail.html" class="list-group-item">
               <div class="left">
                 <div class="status">
                   <span class="sr-only">reg</span>
@@ -249,7 +257,7 @@
                 <p class="charge"></p>
               </div>
             </a>
-            <a href="./apply-history-detail-ing.html" class="list-group-item">
+            <a href="./history-detail-ing.html" class="list-group-item">
               <div class="left">
                 <div class="status">
                   <span class="sr-only">ing</span>
@@ -318,10 +326,7 @@
                 <p class="charge">시설팀</p>
               </div>
             </a>
-            <a
-              href="./apply-history-detail-finish.html"
-              class="list-group-item"
-            >
+            <a href="./history-detail-finish.html" class="list-group-item">
               <div class="left">
                 <div class="status">
                   <span class="sr-only">complete</span>
@@ -411,17 +416,18 @@
           &nbsp;Hanyang University. All Rights Reserved.
         </div>
         <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>이용약관</span>
           </a>
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>개인정보처리방침</span>
           </a>
         </div>
       </div>
     </footer>
-    <div class="employee-btn-wrapper btn btn-block">
-      <p>근무시작&nbsp;&nbsp;<span class="timestamp">00:00:00</span></p>
+    <div class="employee-btn-wrapper btn btn-block" id="workTime">
+      <span class="text">근무시작&nbsp;&nbsp;</span>
+      <span class="timestamp">00:00:00</span>
     </div>
     <div class="mypage-box">
       <div class="my-dropdown">

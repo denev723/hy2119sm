@@ -134,31 +134,39 @@
       </div>
       <div class="container-fluid lnb">
         <ul class="navbar navbar-client">
-          <li class="nav-item">
-            <a href="../apply/apply-step1.html" class="nav-link">민원접수</a>
-          </li>
           <li class="nav-item on">
-            <a href="./apply-history.html" class="nav-link">접수내역</a>
+            <a href="../apply/apply-step.html" class="nav-link">민원접수</a>
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="../history/history.html" class="nav-link">접수내역</a>
+          </li>
+          <li class="nav-item">
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
         <ul class="navbar navbar-employee">
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원콜현황</a>
+            <a href="../../employee/status/status-list.html" class="nav-link"
+              >민원콜현황</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원처리</a>
+            <a href="../../employee/doing/doing-list.html" class="nav-link"
+              >민원처리</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">민원접수</a>
+            <a href="../../employee/apply/apply-step.html" class="nav-link"
+              >민원접수</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">접수내역</a>
+            <a href="../../employee/history/history.html" class="nav-link"
+              >접수내역</a
+            >
           </li>
           <li class="nav-item">
-            <a href="javascript:void(0)" class="nav-link">공지사항</a>
+            <a href="#nothing" class="nav-link">공지사항</a>
           </li>
         </ul>
       </div>
@@ -169,10 +177,10 @@
           <span class="title">접수내역</span>
           <p class="desc">접수된 <strong>민원내용</strong>을 확인해주세요</p>
         </h3>
-        <form class="cms-form">
-          <div class="form-group">
-            <span class="badge badge-reg">
-              <span class="sr-only">신청</span>
+        <div class="detail-wrapper">
+          <div class="detail-row">
+            <span class="badge badge-complete">
+              <span class="sr-only">완료</span>
             </span>
             <span
               class="cms-type-internal-time-date-time-absolute"
@@ -180,100 +188,121 @@
               >2022-01-03 17:35</span
             >
           </div>
-          <div class="form-group row">
-            <span class="control-label col-sm-3">민원유형</span>
-            <div class="col-sm-9">
-              <select class="form-control">
-                <option selected>사건사고 신고</option>
-                <option>출입보안 관련</option>
-                <option>안전시설 관련</option>
-                <option>엘리베이터 관련</option>
-                <option>일반시설 관련</option>
-                <option>주차 관련</option>
-                <option>행사지원 관련</option>
-                <option>자료요청</option>
-                <option>기타문의</option>
-              </select>
-              <select class="form-control">
-                <option>화재발생</option>
-                <option>교통사고</option>
-                <option>인명피해</option>
-                <option>실험실 사고</option>
-                <option>위험물 신고</option>
-                <option>긴급누수</option>
-                <option selected>업무차량 입출차(VIP)</option>
-                <option>분실물(신고,습득)</option>
-                <option>금연구역 흡연</option>
-                <option>수상자 신고</option>
-                <option>기타현장확인 요청</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <span class="control-label col-sm-3">건물</span>
-            <div class="col-sm-9">
-              <select class="form-control">
-                <option>미선택</option>
-                <option>FTC관</option>
-                <option>HIT관</option>
-                <option>IT.BC관</option>
-                <option>개나리관</option>
-                <option>건축관</option>
-                <option>경영관</option>
-                <option>경제금융관</option>
-                <option selected>정몽구미래자동차연구센터</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <span class="control-label col-sm-3">상세위치</span>
-            <div class="col-sm-9">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="자세한 위치를 입력해주세요"
-                value="지하편의점 앞"
-              />
-            </div>
-          </div>
-          <div class="form-group row">
-            <span class="control-label col-sm-3">민원내용</span>
-            <div class="col-sm-9">
-              <div class="textarea form-control" contenteditable="true">
-                <p>긴급처리 요청</p>
-                <p>정몽구미래자동차연구센터 건물 지하편의점 앞에서</p>
-                <p>업무차량이 진입불가 중입니다.</p>
-                <p>빠른 업무처리 바랍니다.</p>
-                <br />
-                <img src="../../src/images/temp/accident.png" alt="" />
+          <div class="detail-row">
+            <span class="title">민원유형</span>
+            <div>
+              <div>
+                <p class="form-control-static">사건사고 신고</p>
+              </div>
+              <div>
+                <p class="form-control-static">업무차량 입출차(VIP)</p>
               </div>
             </div>
           </div>
-          <div class="form-group row">
-            <span class="control-label hidden">파일첨부</span>
-            <div class="col-sm-9 cms-file-md-upload-inner">
-              <label for="pic-file">
-                <span
-                  ><strong>사진파일 업로드</strong>&nbsp;&nbsp;&nbsp;마우스로
-                  이미지파일을 끌어오세요</span
-                >
-              </label>
-              <input type="file" id="pic-file" multiple />
+          <div class="detail-row">
+            <span class="title">건물</span>
+            <div>
+              <div>
+                <p class="form-control-static">정몽구미래자동차연구센터</p>
+              </div>
             </div>
           </div>
-        </form>
+          <div class="detail-row">
+            <span class="title">상세위치</span>
+            <div>
+              <div>
+                <p class="form-control-static">지하편의점 앞</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="title">민원내용</span>
+            <div>
+              <p>긴급처리 요청</p>
+              <p>정몽구미래자동차연구센터 건물 지하편의점 앞에서</p>
+              <p>업무차량이 진입불가 중입니다.</p>
+              <p>빠른 업무처리 바랍니다.</p>
+              <br />
+              <img src="../../src/images/temp/accident.png" alt="" />
+            </div>
+          </div>
+          <div class="detail-row employee">
+            <span class="title">담당 근무자</span>
+            <div>
+              <div>
+                <p class="form-control-static">이민석</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row finish-date">
+            <span class="title">처리완료 일시</span>
+            <div>
+              <div>
+                <p class="form-control-static">2022-01-03 19:17</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row finish-content">
+            <span class="title">민원내용</span>
+            <div>
+              <p>확인했습니다.</p>
+              <p>차량 진입이 완료되었습니다.</p>
+              <br />
+              <img src="../../src/images/temp/accident-finish.png" alt="" />
+            </div>
+          </div>
+          <div class="detail-row rating">
+            <span class="title">만족도 평가</span>
+            <div>
+              <form class="cms-form">
+                <fieldset>
+                  <legend>만족도 평가</legend>
+                  <input type="radio" name="rating" value="5" id="rate5" />
+                  <label for="rate5"> </label>
+                  <input type="radio" name="rating" value="4" id="rate4" />
+                  <label for="rate4"> </label>
+                  <input type="radio" name="rating" value="3" id="rate3" />
+                  <label for="rate3"> </label>
+                  <input type="radio" name="rating" value="2" id="rate2" />
+                  <label for="rate2"> </label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    value="1"
+                    id="rate1"
+                    checked
+                  />
+                  <label for="rate1"> </label>
+                </fieldset>
+                <div class="btn-group">
+                  <a
+                    href="./history-detail-finish-rated.html"
+                    role="button"
+                    class="btn btn-primary rate-btn"
+                  >
+                    <span class="sr-only">평가하기</span>
+                  </a>
+                </div>
+              </form>
+              <span class="warning"
+                >처리결과에 대한 만족도를 선택해주세요.(만족도 평가는 1회만
+                가능합니다.)</span
+              >
+            </div>
+          </div>
+        </div>
         <div class="btn-group" role="group">
-          <a
-            href="./apply-history-detail.html"
-            class="btn btn-primary go-edit blue"
-          >
-            <span class="sr-only">신청취소</span>
+          <a href="./history.html" class="btn btn-primary go-list">
+            <span class="sr-only">목록보기</span>
+          </a>
+          <a href="./history-detail-edit.html" class="btn btn-primary go-edit">
+            <span class="sr-only">수정하기</span>
           </a>
           <a
-            href="javascript:history.back()"
-            class="btn btn-primary go-cancel small"
+            href="./history-detail-cancel.html"
+            class="btn btn-primary go-app-cancel"
           >
-            <span class="sr-only">취소하기</span>
+            <span class="sr-only">신청취소</span>
           </a>
         </div>
       </div>
@@ -289,17 +318,18 @@
           &nbsp;Hanyang University. All Rights Reserved.
         </div>
         <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>이용약관</span>
           </a>
-          <a href="javascript:void(0)" class="btn btn-link">
+          <a href="#nothing" class="btn btn-link">
             <span>개인정보처리방침</span>
           </a>
         </div>
       </div>
     </footer>
-    <div class="employee-btn-wrapper btn btn-block">
-      <p>근무시작&nbsp;&nbsp;<span class="timestamp">00:00:00</span></p>
+    <div class="employee-btn-wrapper btn btn-block" id="workTime">
+      <span class="text">근무시작&nbsp;&nbsp;</span>
+      <span class="timestamp">00:00:00</span>
     </div>
     <div class="mypage-box">
       <div class="my-dropdown">
