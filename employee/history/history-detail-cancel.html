@@ -233,9 +233,58 @@
         </div>
       </div>
     </footer>
-    <div class="employee-btn-wrapper btn btn-block" id="workTime">
-      <span class="text">근무시작&nbsp;&nbsp;</span>
-      <span class="timestamp">00:00:00</span>
+    <div class="bottom-wrapper">
+      <div class="chatting-box nochat">
+        <div class="btn-wrapper">
+          <div class="hide-box">
+            <a href="#hide" class="btn hide-btn">
+              <span class="sr-only">채팅창 숨기기</span>
+            </a>
+          </div>
+          <div class="reload-box">
+            <a href="#reload" role="button" class="btn reload-btn disabled">
+              <span class="sr-only">새로고침</span>
+            </a>
+          </div>
+        </div>
+        <div class="list-commt">
+          <div class="box-type1">
+            <p>[이민석] 저의 업무가 아닌것 같습니다.</p>
+            <p>[관리자] 시설팀에 인원이 없어 진행요청 드립니다.</p>
+            <p>[이민석] 그럼 업무시작하겠습니다.</p>
+          </div>
+          <form action="cms-form">
+            <div class="input-group">
+              <input
+                type="text"
+                name="content"
+                class="form-control"
+                placeholder="문의내용을 입력해주세요"
+              />
+              <div class="input-group-btn">
+                <button class="btn btn-success .form-control" id="message">
+                  <span class="sr-only">문의</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="list-inquiry">
+          <p class="text-truncate">
+            이민석 (A조 1구역)&nbsp;
+            <span>
+              배정일시 :
+              <span class="cms-type-internal-time-date-time-relative"
+                >28분전</span
+              >
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="employee-btn-wrapper btn btn-block" id="workTime">
+        <span class="text">근무시작&nbsp;&nbsp;</span>
+        <span class="timestamp">00:00:00</span>
+      </div>
     </div>
     <div class="mypage-box">
       <div class="my-dropdown">

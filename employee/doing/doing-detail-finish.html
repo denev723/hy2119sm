@@ -173,232 +173,134 @@
           <span class="title">접수내역</span>
           <p class="desc">접수된 <strong>민원내용</strong>을 확인해주세요</p>
         </h3>
-        <div class="filter-wrapper">
-          <a href="#filter-open" class="btn filter-btn" role="button">필터</a>
-          <ul>
-            <li>
-              <label for="all">
-                <input type="radio" name="filter" id="all" checked />
-                전체
-              </label>
-            </li>
-            <li>
-              <label for="reg">
-                <input type="radio" name="filter" id="reg" />
-                신청
-              </label>
-            </li>
-            <li>
-              <label for="ing">
-                <input type="radio" name="filter" id="ing" />
-                진행
-              </label>
-            </li>
-            <li>
-              <label for="complete">
-                <input type="radio" name="filter" id="complete" />
-                처리완료
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="list-group-type1">
-          <div class="list-group">
-            <a href="./history-detail.html" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">reg</span>
-                  <span class="badge badge-reg"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[사건사고 신고]</span> 업무차량
-                    입출차(VIP)
-                  </p>
-                  <small class="location"
-                    >정몽구미래자동차연구센터 > 지하편의점 앞</small
+        <div class="detail-wrapper">
+          <div class="detail-row">
+            <span class="badge badge-complete">
+              <span class="sr-only">완료</span>
+            </span>
+            <span
+              class="cms-type-internal-time-date-time-absolute"
+              title="2022-01-03 17:35"
+              >2022-01-03 17:35</span
+            >
+          </div>
+          <div class="detail-row">
+            <span class="title">민원유형</span>
+            <div>
+              <div>
+                <p class="form-control-static">사건사고 신고</p>
+              </div>
+              <div>
+                <p class="form-control-static">업무차량 입출차(VIP)</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="title">건물</span>
+            <div>
+              <div>
+                <p class="form-control-static">정몽구미래자동차연구센터</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="title">상세위치</span>
+            <div>
+              <div>
+                <p class="form-control-static">지하편의점 앞</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row">
+            <span class="title">민원내용</span>
+            <div>
+              <p>긴급처리 요청</p>
+              <p>정몽구미래자동차연구센터 건물 지하편의점 앞에서</p>
+              <p>업무차량이 진입불가 중입니다.</p>
+              <p>빠른 업무처리 바랍니다.</p>
+              <br />
+              <img src="../../src/images/temp/accident.png" alt="" />
+            </div>
+          </div>
+          <div class="detail-row employee">
+            <span class="title">담당 근무자</span>
+            <div>
+              <div>
+                <p class="form-control-static">이민석</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row finish-date">
+            <span class="title">처리완료 일시</span>
+            <div>
+              <div>
+                <p class="form-control-static">2022-01-03 19:17</p>
+              </div>
+            </div>
+          </div>
+          <div class="detail-row finish-content">
+            <span class="title">민원내용</span>
+            <div>
+              <p>확인했습니다.</p>
+              <p>차량 진입이 완료되었습니다.</p>
+              <br />
+              <img src="../../src/images/temp/accident-finish.png" alt="" />
+            </div>
+          </div>
+          <div class="detail-row rating">
+            <span class="title">만족도 평가</span>
+            <div>
+              <form class="cms-form">
+                <fieldset>
+                  <legend>만족도 평가</legend>
+                  <input type="radio" name="rating" value="5" id="rate5" />
+                  <label for="rate5"> </label>
+                  <input type="radio" name="rating" value="4" id="rate4" />
+                  <label for="rate4"> </label>
+                  <input type="radio" name="rating" value="3" id="rate3" />
+                  <label for="rate3"> </label>
+                  <input type="radio" name="rating" value="2" id="rate2" />
+                  <label for="rate2"> </label>
+                  <input
+                    type="radio"
+                    name="rating"
+                    value="1"
+                    id="rate1"
+                    checked
+                  />
+                  <label for="rate1"> </label>
+                </fieldset>
+                <div class="btn-group">
+                  <a
+                    href="./history-detail-finish-rated.html"
+                    role="button"
+                    class="btn btn-primary rate-btn"
                   >
+                    <span class="sr-only">평가하기</span>
+                  </a>
                 </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge"></p>
-              </div>
-            </a>
-            <a href="#nothing" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">reg</span>
-                  <span class="badge badge-reg"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[엘리베이터]</span> 엘리베이터 고장
-                  </p>
-                  <small class="location"
-                    >한양플라자(학생복지관) 건물 > 엘리베이터</small
-                  >
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge"></p>
-              </div>
-            </a>
-            <a href="./history-detail-ing.html" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">ing</span>
-                  <span class="badge badge-ing"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[사건사고 신고]</span> 업무차량
-                    입출차(VIP)
-                  </p>
-                  <small class="location"
-                    >정몽구미래자동차연구센터 > 지하편의점 앞</small
-                  >
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge">시설팀</p>
-              </div>
-            </a>
-            <a href="#nothing" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">trans</span>
-                  <span class="badge badge-trans"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[일반시설]</span> 건물 유지보수 관련
-                  </p>
-                  <small class="location">HIT건물 > 1층 정문</small>
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge">관리처 관재팀</p>
-              </div>
-            </a>
-            <a href="#nothing" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">cancel</span>
-                  <span class="badge badge-cancel"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[기타문의]</span> 기타 현장확인 요청
-                  </p>
-                  <small class="location">백남학술정보관 > 2층 계단</small>
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge">시설팀</p>
-              </div>
-            </a>
-            <a href="./history-detail-finish.html" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">complete</span>
-                  <span class="badge badge-complete"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[사건사고 신고]</span> 업무차량
-                    입출차(VIP)
-                  </p>
-                  <small class="location"
-                    >정몽구미래자동차연구센터 > 지하편의점 앞</small
-                  >
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge">시설팀</p>
-              </div>
-            </a>
-            <a href="#nothing" class="list-group-item">
-              <div class="left">
-                <div class="status">
-                  <span class="sr-only">c-cancel</span>
-                  <span class="badge badge-c-cancel"></span>
-                </div>
-                <div class="content">
-                  <p class="title">
-                    <span class="category">[출입보안]</span> 출입보안 기기 오류
-                  </p>
-                  <small class="location">역사관(구 본관) 건물 > 정문</small>
-                </div>
-              </div>
-              <div class="right">
-                <span
-                  class="cms-type-internal-time-date-time-absolute"
-                  title="2021-01-03 17:35"
-                  >2021-01-03 17:35</span
-                >
-                <p class="charge">시설팀</p>
-              </div>
-            </a>
+              </form>
+              <span class="warning"
+                >처리결과에 대한 만족도를 선택해주세요.(만족도 평가는 1회만
+                가능합니다.)</span
+              >
+            </div>
           </div>
         </div>
-        <ul class="pagination">
-          <li class="page-item">
-            <a
-              href="#nothing"
-              class="page-link page-prev"
-              aria-label="Previous"
-            ></a>
-          </li>
-          <li class="page-item active">
-            <a href="#nothing" class="page-link">1</a>
-          </li>
-          <li class="page-item">
-            <a href="#nothing" class="page-link">2</a>
-          </li>
-          <li class="page-item">
-            <a href="#nothing" class="page-link">3</a>
-          </li>
-          <li class="page-item">
-            <a href="#nothing" class="page-link">4</a>
-          </li>
-          <li class="page-item">
-            <a
-              href="#nothing"
-              class="page-link page-next"
-              aria-label="Next"
-            ></a>
-          </li>
-        </ul>
+        <div class="btn-group" role="group">
+          <a href="./history.html" class="btn btn-primary go-list">
+            <span class="sr-only">목록보기</span>
+          </a>
+          <a href="./history-detail-edit.html" class="btn btn-primary go-edit">
+            <span class="sr-only">수정하기</span>
+          </a>
+          <a
+            href="./history-detail-cancel.html"
+            class="btn btn-primary go-app-cancel"
+          >
+            <span class="sr-only">신청취소</span>
+          </a>
+        </div>
       </div>
       <div class="top-btn">
         <a href="#top"></a>

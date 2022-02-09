@@ -247,15 +247,50 @@
             <div></div>
           </div>
         </div>
+        <div class="complete-box">
+          <div class="flex-wrapper">
+            <div class="btn-wrapper">
+              <a href="#close" class="btn-close">닫기</a>
+            </div>
+            <div class="content">
+              <p class="text">업무를 <strong>완료</strong> 하였습니다.</p>
+              <form class="cms-form">
+                <div class="form-group">
+                  <div>
+                    <textarea
+                      class="form-control"
+                      placeholder="완료된 업무내용을 간략하게 입력해주세요"
+                      cols="30"
+                      rows="10"
+                      name="complete-editor"
+                    ></textarea>
+                  </div>
+                  <div class="cms-file-md-upload-inner">
+                    <label for="pic-file">
+                      <span
+                        ><strong>사진파일 업로드</strong
+                        >&nbsp;&nbsp;&nbsp;마우스로 이미지파일을
+                        끌어오세요</span
+                      >
+                    </label>
+                    <input type="file" id="pic-file" multiple />
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <a href="./doing-detail-finish.html" class="btn btn-success">
+                    <span class="sr-only">확인</span>
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div class="btn-group" role="group">
-          <a href="./doing-list.html" class="btn btn-primary go-list">
+          <a href="#completebox-on" class="btn btn-primary go-complete">
+            <span class="sr-only">업무완료</span>
+          </a>
+          <a href="#nothing" class="btn btn-primary go-list gray">
             <span class="sr-only">목록보기</span>
-          </a>
-          <a href="#nothing" class="btn btn-primary go-edit">
-            <span class="sr-only">수정하기</span>
-          </a>
-          <a href="#nothing" class="btn btn-primary go-app-cancel">
-            <span class="sr-only">신청취소</span>
           </a>
         </div>
       </div>
@@ -281,19 +316,24 @@
       </div>
     </footer>
     <div class="bottom-wrapper">
-      <div class="chatting-box">
-        <button class="btn reload-btn">
-          <span class="sr-only">새로고침</span>
-        </button>
+      <div class="chatting-box nochat">
+        <div class="btn-wrapper">
+          <div class="hide-box">
+            <a href="#hide" class="btn hide-btn">
+              <span class="sr-only">채팅창 숨기기</span>
+            </a>
+          </div>
+          <div class="reload-box">
+            <a href="#reload" role="button" class="btn reload-btn disabled">
+              <span class="sr-only">새로고침</span>
+            </a>
+          </div>
+        </div>
         <div class="list-commt">
           <div class="box-type1">
-            <p>
-              [이민석] 저의 업무가 아닌것 같습니다.
-              <br />
-              [관리자] 시설팀에 인원이 없어 진행요청 드립니다.
-              <br />
-              [이민석] 그럼 업무시작하겠습니다.
-            </p>
+            <p>[이민석] 저의 업무가 아닌것 같습니다.</p>
+            <p>[관리자] 시설팀에 인원이 없어 진행요청 드립니다.</p>
+            <p>[이민석] 그럼 업무시작하겠습니다.</p>
           </div>
           <form action="cms-form">
             <div class="input-group">
@@ -304,7 +344,7 @@
                 placeholder="문의내용을 입력해주세요"
               />
               <div class="input-group-btn">
-                <button class="btn btn success">
+                <button class="btn btn-success .form-control" id="message">
                   <span class="sr-only">문의</span>
                 </button>
               </div>
@@ -313,9 +353,9 @@
         </div>
         <div class="list-inquiry">
           <p class="text-truncate">
-            이민석 (A조 1구역)
+            이민석 (A조 1구역)&nbsp;
             <span>
-              배정일시:
+              배정일시 :
               <span class="cms-type-internal-time-date-time-relative"
                 >28분전</span
               >

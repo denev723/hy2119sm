@@ -4,8 +4,10 @@ $(document).ready(function () {
     $(".mypage-box").addClass("on");
   });
 
-  $(".btn-close[href$='#close']").click(function () {
-    $(".mypage-box").removeClass("on");
+  $(".btn-close[href='#close']").each(function () {
+    $(this).click(function () {
+      $(this).parent().parent().parent().removeClass("on");
+    });
   });
 
   // copyright
@@ -20,7 +22,8 @@ $(document).ready(function () {
     pause: 5000,
     speed: 1100,
     pager: true,
-    pagerCustom: "#bx-pager"
+    pagerCustom: "#bx-pager",
+    touchEnabled: navigator.maxTouchPoints > 0
   });
 
   // 메인페이지 서브 슬라이더
@@ -35,6 +38,13 @@ $(document).ready(function () {
     centerMode: true,
     arrows: false
   });
+
+  var footerHeight = Math.round(
+    $(".site-footer").outerHeight() +
+      $(".bottom-wrapper .employee-btn-wrapper").outerHeight()
+  );
+  var bottomResult = footerHeight - 50 + "px";
+  $(".top-btn").css({ bottom: bottomResult });
 
   if ($(".box-body").length > 1) {
     $(".box-body").each(function (i, item) {
@@ -224,6 +234,37 @@ $(document).ready(function () {
     }
   });
 
+  $(".box-type1 p").each(function () {
+    var pText = $(this).text().trim();
+    if (pText.includes("관리자")) {
+      $(this).addClass("gray");
+    }
+  });
+
+  $("#message").click(function (e) {
+    e.preventDefault();
+    var text = $("input[name='content']");
+    if (text.length > 0) {
+      var textEl = "<p>" + "[이민석] " + text.val() + "</p>";
+      $(".box-type1").append(textEl);
+    }
+    text.val("");
+  });
+
+  $("a[href='#hide']").click(function () {
+    $(".chatting-box").toggleClass("nochat");
+    $(".reload-btn").toggleClass("disabled");
+  });
+
+  $("a[href='#reload']").click(function () {
+    location.reload();
+  });
+
+  $("a[href='#completebox-on']").click(function () {
+    $(".complete-box").addClass("on");
+    $(window).scrollTop(0);
+  });
+
   var body = $("body");
   var loca = location.pathname;
   var classification = loca.split("/");
@@ -256,8 +297,9 @@ $(document).ready(function () {
     } else {
       var removeDot = pageNameSplit.split(".")[0];
       result = removeDot.split("-");
-      console.log(result);
-      if (result[result.length - 1] === "2") {
+      if (result[result.length - 1] === "1") {
+        body.addClass("page-apply-second");
+      } else if (result[result.length - 1] === "2") {
         body.addClass("page-apply-middle");
       } else if (result[result.length - 1] === "final") {
         body.addClass("page-apply-final");
@@ -273,11 +315,15 @@ $(document).ready(function () {
     }
   }
 
-  if (classification[1] === "client") {
-    $(".navbar-employee, .employee-btn-wrapper").hide();
+  if (classification[1] !== "employee") {
+    $(".navbar-employee, .bottom-wrapper").hide();
     $(".site-footer").css({ "margin-bottom": "0" });
-  } else if (classification[1] === "employee") {
+  } else {
     $(".navbar-client").hide();
+  }
+
+  if (classification[1] === "employee") {
+    $(".rating").hide();
   }
 
   if (loca === "/client/apply/apply-step1.html") {
@@ -286,5 +332,10 @@ $(document).ready(function () {
 
   if ($("div[aria-label='로그인버튼']").length > 0) {
     $("body").addClass("page-login");
+  }
+
+  if (!$(body).hasClass("page-doing-detail")) {
+    $(".chatting-box").hide();
+    $(".bottom-wrapper").css({ "border-top": "none" });
   }
 });
