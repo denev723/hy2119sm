@@ -246,7 +246,8 @@ $(document).ready(function () {
     var text = $("input[name='content']");
     if (text.length > 0) {
       var textEl = "<p>" + "[이민석] " + text.val() + "</p>";
-      $(".box-type1").append(textEl);
+      var scrollEnd = $(".box-type1").prop("scrollHeight");
+      $(".box-type1").append(textEl).scrollTop(scrollEnd);
     }
     text.val("");
   });
@@ -265,14 +266,30 @@ $(document).ready(function () {
     $(window).scrollTop(0);
   });
 
+  $("button.accept-btn").click(function () {
+    $(".accept-box").addClass("on");
+    $(window).scrollTop(0);
+  });
+
+  $("button.reject-btn").click(function () {
+    $(".reject-box").addClass("on");
+    $(window).scrollTop(0);
+  });
+
   var body = $("body");
   var loca = location.pathname;
   var classification = loca.split("/");
   var pageNameSplit = classification[classification.length - 1];
   var result;
 
+  if (classification[2] === "status") {
+    $(".nav-item.on .nav-link").css({ color: "#ff7800" });
+  }
+
   $(".navbar .nav-item a").each(function () {
     var href = $(this).attr("href").split("/");
+    console.log(href);
+    console.log(pageNameSplit.split("-")[0]);
     if (pageNameSplit.includes("-")) {
       if (href[1] === pageNameSplit.split("-")[0]) {
         $(this).parent().addClass("on").siblings().removeClass("on");
@@ -315,11 +332,14 @@ $(document).ready(function () {
     }
   }
 
-  if (classification[1] !== "employee") {
-    $(".navbar-employee, .bottom-wrapper").hide();
+  if (classification[1] === "client") {
+    $(".navbar-employee, .navbar-transfer,.bottom-wrapper").hide();
+    $(".site-footer").css({ "margin-bottom": "0" });
+  } else if (classification[1] === "transfer") {
+    $(".navbar-employee, .navbar-client,.bottom-wrapper").hide();
     $(".site-footer").css({ "margin-bottom": "0" });
   } else {
-    $(".navbar-client").hide();
+    $(".navbar-client, .navbar-transfer").hide();
   }
 
   if (classification[1] === "employee") {
