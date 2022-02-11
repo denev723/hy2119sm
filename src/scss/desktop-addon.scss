@@ -27,6 +27,7 @@
 
       .user-name {
         font-size: 24px;
+        margin: 0 0 10px;
       }
 
       .login-time {
@@ -36,7 +37,6 @@
 
       .btn-group {
         margin-bottom: 31px;
-
         .btn-primary {
           width: 120px;
           height: 60px;
@@ -51,10 +51,10 @@
 }
 
 .site-header {
-  max-width: 1400px;
+  max-width: 1420px;
   width: 100%;
   margin: auto;
-  padding: 11px 0;
+  padding: 11px 10px;
 
   .header-wrapper {
     .main-logo {
@@ -69,8 +69,6 @@
     }
 
     .gnb {
-      margin-top: 16px;
-
       .ico-my {
         background-size: 22px 27px;
         width: 50px;
@@ -90,6 +88,7 @@
     }
   }
   .lnb {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -393,6 +392,7 @@
   }
 
   .top-btn {
+    display: block;
     position: absolute;
     right: 40px;
     a {
@@ -448,6 +448,7 @@
         .hide-btn {
           width: 17px;
           height: 14px;
+          background-size: 17px 11px;
         }
       }
 
@@ -475,6 +476,7 @@
           &::before {
             width: 24px;
             height: 24px;
+            top: 4px;
           }
         }
       }
@@ -528,6 +530,7 @@
 
     .btn-group {
       float: right;
+      margin-left: 0;
 
       .btn-link {
         font-size: 16px;
@@ -658,6 +661,7 @@
 
               div:first-child {
                 margin-right: 10px;
+                margin-bottom: 0;
               }
             }
           }
@@ -805,7 +809,8 @@
 
     .conts-wrap {
       max-width: 720px;
-      margin: 0;
+      margin: 0 auto;
+      padding: 0;
 
       .sub-wrap {
         width: 468px;
@@ -833,7 +838,7 @@
             width: 100%;
 
             .btn {
-              padding: 21px 90px;
+              padding: 21px 0px;
               margin: 8px 0;
               font-size: 18px;
             }
@@ -944,7 +949,10 @@
   .btn-primary {
     width: 200px;
     height: 90px;
-    margin: 0 7px;
+    margin: 0;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
   }
 
   .go-cancel {
@@ -959,7 +967,6 @@
 
   .go-list {
     width: 170px;
-    margin-right: 6px;
   }
 
   .go-accept {
@@ -972,7 +979,6 @@
 
   .go-edit {
     width: 170px;
-    margin-right: 6px;
   }
 
   .go-app-cancel {
@@ -1162,6 +1168,832 @@
 
         .sub-footer {
           padding: 30px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.page-mypage {
+  .sub-wrap {
+    margin-top: 69px;
+
+    .sub-content {
+      margin: 0 auto 80px;
+      max-width: 720px;
+
+      .summary {
+        text-align: center;
+        margin-bottom: 39px;
+
+        .title {
+          font-size: 19px;
+          width: 110px;
+          height: 60px;
+          border-radius: 30px;
+        }
+      }
+
+      .box-primary {
+        .box-body {
+          padding: 30px 0;
+          margin-bottom: 50px;
+
+          .form-group {
+            &:nth-child(1) {
+              .col-sm-9 {
+                max-width: 470px;
+              }
+            }
+
+            &:nth-child(5) {
+              .col-sm-9 {
+                max-width: 470px;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 25px;
+            }
+
+            .control-label {
+              font-size: 20px;
+              padding: 0;
+              margin-bottom: 10px;
+            }
+
+            .col-sm-9 {
+              height: 70px;
+              border-radius: 8px;
+
+              .form-control-static {
+                font-size: 18px;
+                padding: 0 0 0 20px;
+              }
+            }
+          }
+        }
+
+        .box-footer {
+          .btn {
+            padding: 0;
+          }
+
+          .btn-default {
+            width: 200px;
+            height: 90px;
+            margin-right: 3px;
+          }
+
+          .btn-danger {
+            width: 200px;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-apply {
+  .site-content {
+    .conts-wrap {
+      .step {
+        width: 470px;
+        height: 50px;
+        margin-top: 33px;
+
+        &::before {
+          width: 412px;
+          height: 28px;
+        }
+
+        p {
+          font-size: 16px;
+          padding-top: 43px;
+        }
+      }
+
+      .prev-value {
+        width: 100%;
+        height: 74px;
+        border-radius: 10px;
+        margin-top: 60px;
+
+        .value {
+          font-size: 22px;
+          margin-bottom: 0;
+          padding-left: 58px;
+
+          &::before {
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+
+      .complaints-group {
+        margin: 57px 0 30px;
+
+        div {
+          padding-bottom: 15px;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:nth-child(odd) {
+            padding-right: 15px;
+          }
+
+          .btn-default {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            padding: 6px 15px;
+
+            .title {
+              font-size: 20px;
+            }
+
+            .logo {
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+      }
+
+      .complaints-group-detail {
+        margin: 12px -8px 37px;
+
+        div {
+          padding: 8px;
+
+          .btn-default {
+            width: 100%;
+            height: 80px;
+            border-radius: 8px;
+            padding: 6px 15px;
+
+            .title {
+              font-size: 20px;
+            }
+
+            .check-logo {
+              width: 20px;
+              height: 17px;
+            }
+          }
+        }
+      }
+
+      .finish {
+        width: 100%;
+        height: 400px;
+        border-radius: 8px;
+        margin-top: 57px;
+        margin-bottom: 56px;
+
+        .text {
+          font-size: 24px;
+          padding-top: 206px;
+
+          &::before {
+            width: 180px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-apply-middle {
+  .conts-wrap {
+    .step {
+      &::before {
+        background-image: url(../images/step-3.png);
+      }
+    }
+
+    .info {
+      padding: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 58px;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 70px;
+          height: 70px;
+          margin-right: 11px;
+        }
+
+        .name {
+          font-size: 28px;
+        }
+
+        .email {
+          font-size: 18px;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .phone-img {
+          width: 18px;
+          height: 26px;
+        }
+
+        .tel {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .box-primary {
+      margin-top: 35px;
+      .control-label {
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 7px;
+      }
+
+      .col-sm-3,
+      .col-sm-9 {
+        width: 100%;
+        padding: 0;
+      }
+
+      .form-group {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        &:nth-child(1) {
+          .col-sm-9 {
+            display: flex;
+
+            select {
+              display: inline-block;
+            }
+
+            select:nth-child(1) {
+              margin-right: 10px;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          margin-bottom: 20px;
+        }
+
+        .col-sm-9 {
+          select {
+            height: 68px;
+            padding-left: 23px;
+            background-position: calc(100% - 19px) 50%;
+            font-size: 18px;
+          }
+
+          input[type="text"] {
+            height: 68px;
+            padding-left: 23px;
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+
+          textarea {
+            padding: 26px 23px;
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .cms-file-md-upload-inner {
+          margin-top: -16px;
+          height: 80px;
+
+          label {
+            span {
+              font-size: 18px;
+              padding-left: 34px;
+
+              &::before {
+                width: 27px;
+                height: 27px;
+              }
+            }
+          }
+        }
+      }
+
+      .agree {
+        margin-bottom: 45px;
+
+        .checkbox-btn {
+          width: 189px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.page-history {
+  .site-content {
+    .conts-wrap {
+      margin: 70px auto 190px;
+      .page-title {
+        margin-bottom: 40px;
+      }
+
+      .filter-wrapper {
+        text-align: right;
+
+        .filter-btn {
+          font-size: 22px;
+          padding: 0 25px 0 33px;
+
+          &:active {
+            box-shadow: none;
+          }
+
+          &::before {
+            width: 22px;
+            height: 22px;
+          }
+
+          &::after {
+            width: 14px;
+            height: 10px;
+          }
+        }
+
+        ul {
+          top: 48px;
+          right: 0;
+          text-align: left;
+          padding: 23px;
+
+          li {
+            &:not(:last-child) {
+              padding: 0;
+              margin-bottom: 22px;
+            }
+
+            label {
+              font-size: 18px;
+              margin: 0;
+              padding-left: 42px;
+
+              &::before {
+                width: 32px;
+                height: 32px;
+              }
+            }
+          }
+        }
+      }
+
+      .form-group {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        .col-sm-3,
+        .col-sm-9 {
+          width: 100%;
+          padding: 0;
+        }
+
+        &:nth-child(2) {
+          .col-sm-9 {
+            display: flex;
+
+            select:nth-child(1) {
+              margin-right: 10px;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .col-sm-9 {
+          select {
+            height: 68px;
+            padding-left: 23px;
+            background-image: url(../images/selectbox-icon.png);
+            background-position: calc(100% - 19px) 50%;
+            font-size: 18px;
+          }
+
+          input[type="text"] {
+            height: 68px;
+            padding-left: 23px;
+            font-size: 18px;
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+
+          .textarea {
+            width: 100%;
+            height: 622px;
+            padding: 26px 23px;
+
+            p {
+              font-size: 18px;
+              margin: 0;
+            }
+          }
+        }
+
+        .cms-file-md-upload-inner {
+          margin-top: -16px;
+          height: 80px;
+
+          label {
+            span {
+              font-size: 18px;
+              padding-left: 34px;
+
+              &::before {
+                width: 27px;
+                height: 27px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-history-detail {
+  .site-content {
+    .conts-wrap {
+      .cms-form {
+        margin-bottom: 45px;
+
+        .form-group {
+          &:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+
+            .cms-type-internal-time-date-time-absolute {
+              font-size: 16px;
+              padding-left: 37px;
+
+              &::before {
+                content: "";
+                width: 27px;
+                height: 26px;
+              }
+            }
+          }
+
+          .control-label {
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+
+          textarea[name="cancel-editor"] {
+            width: 100%;
+            height: 600px;
+            font-size: 18px;
+            padding: 26px 22px;
+
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-status {
+  .site-content {
+    .conts-wrap {
+      .page-title {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+.page-doing {
+  .site-content {
+    .conts-wrap {
+      .page-title {
+        margin-bottom: 43px;
+      }
+    }
+  }
+}
+
+.page-doing-detail {
+  .site-content {
+    .conts-wrap {
+      .complete-box {
+        &.on {
+          display: flex;
+        }
+
+        padding: 200px 0 !important;
+
+        .flex-wrapper {
+          width: 600px !important;
+          height: 640px !important;
+          padding: 24px 40px 54px !important;
+
+          .btn-wrapper {
+            text-align: right;
+          }
+        }
+
+        .content {
+          .text {
+            font-size: 24px !important;
+            padding-top: 90px !important;
+            margin-top: 7px !important;
+            margin: 0 0 9px !important;
+
+            &::before {
+              width: 70px !important;
+              height: 70px !important;
+            }
+          }
+
+          .cms-form {
+            margin-top: 10px !important;
+
+            .form-group {
+              margin-bottom: 20px !important;
+
+              textarea[name="complete-editor"] {
+                width: 100% !important;
+                height: 218px !important;
+                font-size: 18px !important;
+                padding: 26px 22px !important;
+
+                &::placeholder {
+                  font-size: 18px !important;
+                }
+              }
+
+              .cms-file-md-upload-inner {
+                height: 80px !important;
+                margin-top: 10px !important;
+
+                label {
+                  span {
+                    font-size: 18px !important;
+                    padding-left: 34px !important;
+
+                    &::before {
+                      width: 27px !important;
+                      height: 27px !important;
+                      position: absolute;
+                    }
+                  }
+                }
+              }
+            }
+            .btn-group {
+              .btn-success {
+                width: 160px !important;
+                height: 60px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-transcase {
+  .site-content {
+    .conts-wrap {
+      .page-title {
+        margin-bottom: 58px;
+      }
+
+      .list-group-type1 {
+        .list-group {
+          .list-group-item {
+            align-items: flex-start;
+
+            .right {
+              .cms-type-internal-time-date-time-absolute {
+                display: inline-block;
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      .list-group-type2 {
+        .list-group-item {
+          padding: 25px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          .flex-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .left {
+              display: flex;
+              align-items: center;
+
+              .badge {
+                width: 70px;
+                height: 70px;
+                margin-right: 14px;
+              }
+
+              .title {
+                font-size: 22px;
+                margin-bottom: 0;
+              }
+
+              .location {
+                font-size: 16px;
+                padding-left: 25px;
+
+                &::before {
+                  width: 18px;
+                  height: 21px;
+                }
+              }
+            }
+
+            .right {
+              text-align: right;
+
+              span {
+                font-size: 16px;
+              }
+
+              .charge {
+                font-size: 20px;
+                margin-bottom: 0;
+              }
+
+              .btn-group {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 6px;
+
+                .btn-default {
+                  width: 60px;
+                  height: 40px;
+                }
+
+                .accept-btn {
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+
+          .box-type1 {
+            padding: 20px;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+              font-size: 16px;
+
+              &::before {
+                width: 24px;
+                height: 24px;
+              }
+
+              &:not(:first-child) {
+                margin-top: 6px;
+              }
+            }
+          }
+
+          .complaint-content {
+            margin-top: 23px;
+            margin-bottom: 6px;
+
+            p {
+              padding-left: 35px;
+            }
+          }
+
+          .chat {
+            p {
+              padding-left: 33px;
+            }
+          }
+        }
+      }
+
+      .accept-box {
+        padding-top: 200px;
+
+        .flex-wrapper {
+          width: 460px;
+          height: 320px;
+          padding: 24px 40px 54px;
+
+          .content {
+            .text {
+              font-size: 24px;
+              padding-top: 90px;
+              margin-top: 7px;
+              margin: 0 0 33px;
+
+              &::before {
+                width: 70px;
+                height: 70px;
+              }
+            }
+
+            .btn-group {
+              .btn-success {
+                width: 120px;
+                height: 60px;
+              }
+            }
+          }
+        }
+      }
+
+      .reject-box {
+        padding-top: 200px;
+
+        .flex-wrapper {
+          width: 600px;
+          height: 550px;
+          padding: 24px 40px 54px;
+
+          .content {
+            .text {
+              font-size: 24px;
+              padding-top: 90px;
+              margin-top: 7px;
+              margin: 0 0 23px;
+
+              &::before {
+                width: 70px;
+                height: 70px;
+              }
+            }
+
+            .cms-form {
+              .form-group {
+                margin-bottom: 20px;
+                textarea[name="complete-editor"] {
+                  width: 100%;
+                  height: 218px;
+                  padding: 26px 23px;
+                  font-size: 18px;
+
+                  &::placeholder {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+
+            .btn-group {
+              .btn-success {
+                width: 120px;
+                height: 60px;
+              }
+            }
+          }
         }
       }
     }

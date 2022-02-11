@@ -6,6 +6,10 @@ body {
   position: relative;
 }
 
+img {
+  width: 100%;
+}
+
 .mypage-box {
   &.on {
     display: block;
@@ -16,16 +20,16 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 240px;
+  padding-top: 100px;
   top: 0;
   left: 0;
 
   .my-dropdown {
-    width: 460px;
+    width: 280px;
     margin: auto;
     background-color: #fff;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
 
     .btn-wrapper {
       text-align: right;
@@ -53,49 +57,56 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
       }
 
       .user-name {
         font-family: "NanumSquare";
         letter-spacing: -0.08em;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: bold;
+        margin: 0 0 4px;
       }
 
       .login-time {
         font-family: "NanumSquare";
         color: #999999;
         letter-spacing: -0.08em;
-        font-size: 16px;
+        font-size: 10px;
         font-weight: bold;
-        margin-bottom: 37px;
+        margin-bottom: 27px;
       }
 
       .btn-group {
         margin-bottom: 31px;
         .btn-primary {
           background-color: transparent;
-          width: 120px;
-          height: 60px;
-          border: 3px solid $base-color;
-          border-radius: 30px;
-          font-family: "NanumSquare";
-          font-weight: bold;
-          letter-spacing: -0.08em;
-          color: $base-color;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          border: none;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 80px;
+          height: 40px;
 
           &:first-child {
             margin-right: 4px;
           }
 
-          &:hover {
-            background-color: $base-color;
-            color: #fff;
+          &.logout-btn {
+            background-image: url(../images/logout-btn.png);
+
+            &:hover {
+              background-image: url(../images/logout-btn-on.png);
+            }
+          }
+
+          &.myinfo-btn {
+            background-image: url(../images/myinfo-btn.png);
+
+            &:hover {
+              background-image: url(../images/myinfo-btn-on.png);
+            }
           }
         }
       }
@@ -104,10 +115,10 @@ body {
 }
 
 .site-header {
-  max-width: 1400px;
+  max-width: 1420px;
   width: 100%;
   margin: auto;
-  padding: 11px 0;
+  padding: 11px 10px;
   position: relative;
 
   .header-wrapper {
@@ -116,13 +127,14 @@ body {
     align-items: center;
 
     .main-logo {
-      width: 206px;
-      height: 52px;
+      width: 123px;
+      height: 31px;
 
       .navbar-brand {
         display: block;
         background-image: url(../images/main-logo.png);
-        background-size: 206px 52px;
+        background-size: 123px 31px;
+        background-repeat: no-repeat;
         padding: 0;
         width: 100%;
         height: 100%;
@@ -130,16 +142,16 @@ body {
     }
 
     .gnb {
-      margin-top: 16px;
+      margin-top: 0px;
 
       .ico-my {
         display: inline-block;
         background-image: url(../images/user-logo-black.png);
-        background-size: 22px 27px;
+        background-size: 18px 23px;
         background-repeat: no-repeat;
         background-position: center center;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
 
         &:hover {
@@ -150,15 +162,16 @@ body {
       .ico-noti {
         display: inline-block;
         background-image: url(../images/alram-logo.png);
-        background-size: 24px 27px;
+        background-size: 20px 23px;
         background-repeat: no-repeat;
         background-position: center center;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
       }
     }
   }
   .lnb {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -456,14 +469,14 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        width: 206px;
-        height: 52px;
+        width: 176px;
+        height: 44px;
       }
     }
 
     .sub-footer {
       .copyright {
-        font-size: 13px;
+        font-size: 11px;
         letter-spacing: -0.04em;
         color: #aaaaaa;
         text-align: center;
@@ -473,6 +486,7 @@ body {
   }
 
   .top-btn {
+    display: none;
     position: absolute;
     right: 40px;
     a {
@@ -498,7 +512,7 @@ body {
 
   .employee-btn-wrapper {
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,12 +520,12 @@ body {
 
     .text {
       font-family: "NanumSquare";
-      font-size: 32px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: -0.08em;
       color: $main-black;
       position: relative;
-      padding-left: 64px;
+      padding-left: 44px;
 
       &::before {
         content: "";
@@ -519,8 +533,8 @@ body {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 52px;
-        height: 52px;
+        width: 32px;
+        height: 32px;
         position: absolute;
         top: 50%;
         left: 0;
@@ -533,7 +547,7 @@ body {
       font-weight: 800;
       letter-spacing: -0.08em;
       color: $main-black;
-      font-size: 30px;
+      font-size: 16px;
       color: #e6aa28;
 
       &.start {
@@ -545,7 +559,7 @@ body {
   .chatting-box {
     max-width: 720px;
     margin: auto;
-    padding: 9px 0 20px;
+    padding: 9px 10px 20px;
 
     &.nochat {
       .list-commt {
@@ -581,7 +595,7 @@ body {
           width: 17px;
           height: 14px;
           background-image: url(../images/chat-down-btn.png);
-          background-size: cover;
+          background-size: 17px 11px;
           background-position: center center;
           background-repeat: no-repeat;
           background-color: transparent;
@@ -601,8 +615,8 @@ body {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          width: 42px;
-          height: 42px;
+          width: 32px;
+          height: 32px;
         }
       }
     }
@@ -614,22 +628,22 @@ body {
 
     .list-commt {
       .box-type1 {
-        height: 200px;
-        padding: 27px 22px;
+        height: 150px;
+        padding: 22px 17px;
         overflow: scroll;
         background-color: #f2f2f2;
         border-radius: 8px;
-        margin: 6px 0 12px;
+        margin: 6px 0;
         transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
 
         p {
           font-family: "NanumSquare";
-          font-size: 18px;
-          line-height: 32px;
+          font-size: 14px;
           letter-spacing: -0.08em;
           color: $main-black;
           position: relative;
           padding-left: 32px;
+          margin-bottom: 10px;
 
           &::before {
             content: "";
@@ -640,9 +654,8 @@ body {
             background-repeat: no-repeat;
             background-position: center center;
             position: absolute;
-            top: 50%;
+            top: -2px;
             left: 0;
-            transform: translateY(-50%);
           }
 
           &.gray::before {
@@ -653,20 +666,20 @@ body {
 
       .input-group {
         input[type="text"] {
-          height: 68px;
+          height: 48px;
           border: 1px solid #e2e2e2;
           border-radius: 8px;
           background-color: #f8f8f8;
           font-family: "NanumSquare";
-          font-size: 18px;
+          font-size: 14px;
           letter-spacing: -0.08em;
           color: $main-black;
           margin-right: 8px;
-          width: 99%;
+          width: 97%;
 
           &::placeholder {
             font-family: "NanumSquare";
-            font-size: 18px;
+            font-size: 14px;
             letter-spacing: -0.08em;
             color: #aaaaaa;
           }
@@ -678,8 +691,8 @@ body {
           background-size: cover;
           background-position: center center;
           background-repeat: no-repeat;
-          width: 90px;
-          height: 70px;
+          width: 63px;
+          height: 49px;
 
           &:hover {
             background-image: url(../images/inquiry-btn-on.png);
@@ -692,7 +705,7 @@ body {
       margin-top: 15px;
       p {
         font-family: "NanumSquare";
-        font-size: 18px;
+        font-size: 14px;
         letter-spacing: -0.08em;
         color: $main-black;
         position: relative;
@@ -722,25 +735,26 @@ body {
 
 .site-footer {
   background-color: $main-color;
-  height: 100px;
-  margin-bottom: 90px;
+  height: auto;
+  margin-bottom: 70px;
   .container-fluid {
-    padding: 31px 40px;
+    padding: 31px 10px;
     .copyright {
       float: left;
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: -0.04em;
       padding: 6px 0;
       color: #fff;
     }
 
     .btn-group {
-      float: right;
+      float: left;
+      margin-left: -12px;
 
       .btn-link {
         font-family: "NanumSquare";
         font-weight: bold;
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: -0.08em;
 
         span {
@@ -790,7 +804,7 @@ body {
   .site-content {
     .conts-wrap {
       max-width: 720px;
-      margin: 70px auto 340px;
+      margin: 30px auto 100px;
 
       .list-group-type1 {
         margin-top: 15px;
@@ -949,8 +963,8 @@ body {
       }
 
       .badge {
-        width: 70px;
-        height: 40px;
+        width: 42px;
+        height: 24px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -981,7 +995,7 @@ body {
       }
 
       .detail-wrapper {
-        margin-bottom: 45px;
+        margin-bottom: 35px;
 
         .detail-row {
           font-family: "NanumSquare";
@@ -995,17 +1009,21 @@ body {
             padding: 9px 0;
             border-top: 2px solid #222;
             border-bottom: 1px solid #dddddd;
-            margin-bottom: 25px !important;
+            margin-bottom: 15px !important;
           }
 
           &:nth-child(2) {
             div {
               width: 100%;
-              display: flex;
-              align-items: center;
+              display: block;
 
-              div:first-child {
-                margin-right: 10px;
+              div {
+                display: flex;
+                align-items: center;
+                &:first-child {
+                  margin-right: 0;
+                  margin-bottom: 10px;
+                }
               }
             }
           }
@@ -1013,7 +1031,7 @@ body {
           &:nth-child(5),
           &:nth-child(8) {
             div {
-              padding: 27px 24px;
+              padding: 20px 17px;
               background-color: #f2f2f2;
               border-radius: 8px;
             }
@@ -1147,19 +1165,19 @@ body {
           }
 
           &:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
           }
 
           .cms-type-internal-time-date-time-absolute {
-            font-size: 16px;
+            font-size: 12px;
             font-weight: bold;
             position: relative;
-            padding-left: 37px;
+            padding-left: 32px;
 
             &::before {
               content: "";
-              width: 27px;
-              height: 26px;
+              width: 22px;
+              height: 21px;
               background-image: url(../images/calendar-logo.png);
               background-size: cover;
               background-repeat: no-repeat;
@@ -1172,7 +1190,7 @@ body {
           }
 
           .title {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             display: inline-block;
             margin-bottom: 6px;
@@ -1180,22 +1198,26 @@ body {
 
           div {
             p {
-              font-size: 18px;
+              font-size: 14px;
               font-weight: 400;
-              line-height: 26px;
+              line-height: 22px;
               margin-bottom: 0;
             }
 
+            img {
+              width: 100%;
+            }
+
             div {
-              height: 70px;
+              height: 50px;
               display: flex;
               align-items: center;
-              padding-left: 20px;
+              padding-left: 17px;
               border-radius: 8px;
               background-color: #f2f2f2;
 
               .form-control-static {
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: 400;
               }
             }
@@ -1205,7 +1227,7 @@ body {
 
       .alert-success {
         width: 100%;
-        height: 400px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1213,19 +1235,19 @@ body {
         background-color: #f6f6f6;
         border-radius: 8px;
         border: none;
-        margin-bottom: 45px;
+        margin-bottom: 36px;
 
         p {
           margin-bottom: 0;
           font-family: "NanumSquare";
-          font-size: 24px;
+          font-size: 16px;
           font-weight: bold;
-          line-height: 34px;
+          line-height: 26px;
           letter-spacing: -0.08em;
           color: $main-black;
           text-align: center;
           position: relative;
-          padding-top: 133px;
+          padding-top: 83px;
 
           strong {
             color: $base-color;
@@ -1234,8 +1256,8 @@ body {
 
           &::before {
             content: "";
-            width: 98px;
-            height: 98px;
+            width: 68px;
+            height: 68px;
             background-image: url(../images/check-logo-round.png);
             background-size: cover;
             background-repeat: no-repeat;
@@ -1255,13 +1277,13 @@ body {
   text-align: center;
 
   .title {
-    width: 110px;
-    height: 60px;
+    width: 88px;
+    height: 48px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-family: "NanumSquare";
-    font-size: 19px;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: -0.08em;
     color: $main-black;
@@ -1272,7 +1294,7 @@ body {
   .desc {
     font-weight: 300;
     font-family: "NanumSquare";
-    font-size: 48px;
+    font-size: 20px;
     color: $main-black;
     letter-spacing: -0.08em;
     margin-top: 22px;
@@ -1341,9 +1363,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 200px;
-    height: 90px;
-    margin: 0 7px;
+    width: 111px;
+    height: 50px;
+    margin: 0;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
 
     &:active,
     &:focus {
@@ -1381,7 +1406,7 @@ body {
 
     &.small {
       background-image: url(../images/cancel-small-btn.png);
-      width: 170px;
+      width: 94px;
     }
 
     &.small:hover {
@@ -1395,7 +1420,7 @@ body {
 
   .go-history {
     background-image: url(../images/history-btn.png);
-    width: 220px;
+    width: 123px;
 
     &:hover {
       background-image: url(../images/history-btn-on.png);
@@ -1404,8 +1429,7 @@ body {
 
   .go-list {
     background-image: url(../images/list-btn.png);
-    width: 170px;
-    margin-right: 6px;
+    width: 94px;
 
     &.gray {
       background-image: url(../images/list-btn-gray.png);
@@ -1422,7 +1446,7 @@ body {
 
   .go-accept {
     background-image: url(../images/accept-btn.png);
-    width: 170px;
+    width: 94px;
 
     &:hover {
       background-image: url(../images/accept-btn-on.png);
@@ -1431,7 +1455,7 @@ body {
 
   .go-complete {
     background-image: url(../images/complete-btn.png);
-    width: 170px;
+    width: 94px;
 
     &:hover {
       background-image: url(../images/complete-btn-on.png);
@@ -1440,8 +1464,7 @@ body {
 
   .go-edit {
     background-image: url(../images/edit-btn.png);
-    width: 170px;
-    margin-right: 6px;
+    width: 94px;
 
     &.blue {
       background-image: url(../images/edit-blue-btn.png);
@@ -1458,16 +1481,16 @@ body {
 
   .go-app-cancel {
     background-image: url(../images/app-cancel-btn.png);
-    width: 170px;
+    width: 94px;
 
     &.request {
       background-image: url(../images/app-cancel-req-btn.png);
-      width: 170px;
+      width: 94px;
     }
 
     &.blue {
       background-image: url(../images/app-cancel-blue-btn-on.png);
-      width: 170px;
+      width: 94px;
     }
 
     &.blue:hover {
@@ -1485,7 +1508,7 @@ body {
 
   .go-confirm {
     background-image: url(../images/confirm-btn.png);
-    width: 170px;
+    width: 94px;
 
     &:hover {
       background-image: url(../images/confirm-btn-on.png);
@@ -1525,19 +1548,14 @@ body {
   }
 
   .site-content {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-top: none;
 
     .conts-wrap {
       max-width: 720px;
-      margin: 0;
+      margin: 0 auto;
+      padding: 30px 0;
 
       .sub-wrap {
-        width: 468px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -1547,18 +1565,18 @@ body {
           width: 100%;
           text-align: center;
           border: 1px solid #e5e5e5;
+          padding: 30px;
           border-radius: 12px;
-          padding: 70px;
           margin-bottom: 60px;
 
           .text {
             text-align: left;
             font-family: "NanumSquare";
-            font-size: 22px;
-            line-height: 28px;
+            font-size: 16px;
+            line-height: 20px;
             letter-spacing: -0.08em;
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
             &::after {
               content: "";
@@ -1567,8 +1585,8 @@ body {
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center center;
-              width: 62px;
-              height: 62px;
+              width: 42px;
+              height: 42px;
               position: absolute;
               right: 0;
               top: 50%;
@@ -1585,16 +1603,16 @@ body {
               color: #333;
               border: 1px solid #aaaaaa;
               border-radius: 6px;
-              padding: 21px 90px;
+              padding: 15px 0;
               margin: 8px 0;
               font-family: "NanumSquare";
               font-weight: bold;
-              font-size: 18px;
+              font-size: 12px;
               letter-spacing: -0.08em;
               color: $main-black;
               display: flex;
               align-items: center;
-              justify-content: flex-start;
+              justify-content: center;
 
               &:active {
                 box-shadow: none;
@@ -2153,269 +2171,285 @@ body {
 }
 
 .page-apply {
-  .conts-wrap {
-    .step {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin: auto;
-      width: 470px;
-      height: 50px;
-      margin-top: 33px;
-
-      &::before {
-        content: "";
-        background-image: url(../images/step-1.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 412px;
-        height: 28px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      p {
-        font-family: "NanumSquare";
-        font-weight: bold;
-        font-size: 16px;
-        letter-spacing: -0.08em;
-        color: #aaaaaa;
-        padding-top: 43px;
-
-        &.on {
-          color: $base-color;
-        }
-      }
-    }
-
-    .prev-value {
-      width: 100%;
-      height: 74px;
-      border: 3px solid $main-black;
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 60px;
-
-      .value {
-        font-family: "NanumSquare";
-        font-size: 22px;
-        font-weight: bold;
-        color: $main-black;
-        letter-spacing: -0.08em;
-        margin-bottom: 0;
+  .site-content {
+    .conts-wrap {
+      .step {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
-        padding-left: 58px;
+        margin: auto;
+        width: auto;
+        width: 290px;
+        height: 50px;
+        margin-top: 33px;
 
         &::before {
           content: "";
-          width: 44px;
-          height: 44px;
-          background-image: url(../images/check-blue-logo-small-round.png);
+          background-image: url(../images/step-1.png);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-        }
-      }
-    }
-
-    .complaints-group {
-      display: inline-block;
-      margin: 57px 0 30px;
-
-      div {
-        padding-bottom: 15px;
-        padding-left: 0;
-        padding-right: 0;
-
-        &:nth-child(odd) {
-          padding-right: 15px;
-        }
-
-        &:nth-child(1) {
-          .logo {
-            background-image: url(../images/apply-step-1-1.png);
-          }
-        }
-        &:nth-child(2) {
-          .logo {
-            background-image: url(../images/apply-step-1-2.png);
-          }
-        }
-        &:nth-child(3) {
-          .logo {
-            background-image: url(../images/apply-step-1-3.png);
-          }
-        }
-        &:nth-child(4) {
-          .logo {
-            background-image: url(../images/apply-step-1-4.png);
-          }
-        }
-        &:nth-child(5) {
-          .logo {
-            background-image: url(../images/apply-step-1-5.png);
-          }
-        }
-        &:nth-child(6) {
-          .logo {
-            background-image: url(../images/apply-step-1-6.png);
-          }
-        }
-        &:nth-child(7) {
-          .logo {
-            background-image: url(../images/apply-step-1-7.png);
-          }
-        }
-        &:nth-child(8) {
-          .logo {
-            background-image: url(../images/apply-step-1-8.png);
-          }
-        }
-        &:nth-child(9) {
-          .logo {
-            background-image: url(../images/apply-step-1-9.png);
-          }
-        }
-
-        .btn-default {
-          display: block;
-          width: 100%;
-          height: 80px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #f6f6f6;
-          border: none;
-          border-radius: 8px;
-          padding: 6px 15px;
-
-          &.on {
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            background-color: $base-color;
-
-            .title {
-              color: #fff;
-            }
-          }
-
-          .title {
-            font-family: "NanumSquare";
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: -0.08em;
-            color: $main-black;
-          }
-
-          .logo {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 60px;
-            height: 60px;
-          }
-        }
-      }
-    }
-
-    .complaints-group-detail {
-      margin: 12px -8px 37px;
-      display: inline-block;
-
-      div {
-        padding: 8px;
-
-        .btn-default {
-          display: block;
-          width: 100%;
-          height: 80px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #f6f6f6;
-          border: none;
-          border-radius: 8px;
-          padding: 6px 15px;
-
-          &.on {
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            background-color: $base-color;
-
-            .title {
-              color: #fff;
-            }
-
-            .check-logo {
-              display: block;
-            }
-          }
-
-          .title {
-            font-family: "NanumSquare";
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: -0.08em;
-            color: $main-black;
-          }
-
-          .check-logo {
-            display: none;
-            background-image: url(../images/check-logo-w.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 20px;
-            height: 17px;
-          }
-        }
-      }
-    }
-
-    .finish {
-      width: 100%;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      background-color: #f8f8f8;
-      margin-top: 57px;
-      margin-bottom: 56px;
-
-      .text {
-        font-family: "NanumSquare";
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: -0.08em;
-        color: $main-black;
-        position: relative;
-        padding-top: 206px;
-
-        strong {
-          color: $base-color;
-        }
-
-        &::before {
-          content: "";
-          width: 180px;
-          height: 180px;
-          background-image: url(../images/complete-logo.png);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center center;
+          width: 237px;
+          height: 16px;
           position: absolute;
           top: 0;
           left: 50%;
           transform: translateX(-50%);
+        }
+
+        p {
+          font-family: "NanumSquare";
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: -0.08em;
+          color: #aaaaaa;
+          padding-top: 31px;
+
+          &.on {
+            color: $base-color;
+          }
+        }
+      }
+
+      .prev-value {
+        width: 100%;
+        height: 54px;
+        border: 3px solid $main-black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 27px;
+
+        .value {
+          font-family: "NanumSquare";
+          font-size: 16px;
+          font-weight: bold;
+          color: $main-black;
+          letter-spacing: -0.08em;
+          margin-bottom: 0;
+          position: relative;
+          padding-left: 43px;
+
+          &::before {
+            content: "";
+            width: 29px;
+            height: 29px;
+            background-image: url(../images/check-blue-logo-small-round.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      .complaints-group {
+        display: inline-block;
+        margin: 27px 0 30px;
+
+        div {
+          padding-bottom: 15px;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:nth-child(odd) {
+            padding-right: 0px;
+          }
+
+          &:nth-child(1) {
+            .logo {
+              background-image: url(../images/apply-step-1-1.png);
+            }
+          }
+          &:nth-child(2) {
+            .logo {
+              background-image: url(../images/apply-step-1-2.png);
+            }
+          }
+          &:nth-child(3) {
+            .logo {
+              background-image: url(../images/apply-step-1-3.png);
+            }
+          }
+          &:nth-child(4) {
+            .logo {
+              background-image: url(../images/apply-step-1-4.png);
+            }
+          }
+          &:nth-child(5) {
+            .logo {
+              background-image: url(../images/apply-step-1-5.png);
+            }
+          }
+          &:nth-child(6) {
+            .logo {
+              background-image: url(../images/apply-step-1-6.png);
+            }
+          }
+          &:nth-child(7) {
+            .logo {
+              background-image: url(../images/apply-step-1-7.png);
+            }
+          }
+          &:nth-child(8) {
+            .logo {
+              background-image: url(../images/apply-step-1-8.png);
+            }
+          }
+          &:nth-child(9) {
+            .logo {
+              background-image: url(../images/apply-step-1-9.png);
+            }
+          }
+
+          .btn-default {
+            display: block;
+            width: 100%;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f6f6f6;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 15px;
+
+            &.on {
+              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+              background-color: $base-color;
+
+              .title {
+                color: #fff;
+              }
+            }
+
+            .title {
+              font-family: "NanumSquare";
+              font-size: 14px;
+              font-weight: bold;
+              letter-spacing: -0.08em;
+              color: $main-black;
+            }
+
+            .logo {
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+
+      .complaints-group-detail {
+        margin: 12px -8px 37px;
+        display: inline-block;
+
+        div {
+          padding: 5px;
+
+          .btn-default {
+            display: block;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f6f6f6;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 15px;
+
+            &.on {
+              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+              background-color: $base-color;
+
+              .title {
+                color: #fff;
+              }
+
+              .check-logo {
+                display: block;
+              }
+            }
+
+            .title {
+              font-family: "NanumSquare";
+              font-size: 12px;
+              font-weight: bold;
+              letter-spacing: -0.08em;
+              color: $main-black;
+            }
+
+            .check-logo {
+              display: none;
+              background-image: url(../images/check-logo-w.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              width: 15px;
+              height: 12px;
+            }
+          }
+        }
+      }
+
+      .finish {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #f8f8f8;
+        margin-top: 27px;
+        margin-bottom: 36px;
+
+        .text {
+          font-family: "NanumSquare";
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: -0.08em;
+          color: $main-black;
+          position: relative;
+          padding-top: 156px;
+          text-align: center;
+
+          strong {
+            color: $base-color;
+          }
+
+          &::before {
+            content: "";
+            width: 130px;
+            height: 130px;
+            background-image: url(../images/complete-logo.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-apply-second {
+  .site-content {
+    .conts-wrap {
+      .step {
+        &::before {
+          background-image: url(../images/step-2.png);
         }
       }
     }
@@ -2433,29 +2467,29 @@ body {
     .info {
       border: 3px solid #222;
       border-radius: 10px;
-      padding: 22px;
+      padding: 15px;
+      margin-top: 27px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 58px;
 
       .left {
         display: flex;
         align-items: center;
 
         .avatar {
-          width: 70px;
-          height: 70px;
+          width: 40px;
+          height: 40px;
           background-image: url(../images/apply-d-user-logo.png);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          margin-right: 11px;
+          margin-right: 8px;
         }
 
         .name {
           font-family: "NanumSquare";
-          font-size: 28px;
+          font-size: 17px;
           letter-spacing: -0.08em;
           font-weight: bold;
           margin: 0;
@@ -2464,7 +2498,7 @@ body {
 
         .email {
           font-family: "NanumSquare";
-          font-size: 18px;
+          font-size: 12px;
           letter-spacing: -0.08em;
           font-weight: bold;
           margin: 0;
@@ -2479,18 +2513,18 @@ body {
         justify-content: space-between;
 
         .phone-img {
-          width: 18px;
-          height: 26px;
+          width: 14px;
+          height: 20px;
           background-image: url(../images/apply-phone.png);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          margin: 0 0 10px;
+          margin: 0 0 5px;
         }
 
         .tel {
           font-family: "NanumSquare";
-          font-size: 18px;
+          font-size: 12px;
           letter-spacing: -0.08em;
           font-weight: bold;
           margin: 0;
@@ -2500,10 +2534,10 @@ body {
     }
 
     .box-primary {
-      margin-top: 35px;
+      margin-top: 25px;
       .control-label {
         font-family: "NanumSquare";
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         letter-spacing: -0.08em;
         color: $main-black;
@@ -2521,36 +2555,45 @@ body {
       .form-group {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
 
         &:nth-child(1) {
           .col-sm-9 {
-            display: flex;
+            display: block;
+
+            select {
+              display: block;
+            }
 
             select:nth-child(1) {
-              margin-right: 10px;
+              margin-right: 0px;
+              margin-bottom: 10px;
             }
           }
         }
 
+        &:nth-child(4) {
+          margin-bottom: 25px;
+        }
+
         &:nth-child(5) {
-          margin-bottom: 20px;
+          margin-bottom: 10px;
         }
 
         .col-sm-9 {
           select {
-            height: 68px;
+            height: 48px;
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
-            padding-left: 23px;
+            padding-left: 17px;
             background-image: url(../images/selectbox-icon.png);
             background-position: calc(100% - 19px) 50%;
             background-repeat: no-repeat;
             -webkit-appearance: none;
             -moz-appearance: none;
             font-family: "NanumSquare";
-            font-size: 18px;
+            font-size: 14px;
             letter-spacing: -0.08em;
             color: $main-black;
           }
@@ -2563,18 +2606,18 @@ body {
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
-            height: 68px;
-            padding-left: 23px;
+            height: 48px;
+            padding-left: 17px;
 
             &::placeholder {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 14px;
               letter-spacing: -0.08em;
             }
           }
 
           textarea {
-            padding: 26px 23px;
+            padding: 20px 17px;
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
@@ -2582,7 +2625,7 @@ body {
 
             &::placeholder {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 14px;
               letter-spacing: -0.08em;
             }
           }
@@ -2607,12 +2650,12 @@ body {
 
             span {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 11px;
               letter-spacing: -0.08em;
               font-weight: bold;
               color: #aaaaaa;
               position: relative;
-              padding-left: 34px;
+              padding-left: 29px;
               white-space: nowrap;
 
               strong {
@@ -2625,8 +2668,8 @@ body {
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                width: 27px;
-                height: 27px;
+                width: 22px;
+                height: 22px;
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -2645,8 +2688,8 @@ body {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          width: 189px;
-          height: 24px;
+          width: 126px;
+          height: 16px;
 
           &.on {
             background-image: url(../images/checkbox-content-on.png);
@@ -2667,17 +2710,13 @@ body {
 }
 
 .page-apply-final {
-  .conts-wrap .step {
-    &::before {
-      background-image: url(../images/step-4.png);
-    }
-  }
-}
-
-.page-apply-second {
-  .conts-wrap .step {
-    &::before {
-      background-image: url(../images/step-2.png);
+  .site-content {
+    .conts-wrap {
+      .step {
+        &::before {
+          background-image: url(../images/step-4.png);
+        }
+      }
     }
   }
 }
@@ -2685,9 +2724,9 @@ body {
 .page-history {
   .site-content {
     .conts-wrap {
-      margin: 70px auto 190px;
+      margin: 30px auto 100px;
       .page-title {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
       }
 
       .filter-wrapper {
@@ -2807,7 +2846,11 @@ body {
       .form-group {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
+
+        &:nth-child(5) {
+          margin-bottom: 25px;
+        }
 
         .col-sm-3,
         .col-sm-9 {
@@ -2817,28 +2860,29 @@ body {
 
         &:nth-child(2) {
           .col-sm-9 {
-            display: flex;
+            display: block;
 
             select:nth-child(1) {
-              margin-right: 10px;
+              margin-right: 0;
+              margin-bottom: 10px;
             }
           }
         }
 
         .col-sm-9 {
           select {
-            height: 68px;
+            height: 48px;
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
-            padding-left: 23px;
+            padding-left: 17px;
             background-image: url(../images/selectbox-icon.png);
             background-position: calc(100% - 19px) 50%;
             background-repeat: no-repeat;
             -webkit-appearance: none;
             -moz-appearance: none;
             font-family: "NanumSquare";
-            font-size: 18px;
+            font-size: 14px;
             letter-spacing: -0.08em;
             color: $main-black;
           }
@@ -2851,28 +2895,32 @@ body {
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
-            height: 68px;
-            padding-left: 23px;
-            font-size: 18px;
+            height: 48px;
+            padding-left: 17px;
+            font-size: 14px;
 
             &::placeholder {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 14px;
               letter-spacing: -0.08em;
             }
           }
 
           .textarea {
             width: 100%;
-            height: 622px;
-            padding: 26px 23px;
+            height: 331px;
+            padding: 20px 17px;
             border-radius: 8px;
             border: 1px solid #e2e2e2;
             background-color: #f8f8f8;
 
             p {
-              font-size: 18px;
+              font-size: 14px;
               margin: 0;
+            }
+
+            img {
+              width: 100%;
             }
           }
         }
@@ -2896,12 +2944,12 @@ body {
 
             span {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 11px;
               letter-spacing: -0.08em;
               font-weight: bold;
               color: #aaaaaa;
               position: relative;
-              padding-left: 34px;
+              padding-left: 29px;
               white-space: nowrap;
 
               strong {
@@ -2914,8 +2962,8 @@ body {
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                width: 27px;
-                height: 27px;
+                width: 22px;
+                height: 22px;
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -2942,7 +2990,7 @@ body {
         font-family: "NanumSquare";
         color: $main-black;
         letter-spacing: -0.08em;
-        margin-bottom: 50px;
+        margin-bottom: 35px;
 
         .form-group {
           &:nth-child(1) {
@@ -2954,15 +3002,15 @@ body {
             border-bottom: 1px solid #dddddd;
 
             .cms-type-internal-time-date-time-absolute {
-              font-size: 16px;
+              font-size: 12px;
               font-weight: bold;
               position: relative;
-              padding-left: 35px;
+              padding-left: 32px;
 
               &::before {
                 content: "";
-                width: 27px;
-                height: 26px;
+                width: 22px;
+                height: 21px;
                 background-image: url(../images/calendar-logo.png);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -2976,7 +3024,7 @@ body {
           }
 
           .control-label {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             display: inline-block;
             margin-bottom: 5px;
@@ -2984,17 +3032,17 @@ body {
 
           textarea[name="cancel-editor"] {
             width: 100%;
-            height: 600px;
+            height: 300px;
             background-color: #f8f8f8;
             border-radius: 8px;
             border: 1px solid #e2e2e2;
-            font-size: 18px;
+            font-size: 14px;
             resize: none;
-            padding: 26px 22px;
+            padding: 22px 18px;
 
             &::placeholder {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 14px;
               font-weight: 400;
               letter-spacing: -0.08em;
               color: #aaaaaa;
@@ -3020,7 +3068,7 @@ body {
   .site-content {
     .conts-wrap {
       .page-title {
-        margin-bottom: 43px;
+        margin-bottom: 28px;
       }
     }
   }
@@ -3043,12 +3091,14 @@ body {
         z-index: 98;
         display: none;
         justify-content: center;
-        padding-top: 200px;
+        padding: 100px 10px;
 
         .flex-wrapper {
-          width: 600px;
-          height: 640px;
-          padding: 24px 40px 54px;
+          min-width: 300px;
+          max-width: 600px;
+          width: 100%;
+          height: 480px;
+          padding: 24px 10px;
           border-radius: 16px;
           background-color: #fff;
 
@@ -3071,19 +3121,19 @@ body {
             .text {
               font-family: "NanumSquare";
               font-weight: bold;
-              font-size: 24px;
+              font-size: 18px;
               letter-spacing: -0.08em;
               color: $main-black;
               text-align: center;
               position: relative;
-              padding-top: 90px;
+              padding-top: 70px;
               margin-top: 7px;
               margin: 0 0 9px;
 
               &::before {
                 content: "";
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 background-image: url(../images/check-logo-small-round.png);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -3107,17 +3157,17 @@ body {
 
                 textarea[name="complete-editor"] {
                   width: 100%;
-                  height: 218px;
+                  height: 150px;
                   background-color: #f8f8f8;
                   border-radius: 8px;
                   border: 1px solid #e2e2e2;
-                  font-size: 18px;
+                  font-size: 14px;
                   resize: none;
-                  padding: 26px 22px;
+                  padding: 22px 18px;
 
                   &::placeholder {
                     font-family: "NanumSquare";
-                    font-size: 18px;
+                    font-size: 14px;
                     font-weight: 400;
                     letter-spacing: -0.08em;
                     color: #aaaaaa;
@@ -3143,12 +3193,12 @@ body {
 
                     span {
                       font-family: "NanumSquare";
-                      font-size: 18px;
+                      font-size: 11px;
                       letter-spacing: -0.08em;
                       font-weight: bold;
                       color: #aaaaaa;
                       position: relative;
-                      padding-left: 34px;
+                      padding-left: 29px;
                       white-space: nowrap;
 
                       strong {
@@ -3161,8 +3211,8 @@ body {
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center center;
-                        width: 27px;
-                        height: 27px;
+                        width: 22px;
+                        height: 22px;
                         position: absolute;
                         top: 50%;
                         left: 0;
@@ -3180,8 +3230,8 @@ body {
                   background-repeat: no-repeat;
                   background-size: cover;
                   background-position: center center;
-                  width: 160px;
-                  height: 60px;
+                  width: 120px;
+                  height: 45px;
 
                   &:hover {
                     background-image: url(../images/confirm-small-btn-on.png);
