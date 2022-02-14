@@ -1,6 +1,14 @@
 @import "../scss/variables";
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+.pc {
+  display: none !important;
+}
+
+.mb {
+  display: block !important;
+}
+
 body {
   font-family: "Nanum Gothic";
   position: relative;
@@ -118,13 +126,14 @@ img {
   max-width: 1420px;
   width: 100%;
   margin: auto;
-  padding: 11px 10px;
+  padding: 0;
   position: relative;
 
   .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 
     .main-logo {
       width: 123px;
@@ -170,12 +179,22 @@ img {
       }
     }
   }
+
   .lnb {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px;
+    margin-left: -15px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .navbar {
+      white-space: nowrap;
+    }
 
     .navbar-employee {
       white-space: nowrap;
@@ -200,12 +219,12 @@ img {
 
         .nav-link {
           display: block;
-          font-size: 21px;
+          font-size: 16px;
           letter-spacing: -0.08em;
           font-family: "NanumSquare";
           font-weight: 800;
           color: $main-color;
-          padding: 20px 46px;
+          padding: 15px 18px;
 
           &:focus,
           &:hover {
@@ -221,13 +240,37 @@ img {
 .site-content {
   border-top: 1px solid $main-visual-top;
   min-height: calc(100vh - 95px - 100px);
+  overflow: hidden;
 
   .visual {
     position: relative;
 
+    .bx-viewport {
+      min-height: 220px;
+
+      .control-slider {
+        height: 100%;
+
+        li {
+          width: 100%;
+          height: 100%;
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
     .bx-pager {
       position: absolute;
-      right: 60px;
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
       a {
@@ -249,8 +292,8 @@ img {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      width: 90px;
-      height: 90px;
+      width: 50px;
+      height: 50px;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -261,17 +304,17 @@ img {
 
   .center {
     position: relative;
-    padding: 118px 0;
+    padding: 58px 10px;
     background-color: $main-center;
 
     .text-box {
-      margin-left: 286px;
-      margin-bottom: 130px;
+      margin-left: 0;
+      margin-bottom: 80px;
       .l-text {
-        font-size: 50px;
+        font-size: 30px;
         letter-spacing: -0.05em;
         font-family: "NanumSquare";
-        margin: 0;
+        margin: 0 0 15px;
 
         .orange {
           font-weight: bold;
@@ -285,8 +328,8 @@ img {
       }
 
       .s-text {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 11px;
+        line-height: 19px;
         font-weight: bold;
         letter-spacing: -0.05em;
         color: #fff;
@@ -296,22 +339,23 @@ img {
 
     .text-slider {
       .slider-item {
-        width: 346px;
+        width: 320px;
         text-align: left;
         font-family: "NanumSquare";
         opacity: 0.15;
+        padding: 0px 10px;
         .num {
           font-weight: 800;
-          font-size: 18px;
+          font-size: 11px;
           letter-spacing: -0.06em;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
           color: #fff;
         }
         .content {
-          font-size: 30px;
+          font-size: 18px;
           font-weight: bold;
           letter-spacing: -0.06em;
-          padding-bottom: 25px;
+          padding-bottom: 18px;
           position: relative;
           color: #fff;
 
@@ -321,7 +365,7 @@ img {
 
           &::before {
             content: "";
-            width: 24px;
+            width: 18px;
             height: 4px;
             background-color: #fff;
             position: absolute;
@@ -340,77 +384,151 @@ img {
       }
     }
 
-    &::after {
+    .phone-content-img {
       content: "";
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      width: 171px;
+      height: 215px;
+      position: absolute;
+      bottom: 35px;
+      left: auto;
+      right: 19px;
+      z-index: 9;
+    }
+
+    &.img-1 {
+      .phone-content-img {
+        background-image: url(../images/01.png);
+      }
+    }
+
+    &.img-2 {
+      .phone-content-img {
+        background-image: url(../images/02.png);
+      }
+    }
+
+    &.img-3 {
+      .phone-content-img {
+        background-image: url(../images/03.png);
+      }
+    }
+
+    &.img-4 {
+      .phone-content-img {
+        background-image: url(../images/04.png);
+      }
+    }
+
+    &.img-5 {
+      .phone-content-img {
+        background-image: url(../images/05.png);
+      }
+    }
+
+    &.img-6 {
+      .phone-content-img {
+        background-image: url(../images/06.png);
+      }
+    }
+
+    &.img-7 {
+      .phone-content-img {
+        background-image: url(../images/07.png);
+      }
+    }
+
+    &.img-8 {
+      .phone-content-img {
+        background-image: url(../images/08.png);
+      }
+    }
+
+    .phone-img {
       display: block;
       background-image: url(../images/phone.png);
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      width: 603px;
-      height: 563px;
+      width: 233px;
+      height: 233px;
       position: absolute;
-      bottom: -40px;
-      left: calc(50% + 30px);
+      bottom: 20px;
+      left: auto;
+      right: -40px;
     }
   }
 
   .notice {
     position: relative;
-    padding: 118px 0;
+    padding: 38px 10px;
 
     .notice-title {
       .title {
         font-family: "NanumSquare";
         font-weight: 800;
-        font-size: 60px;
+        font-size: 24px;
         letter-spacing: -0.04em;
         text-align: center;
       }
     }
 
+    .notice-slider {
+      .slider-item {
+        opacity: 0;
+
+        &.slick-current {
+          opacity: 1;
+        }
+      }
+    }
+
     .notice-content {
       max-width: 1400px;
-      margin: 87px auto;
-      padding: 0 16px;
+      margin: 37px auto;
+      padding: 0;
 
       .notice-item {
+        display: block;
         padding: 0;
 
         .date {
-          font-size: 15px;
+          font-size: 12px;
           color: #005ba4;
           letter-spacing: -0.04em;
         }
 
         .title {
-          font-size: 28px;
+          font-size: 16px;
           font-family: "NanumSquare";
-          line-height: 36px;
+          line-height: 24px;
           letter-spacing: -0.08em;
           color: $main-black;
-          margin: 25px 0;
+          margin: 10px 0;
         }
 
         .content {
-          font-size: 15px;
-          line-height: 26px;
+          font-size: 12px;
+          line-height: 24px;
           letter-spacing: -0.04em;
           color: $main-black;
         }
 
         &:nth-child(1) {
-          padding-right: 70px;
+          padding-right: 0;
         }
 
         &:nth-child(2) {
-          padding: 0 70px;
-          border-left: 1px solid #e5e5e5;
-          border-right: 1px solid #e5e5e5;
+          padding: 0;
+          border-left: none;
+          border-right: none;
         }
 
         &:nth-child(3) {
-          padding-left: 70px;
+          padding-left: 0;
         }
 
         &:hover,
@@ -424,13 +542,11 @@ img {
       text-align: center;
       .more-btn {
         font-family: "NanumSquare";
-        font-size: 20px;
+        font-size: 14px;
         letter-spacing: -0.04em;
         color: $main-black;
         position: relative;
-        padding: 7px 17px 7px 0;
-        padding-right: 17px;
-        padding-bottom: 7px;
+        padding: 7px 15px 7px 0;
 
         &:hover {
           text-decoration: none;
@@ -449,8 +565,8 @@ img {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           position: absolute;
           right: 0;
           top: 50%;
@@ -734,7 +850,7 @@ img {
 }
 
 .site-footer {
-  background-color: $main-color;
+  background-color: #2e2e3c;
   height: auto;
   margin-bottom: 70px;
   .container-fluid {
@@ -1052,11 +1168,11 @@ img {
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                height: 120px;
-                padding: 0 30px 0 40px;
+                height: 70px;
+                padding: 0 10px 0 20px;
                 border-radius: 8px;
                 background-color: #f2f2f2;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
                 fieldset {
                   direction: rtl;
@@ -1069,9 +1185,10 @@ img {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    width: 48px;
-                    height: 44px;
+                    width: 26px;
+                    height: 22px;
                     margin-right: 5px;
+                    margin-bottom: 0;
                     cursor: pointer;
                   }
 
@@ -1087,10 +1204,10 @@ img {
                 }
               }
               .warning {
-                font-size: 16px;
+                font-size: 10px;
                 color: $main-black;
                 position: relative;
-                padding-left: 36px;
+                padding-left: 21px;
 
                 &::before {
                   content: "";
@@ -1098,8 +1215,8 @@ img {
                   background-size: cover;
                   background-repeat: no-repeat;
                   background-position: center center;
-                  width: 28px;
-                  height: 28px;
+                  width: 18px;
+                  height: 18px;
                   position: absolute;
                   top: 50%;
                   left: 0;
@@ -1112,11 +1229,11 @@ img {
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                height: 120px;
-                padding: 0 30px 0 40px;
+                height: 70px;
+                padding: 0 10px 0 20px;
                 border-radius: 8px;
                 background-color: #f2f2f2;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
                 .star-wrapper {
                   padding-left: 0;
@@ -1126,8 +1243,8 @@ img {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    width: 48px;
-                    height: 44px;
+                    width: 26px;
+                    height: 22px;
                     margin-right: 5px;
 
                     &.on {
@@ -1139,7 +1256,7 @@ img {
                 .score-wrapper {
                   display: block;
                   p {
-                    font-size: 20px;
+                    font-size: 12px;
                     font-weight: bold;
                     letter-spacing: -0.08em;
 
@@ -1148,13 +1265,13 @@ img {
                     }
 
                     &.score {
-                      font-size: 50px;
+                      font-size: 30px;
                       font-weight: 800;
-                      margin-top: 14px;
+                      margin-top: 4px;
                       text-align: right;
 
                       .p-score {
-                        font-size: 26px;
+                        font-size: 16px;
                         color: #999999;
                       }
                     }
@@ -1429,7 +1546,7 @@ img {
 
   .go-list {
     background-image: url(../images/list-btn.png);
-    width: 94px;
+    width: 95px;
 
     &.gray {
       background-image: url(../images/list-btn-gray.png);
@@ -1517,8 +1634,8 @@ img {
 
   .rate-btn {
     background-image: url(../images/rate-btn.png);
-    width: 110px;
-    height: 60px;
+    width: 74px;
+    height: 40px;
 
     &:hover {
       background-image: url(../images/rate-btn-on.png);
@@ -1743,25 +1860,30 @@ img {
           .summary {
             text-align: center;
             border-bottom: 3px solid #333;
+            margin-bottom: 0;
 
             .title {
               display: inline-block;
               font-family: "NanumSquare";
-              font-size: 19px;
+              font-size: 15px;
               letter-spacing: -0.08em;
               color: $main-black;
-              padding: 23px 22px;
+              width: 88px;
+              height: 48px;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 22px;
+              background-color: #eee;
               border-radius: 30px;
-              background-color: #eeeeee;
-              margin-bottom: 23px;
             }
 
             p {
               font-family: "NanumSquare";
-              font-size: 48px;
+              font-size: 20px;
               font-weight: 400;
               letter-spacing: -0.08em;
-              margin-bottom: 43px;
+              margin-bottom: 23px;
 
               strong {
                 color: $base-color;
@@ -1772,7 +1894,7 @@ img {
 
           .cms-form {
             .box-body-1 {
-              padding: 20px 0 5px;
+              padding: 20px 0 0;
               border-bottom: 1px solid #e5e5e5;
 
               .form-group {
@@ -1787,36 +1909,37 @@ img {
                 .control-label {
                   text-align: left;
                   font-family: "NanumSquare";
-                  font-size: 20px;
+                  font-size: 16px;
                   font-weight: bold;
                   letter-spacing: -0.08em;
                   margin-bottom: 6px;
+                  display: inline-block;
                 }
 
                 .col-sm-9 {
                   input {
-                    height: 70px;
+                    height: 50px;
                     border-radius: 8px;
                     background-color: #f8f8f8;
                     border: 1px solid #e2e2e2;
                     font-family: "NanumSquare";
-                    font-size: 18px;
+                    font-size: 14px;
                     letter-spacing: -0.08em;
 
                     &::placeholder {
                       font-family: "NanumSquare";
-                      font-size: 18px;
+                      font-size: 14px;
                       letter-spacing: -0.08em;
                     }
                   }
 
                   .important {
                     display: inline-block;
-                    margin-top: 15px;
+                    margin-top: 7px;
                     position: relative;
-                    padding-left: 35px;
+                    padding-left: 23px;
                     font-family: "NanumSquare";
-                    font-size: 16px;
+                    font-size: 10px;
                     letter-spacing: -0.08em;
                     color: $main-black;
 
@@ -1826,8 +1949,8 @@ img {
                       background-size: cover;
                       background-position: center center;
                       background-repeat: no-repeat;
-                      width: 28px;
-                      height: 28px;
+                      width: 18px;
+                      height: 18px;
                       position: absolute;
                       top: 50%;
                       transform: translateY(-50%);
@@ -1867,12 +1990,12 @@ img {
                   .col-sm-9 {
                     label {
                       font-family: "NanumSquare";
-                      font-size: 18px;
+                      font-size: 14px;
                       letter-spacing: -0.08em;
                       font-weight: 400;
                       position: relative;
-                      padding-left: 50px;
-                      margin-right: 40px;
+                      padding-left: 35px;
+                      margin-right: 20px;
 
                       &:before {
                         content: "";
@@ -1880,8 +2003,8 @@ img {
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center center;
-                        width: 38px;
-                        height: 38px;
+                        width: 23px;
+                        height: 23px;
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
@@ -1902,7 +2025,7 @@ img {
             }
 
             .box-body-2 {
-              padding: 25px 0 17px;
+              padding: 20px 0 17px;
               border-bottom: 1px solid #e5e5e5;
 
               div {
@@ -1910,7 +2033,7 @@ img {
                   display: inline-block;
                   font-family: "NanumSquare";
                   font-weight: bold;
-                  font-size: 20px;
+                  font-size: 16px;
                   letter-spacing: -0.08em;
                   margin-bottom: 10px;
                 }
@@ -1919,15 +2042,15 @@ img {
                   border-radius: 8px;
                   border: 1px solid #e2e2e2;
                   background-color: #f8f8f8;
-                  padding: 27px 22px;
+                  padding: 22px 17px;
                   height: 298px;
                   overflow: scroll;
 
                   p {
-                    font-size: 16px;
+                    font-size: 12px;
                     font-family: "NanumSquare";
                     letter-spacing: -0.08em;
-                    line-height: 24px;
+                    line-height: 20px;
                     color: #999999;
                   }
                 }
@@ -1935,12 +2058,12 @@ img {
                 div:last-child {
                   label {
                     font-family: "NanumSquare";
-                    font-size: 18px;
+                    font-size: 14px;
                     line-height: 48px;
                     letter-spacing: -0.08em;
                     color: $main-black;
                     position: relative;
-                    padding-left: 42px;
+                    padding-left: 32px;
                     display: inline-block;
                     margin-top: 11px;
 
@@ -1950,8 +2073,8 @@ img {
                       background-size: cover;
                       background-repeat: no-repeat;
                       background-position: center center;
-                      width: 32px;
-                      height: 32px;
+                      width: 22px;
+                      height: 22px;
                       position: absolute;
                       top: 50%;
                       transform: translateY(-50%);
@@ -1976,13 +2099,16 @@ img {
 
             .box-footer {
               text-align: center;
-              padding: 50px 0;
+              padding: 30px 0;
 
               .btn-success {
                 padding: 0;
                 background-image: url(../images/signup-success.png);
-                width: 200px;
-                height: 90px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 111px;
+                height: 50px;
                 background-color: transparent;
                 border: none;
                 margin-right: 3px;
@@ -2002,8 +2128,11 @@ img {
               .btn-warning {
                 padding: 0;
                 background-image: url(../images/signup-cancel.png);
-                width: 200px;
-                height: 90px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 111px;
+                height: 50px;
                 background-color: transparent;
                 border: none;
 
@@ -2253,7 +2382,7 @@ img {
         margin: 27px 0 30px;
 
         div {
-          padding-bottom: 15px;
+          padding-bottom: 10px;
           padding-left: 0;
           padding-right: 0;
 
@@ -2449,7 +2578,7 @@ img {
     .conts-wrap {
       .step {
         &::before {
-          background-image: url(../images/step-2.png);
+          background-image: url(../images/step-2.png) !important;
         }
       }
     }
@@ -2460,7 +2589,7 @@ img {
   .conts-wrap {
     .step {
       &::before {
-        background-image: url(../images/step-3.png);
+        background-image: url(../images/step-3.png) !important;
       }
     }
 
@@ -2714,7 +2843,7 @@ img {
     .conts-wrap {
       .step {
         &::before {
-          background-image: url(../images/step-4.png);
+          background-image: url(../images/step-4.png) !important;
         }
       }
     }
@@ -3495,7 +3624,7 @@ img {
         z-index: 98;
         display: none;
         justify-content: center;
-        padding-top: 200px;
+        padding: 100px 10px 0 10px;
 
         &.on {
           display: flex;
@@ -3503,8 +3632,8 @@ img {
 
         .flex-wrapper {
           width: 460px;
-          height: 320px;
-          padding: 24px 40px 54px;
+          height: 270px;
+          padding: 24px 40px;
           border-radius: 16px;
           background-color: #fff;
 
@@ -3527,19 +3656,19 @@ img {
             .text {
               font-family: "NanumSquare";
               font-weight: bold;
-              font-size: 24px;
+              font-size: 16px;
               letter-spacing: -0.08em;
               color: $main-black;
               text-align: center;
               position: relative;
-              padding-top: 90px;
+              padding-top: 70px;
               margin-top: 7px;
               margin: 0 0 33px;
 
               &::before {
                 content: "";
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 background-image: url(../images/check-logo-small-round.png);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -3563,8 +3692,8 @@ img {
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                width: 120px;
-                height: 60px;
+                width: 100px;
+                height: 50px;
 
                 &:hover {
                   background-image: url(../images/confirm-btn-small-on.png);
@@ -3585,7 +3714,7 @@ img {
         z-index: 98;
         display: none;
         justify-content: center;
-        padding-top: 200px;
+        padding: 100px 10px 0 10px;
 
         &.on {
           display: flex;
@@ -3593,8 +3722,8 @@ img {
 
         .flex-wrapper {
           width: 600px;
-          height: 550px;
-          padding: 24px 40px 54px;
+          height: 520px;
+          padding: 24px 20px;
           border-radius: 16px;
           background-color: #fff;
 
@@ -3617,19 +3746,19 @@ img {
             .text {
               font-family: "NanumSquare";
               font-weight: bold;
-              font-size: 24px;
+              font-size: 16px;
               letter-spacing: -0.08em;
               color: $main-black;
               text-align: center;
               position: relative;
-              padding-top: 90px;
+              padding-top: 70px;
               margin-top: 7px;
               margin: 0 0 23px;
 
               &::before {
                 content: "";
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 background-image: url(../images/check-logo-small-round.png);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -3655,13 +3784,13 @@ img {
                   border: 1px solid #e2e2e2;
                   border-radius: 16px;
                   background-color: #f8f8f8;
-                  padding: 26px 23px;
-                  font-size: 18px;
+                  padding: 21px 18px;
+                  font-size: 14px;
                   font-family: "NanumSquare";
                   letter-spacing: -0.08em;
 
                   &::placeholder {
-                    font-size: 18px;
+                    font-size: 14px;
                     font-family: "NanumSquare";
                     letter-spacing: -0.08em;
                     color: #aaaaaa;
@@ -3678,8 +3807,8 @@ img {
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                width: 120px;
-                height: 60px;
+                width: 100px;
+                height: 50px;
 
                 &:hover {
                   background-image: url(../images/confirm-btn-small-on.png);

@@ -1,5 +1,13 @@
 @import "../scss/variables";
 
+.pc {
+  display: block !important;
+}
+
+.mb {
+  display: none !important;
+}
+
 .mypage-box {
   padding-top: 240px;
 
@@ -124,6 +132,16 @@
   }
 }
 
+@media screen and (max-width: 1380px) {
+  .site-content {
+    .center {
+      .text-box {
+        margin-left: 200px !important;
+      }
+    }
+  }
+}
+
 .site-content {
   border-top: 1px solid $main-visual-top;
   min-height: calc(100vh - 95px - 100px);
@@ -206,6 +224,7 @@
         text-align: left;
         font-family: "NanumSquare";
         opacity: 0.15;
+        padding: 0;
         .num {
           font-weight: 800;
           font-size: 18px;
@@ -246,8 +265,15 @@
       }
     }
 
-    &::after {
-      content: "";
+    .phone-content-img {
+      width: 419px;
+      height: 531px;
+      bottom: -13px;
+      left: calc(50% + 51px);
+      right: auto;
+    }
+
+    .phone-img {
       display: block;
       background-image: url(../images/phone.png);
       background-size: cover;
@@ -258,6 +284,7 @@
       position: absolute;
       bottom: -40px;
       left: calc(50% + 30px);
+      right: auto;
     }
   }
 
@@ -335,8 +362,6 @@
         color: $main-black;
         position: relative;
         padding: 7px 17px 7px 0;
-        padding-right: 17px;
-        padding-bottom: 7px;
 
         &:hover {
           text-decoration: none;
@@ -1026,8 +1051,6 @@
           .summary {
             .title {
               font-size: 19px;
-              padding: 23px 22px;
-              border-radius: 30px;
               margin-bottom: 23px;
             }
 
@@ -1920,7 +1943,7 @@
       }
 
       .accept-box {
-        padding-top: 200px;
+        padding: 200px 0 0 0;
 
         .flex-wrapper {
           width: 460px;
@@ -1951,7 +1974,7 @@
       }
 
       .reject-box {
-        padding-top: 200px;
+        padding: 200px 0 0 0;
 
         .flex-wrapper {
           width: 600px;

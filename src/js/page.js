@@ -27,17 +27,61 @@ $(document).ready(function () {
   });
 
   // 메인페이지 서브 슬라이더
-  $(".text-slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 500,
-    centerMode: true,
-    arrows: false
-  });
+  $(".text-slider")
+    .slick({
+      infinite: true,
+      variableWidth: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 500,
+      centerMode: true,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1270,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 6
+          }
+        }
+      ]
+    })
+    .on("afterChange", function () {
+      var centerClasses = $(".center").attr("class").split(" ");
+      var imgClass = centerClasses[centerClasses.length - 1];
+      var newNumber = Number($(".slick-current").attr("data-slick-index")) + 1;
+      var newImgClass = "img-" + newNumber;
+      $(".center").removeClass(imgClass).addClass(newImgClass);
+    });
+
+  if ($(window).outerWidth() < 1280) {
+    if ($(".center .phone-img").length > 0) {
+      var phoneLeftPosition = $(".slick-current").offset().left + 130;
+      var contentLeftPosition = phoneLeftPosition + 5;
+
+      $(".center .phone-img").css({ left: phoneLeftPosition });
+      $(".center .phone-content-img").css({ left: contentLeftPosition });
+    }
+
+    $(".notice-slider").slick({
+      infinite: true,
+      variableWidth: true,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 500,
+      centerMode: true,
+      arrows: false
+    });
+    $(".notice-slider .slider-item").css({ width: "300px" });
+  }
 
   var footerHeight = Math.round(
     $(".site-footer").outerHeight() +
@@ -288,8 +332,6 @@ $(document).ready(function () {
 
   $(".navbar .nav-item a").each(function () {
     var href = $(this).attr("href").split("/");
-    console.log(href);
-    console.log(pageNameSplit.split("-")[0]);
     if (pageNameSplit.includes("-")) {
       if (href[1] === pageNameSplit.split("-")[0]) {
         $(this).parent().addClass("on").siblings().removeClass("on");
@@ -321,7 +363,6 @@ $(document).ready(function () {
       } else if (result[result.length - 1] === "final") {
         body.addClass("page-apply-final");
       } else if (result.length >= 3 || result[1] === "detail") {
-        console.log(result);
         body.addClass("page-" + result[0] + "-detail");
         $(".page-title .desc").hide();
       }
