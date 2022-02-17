@@ -134,15 +134,16 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: #2e2e3c;
 
     .main-logo {
-      width: 123px;
-      height: 31px;
+      width: 122px;
+      height: 30px;
 
       .navbar-brand {
         display: block;
-        background-image: url(../images/main-logo.png);
-        background-size: 123px 31px;
+        background-image: url(../images/main-logo-m-w.png);
+        background-size: 122px 30px;
         background-repeat: no-repeat;
         padding: 0;
         width: 100%;
@@ -155,8 +156,8 @@ img {
 
       .ico-my {
         display: inline-block;
-        background-image: url(../images/user-logo-black.png);
-        background-size: 18px 23px;
+        background-image: url(../images/user-logo-m-w.png);
+        background-size: 16px 19px;
         background-repeat: no-repeat;
         background-position: center center;
         width: 30px;
@@ -170,8 +171,8 @@ img {
 
       .ico-noti {
         display: inline-block;
-        background-image: url(../images/alram-logo.png);
-        background-size: 20px 23px;
+        background-image: url(../images/alarm-logo-m-w.png);
+        background-size: 18px 19px;
         background-repeat: no-repeat;
         background-position: center center;
         width: 30px;
@@ -385,18 +386,21 @@ img {
     }
 
     .phone-content-img {
-      content: "";
       display: block;
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      width: 171px;
-      height: 215px;
+      width: 193px;
+      height: 245px;
       position: absolute;
-      bottom: 35px;
+      bottom: -15px;
       left: auto;
       right: 19px;
       z-index: 9;
+
+      &.animate {
+        animation: opacity 1s linear;
+      }
     }
 
     &.img-1 {
@@ -453,10 +457,10 @@ img {
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      width: 233px;
-      height: 233px;
+      width: 257px;
+      height: 263px;
       position: absolute;
-      bottom: 20px;
+      bottom: -30px;
       left: auto;
       right: -40px;
     }
@@ -855,6 +859,9 @@ img {
   margin-bottom: 70px;
   .container-fluid {
     padding: 31px 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     .copyright {
       float: left;
       font-size: 12px;
@@ -927,15 +934,15 @@ img {
         margin-bottom: 37px;
 
         .list-group-item {
-          padding: 24px;
+          padding: 16px;
           border: 1px solid #f2f2f2;
           background-color: #f2f2f2;
           border-radius: 10px;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
+          flex-direction: column-reverse;
           font-family: "NanumSquare";
           letter-spacing: -0.08em;
+          position: relative;
 
           &:not(:last-child) {
             margin-bottom: 10px;
@@ -947,17 +954,19 @@ img {
 
           .left {
             display: flex;
+            flex-direction: row;
             align-items: center;
+            width: 100%;
 
             .badge {
               display: block;
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center center;
-              width: 70px;
-              height: 70px;
+              width: 40px;
+              height: 40px;
               border-radius: 50%;
-              margin-right: 14px;
+              margin-right: 9px;
             }
 
             .badge-reg {
@@ -984,21 +993,34 @@ img {
               background-image: url(../images/badge-c-cancel.png);
             }
 
+            .content {
+              flex: 1;
+            }
+
             .title {
-              font-size: 22px;
+              font-size: 16px;
               font-weight: bold;
               margin-bottom: 0;
+              width: calc(100% - 16px);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
 
             .location {
-              font-size: 16px;
+              display: inline-block;
+              font-size: 12px;
               position: relative;
-              padding-left: 25px;
+              padding-left: 17px;
+              width: calc(100% - 16px);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
 
               &::before {
                 content: "";
-                width: 18px;
-                height: 21px;
+                width: 13px;
+                height: 15px;
                 background-image: url(../images/location-logo.png);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -1012,16 +1034,20 @@ img {
           }
 
           .right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             text-align: right;
+            margin-bottom: 10px;
 
             span {
-              font-size: 16px;
+              font-size: 12px;
               color: #999999;
               font-weight: bold;
             }
 
             .charge {
-              font-size: 20px;
+              font-size: 12px;
               font-weight: bold;
               margin-bottom: 0;
             }
@@ -1042,15 +1068,15 @@ img {
           }
 
           .page-link {
-            width: 58px;
-            height: 58px;
+            width: 28px;
+            height: 28px;
             border: 2px solid $main-black;
-            border-radius: 8px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: "NanumSquare";
-            font-size: 22px;
+            font-size: 14px;
             letter-spacing: -0.08em;
             color: $main-black;
             margin: 3px;
@@ -1064,14 +1090,14 @@ img {
 
           .page-prev {
             background-image: url(../images/prev-logo.png);
-            background-size: 11px 17px;
+            background-size: 8px 14px;
             background-position: 50% 50%;
             background-repeat: no-repeat;
           }
 
           .page-next {
             background-image: url(../images/next-logo.png);
-            background-size: 11px 17px;
+            background-size: 8px 14px;
             background-position: 50% 50%;
             background-repeat: no-repeat;
           }
@@ -1286,7 +1312,7 @@ img {
           }
 
           .cms-type-internal-time-date-time-absolute {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
             position: relative;
             padding-left: 32px;
@@ -1438,7 +1464,7 @@ img {
       a {
         display: block;
         font-family: "NanumSquare";
-        font-size: 24px;
+        font-size: 16px;
         font-weight: bold;
         letter-spacing: -0.08em;
         color: #cccccc;
@@ -2875,11 +2901,11 @@ img {
         .filter-btn {
           color: $main-black;
           font-family: "NanumSquare";
-          font-size: 22px;
+          font-size: 16px;
           letter-spacing: -0.08em;
           font-weight: bold;
           position: relative;
-          padding: 0 25px 0 33px;
+          padding: 0 19px 0 25px;
           z-index: 10;
 
           &:active {
@@ -2892,8 +2918,8 @@ img {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            width: 22px;
-            height: 22px;
+            width: 16px;
+            height: 16px;
             position: absolute;
             top: 50%;
             left: 0;
@@ -2906,8 +2932,8 @@ img {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            width: 14px;
-            height: 10px;
+            width: 11px;
+            height: 7px;
             position: absolute;
             top: 50%;
             right: 0;
@@ -2918,7 +2944,7 @@ img {
         ul {
           display: none;
           position: absolute;
-          top: 48px;
+          top: 41px;
           right: 0;
           z-index: 9;
           border: 2px solid $main-black;
@@ -2926,12 +2952,12 @@ img {
           background-color: #fff;
           text-align: left;
           list-style: none;
-          padding: 23px;
+          padding: 17px;
 
           li {
             &:not(:last-child) {
               padding: 0;
-              margin-bottom: 22px;
+              margin-bottom: 17px;
             }
 
             &.checked {
@@ -2942,18 +2968,18 @@ img {
 
             label {
               font-family: "NanumSquare";
-              font-size: 18px;
+              font-size: 14px;
               letter-spacing: -0.08em;
               color: $main-black;
               font-weight: 400;
               margin: 0;
-              padding-left: 42px;
+              padding-left: 32px;
               position: relative;
 
               &::before {
                 content: "";
-                width: 32px;
-                height: 32px;
+                width: 22px;
+                height: 22px;
                 background-image: url(../images/filter-non-check.png);
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -3379,7 +3405,7 @@ img {
   .site-content {
     .conts-wrap {
       .page-title {
-        margin-bottom: 58px;
+        margin-bottom: 38px;
       }
 
       .list-group-type1 {
@@ -3394,7 +3420,7 @@ img {
             .right {
               .cms-type-internal-time-date-time-absolute {
                 display: inline-block;
-                margin-top: 8px;
+                margin-top: 3px;
               }
             }
           }
@@ -3407,7 +3433,7 @@ img {
         }
 
         .list-group-item {
-          padding: 25px;
+          padding: 15px;
           border: 1px solid #f2f2f2;
           background-color: #f2f2f2;
           border-radius: 10px;
@@ -3421,22 +3447,22 @@ img {
 
           .flex-wrapper {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column-reverse;
 
             .left {
               display: flex;
-              align-items: center;
+              flex-direction: row;
+              align-items: flex-start;
 
               .badge {
                 display: block;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                width: 70px;
-                height: 70px;
+                width: 40px;
+                height: 40px;
                 border-radius: 50%;
-                margin-right: 14px;
+                margin-right: 9px;
               }
 
               .badge-reg {
@@ -3463,21 +3489,35 @@ img {
                 background-image: url(../images/badge-c-cancel.png);
               }
 
+              .content {
+                flex: 1;
+              }
+
               .title {
-                font-size: 22px;
+                font-size: 16px;
                 font-weight: bold;
                 margin-bottom: 0;
+                display: block;
+                width: calc(100% - 15px);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
 
               .location {
-                font-size: 16px;
+                font-size: 12px;
                 position: relative;
-                padding-left: 25px;
+                padding-left: 17px;
+                display: block;
+                width: calc(100% - 15px);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 &::before {
                   content: "";
-                  width: 18px;
-                  height: 21px;
+                  width: 13px;
+                  height: 15px;
                   background-image: url(../images/location-logo.png);
                   background-size: cover;
                   background-repeat: no-repeat;
@@ -3492,11 +3532,15 @@ img {
 
             .right {
               text-align: right;
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
 
               span {
-                font-size: 16px;
+                font-size: 12px;
                 color: #999999;
                 font-weight: bold;
+                white-space: nowrap;
               }
 
               .charge {
@@ -3508,15 +3552,15 @@ img {
               .btn-group {
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: center;
-                margin-top: 6px;
+                margin-top: 0px;
 
                 .btn-default {
                   background-color: transparent;
                   border: none;
-                  width: 60px;
-                  height: 40px;
+                  width: 40px;
+                  height: 26px;
                   background-size: cover;
                   background-repeat: no-repeat;
                   background-position: center center;
@@ -3551,8 +3595,8 @@ img {
           }
 
           .box-type1 {
-            padding: 20px;
-            min-height: 60px;
+            padding: 15px;
+            min-height: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -3561,7 +3605,7 @@ img {
 
             p {
               font-family: "NanumSquare";
-              font-size: 16px;
+              font-size: 12px;
               letter-spacing: -0.08em;
               color: $main-black;
               position: relative;
@@ -3571,26 +3615,25 @@ img {
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center center;
-                width: 24px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
                 position: absolute;
-                top: 50%;
+                top: -1px;
                 left: 0;
-                transform: translateY(-50%);
               }
 
               &:not(:first-child) {
-                margin-top: 6px;
+                margin-top: 10px;
               }
             }
           }
 
           .complaint-content {
-            margin-top: 23px;
+            margin-top: 18px;
             margin-bottom: 6px;
 
             p {
-              padding-left: 35px;
+              padding-left: 29px;
 
               &::before {
                 background-image: url(../images/user-small-round-gray.png);
@@ -3600,7 +3643,7 @@ img {
 
           .chat {
             p {
-              padding-left: 33px;
+              padding-left: 29px;
 
               &::before {
                 background-image: url(../images/user-small-round.png);
@@ -3819,5 +3862,15 @@ img {
         }
       }
     }
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

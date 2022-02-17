@@ -26,6 +26,21 @@ $(document).ready(function () {
     touchEnabled: navigator.maxTouchPoints > 0
   });
 
+  $("a[href='#secion-1']").click(function () {
+    var targetOffset = $("#section-1").offset().top + 30;
+    $("html, body").animate({
+      scrollTop: targetOffset
+    });
+  });
+
+  function changeImage() {
+    var centerClasses = $(".center").attr("class").split(" ");
+    var imgClass = centerClasses[centerClasses.length - 1];
+    var newNumber = Number($(".slick-current").attr("data-slick-index")) + 1;
+    var newImgClass = "img-" + newNumber;
+    $(".center").removeClass(imgClass).addClass(newImgClass);
+  }
+
   // 메인페이지 서브 슬라이더
   $(".text-slider")
     .slick({
@@ -35,7 +50,7 @@ $(document).ready(function () {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 3000,
-      speed: 500,
+      speed: 1000,
       centerMode: true,
       arrows: false,
       responsive: [
@@ -53,18 +68,25 @@ $(document).ready(function () {
         }
       ]
     })
-    .on("afterChange", function () {
+    .on("beforeChange", function () {
       var centerClasses = $(".center").attr("class").split(" ");
       var imgClass = centerClasses[centerClasses.length - 1];
-      var newNumber = Number($(".slick-current").attr("data-slick-index")) + 1;
-      var newImgClass = "img-" + newNumber;
+      var num = Number($(".slick-current").children("p.num").text()) + 1;
+      if (num > 8) {
+        num = 1;
+      }
+      var newImgClass = "img-" + num;
       $(".center").removeClass(imgClass).addClass(newImgClass);
+      $(".phone-content-img").addClass("animate");
+    })
+    .on("afterChange", function () {
+      $(".phone-content-img").removeClass("animate");
     });
 
   if ($(window).outerWidth() < 1280) {
     if ($(".center .phone-img").length > 0) {
       var phoneLeftPosition = $(".slick-current").offset().left + 130;
-      var contentLeftPosition = phoneLeftPosition + 5;
+      var contentLeftPosition = phoneLeftPosition;
 
       $(".center .phone-img").css({ left: phoneLeftPosition });
       $(".center .phone-content-img").css({ left: contentLeftPosition });
@@ -82,6 +104,33 @@ $(document).ready(function () {
     });
     $(".notice-slider .slider-item").css({ width: "300px" });
   }
+
+  $(window).resize(function () {
+    if ($(window).outerWidth() < 1280) {
+      if ($(".center .phone-img").length > 0) {
+        var phoneLeftPosition = $(".slick-current").offset().left + 130;
+        var contentLeftPosition = phoneLeftPosition + 5;
+
+        $(".center .phone-img").css({ left: phoneLeftPosition });
+        $(".center .phone-content-img").css({ left: contentLeftPosition });
+      }
+
+      $(".notice-slider").slick({
+        infinite: true,
+        variableWidth: true,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500,
+        centerMode: true,
+        arrows: false
+      });
+      $(".notice-slider .slider-item").css({ width: "300px" });
+    } else {
+      $(".center .phone-img").css({ left: "calc(50% + 30px)" });
+      $(".center .phone-content-img").css({ left: "calc(50% + 51px)" });
+    }
+  });
 
   var footerHeight = Math.round(
     $(".site-footer").outerHeight() +

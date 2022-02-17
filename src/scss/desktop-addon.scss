@@ -65,11 +65,14 @@
   padding: 11px 10px;
 
   .header-wrapper {
+    background-color: #fff;
+
     .main-logo {
       width: 206px;
       height: 52px;
 
       .navbar-brand {
+        background-image: url(../images/main-logo.png);
         background-size: 206px 52px;
         width: 100%;
         height: 100%;
@@ -78,6 +81,7 @@
 
     .gnb {
       .ico-my {
+        background-image: url(../images/user-logo-black.png);
         background-size: 22px 27px;
         width: 50px;
         height: 50px;
@@ -89,6 +93,7 @@
       }
 
       .ico-noti {
+        background-image: url(../images/alram-logo.png);
         background-size: 24px 27px;
         width: 50px;
         height: 50px;
@@ -545,6 +550,7 @@
   margin-bottom: 90px;
   .container-fluid {
     padding: 31px 40px;
+    display: block;
 
     .copyright {
       float: left;
@@ -577,7 +583,7 @@
   .site-content {
     .conts-wrap {
       max-width: 720px;
-      margin: 70px auto 340px;
+      margin: 70px auto 190px;
 
       .list-group-type1 {
         margin-top: 15px;
@@ -596,6 +602,7 @@
 
           .left {
             display: flex;
+            flex-direction: row;
             align-items: center;
 
             .badge {
@@ -612,11 +619,13 @@
             .title {
               font-size: 22px;
               margin-bottom: 0;
+              width: calc(100% - 24px);
             }
 
             .location {
               font-size: 16px;
               padding-left: 25px;
+              width: calc(100% - 24px);
 
               &::before {
                 width: 18px;
@@ -627,6 +636,8 @@
 
           .right {
             text-align: right;
+            width: auto;
+            margin-bottom: 0;
 
             span {
               font-size: 16px;
@@ -1835,8 +1846,18 @@
       }
 
       .list-group-type2 {
+        p {
+          margin: 0;
+        }
+
         .list-group-item {
           padding: 25px;
+          border: 1px solid #f2f2f2;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          display: block;
+          font-family: "NanumSquare";
+          letter-spacing: -0.08em;
 
           &:not(:last-child) {
             margin-bottom: 10px;
@@ -1844,44 +1865,92 @@
 
           .flex-wrapper {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
 
             .left {
               display: flex;
+              flex-direction: row;
               align-items: center;
 
               .badge {
+                display: block;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
                 width: 70px;
                 height: 70px;
+                border-radius: 50%;
                 margin-right: 14px;
+              }
+
+              .badge-reg {
+                background-image: url(../images/badge-reg.png);
+              }
+
+              .badge-ing {
+                background-image: url(../images/badge-ing.png);
+              }
+
+              .badge-trans {
+                background-image: url(../images/badge-trans.png);
+              }
+
+              .badge-cancel {
+                background-image: url(../images/badge-cancel.png);
+              }
+
+              .badge-complete {
+                background-image: url(../images/badge-complete.png);
+              }
+
+              .badge-c-cancel {
+                background-image: url(../images/badge-c-cancel.png);
               }
 
               .title {
                 font-size: 22px;
+                font-weight: bold;
                 margin-bottom: 0;
               }
 
               .location {
                 font-size: 16px;
+                position: relative;
                 padding-left: 25px;
 
                 &::before {
+                  content: "";
                   width: 18px;
                   height: 21px;
+                  background-image: url(../images/location-logo.png);
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
                 }
               }
             }
 
             .right {
               text-align: right;
+              display: block;
+              width: auto;
+              margin-bottom: 0;
 
               span {
                 font-size: 16px;
+                color: #999999;
+                font-weight: bold;
               }
 
               .charge {
                 font-size: 20px;
+                font-weight: bold;
                 margin-bottom: 0;
               }
 
@@ -1893,12 +1962,38 @@
                 margin-top: 6px;
 
                 .btn-default {
+                  background-color: transparent;
+                  border: none;
                   width: 60px;
                   height: 40px;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-position: center center;
+
+                  &:active {
+                    box-shadow: none;
+                  }
+
+                  &:focus {
+                    outline: none;
+                  }
                 }
 
                 .accept-btn {
+                  background-image: url(../images/accept-small-btn.png);
                   margin-right: 4px;
+
+                  &:hover {
+                    background-image: url(../images/accept-small-btn-on.png);
+                  }
+                }
+
+                .reject-btn {
+                  background-image: url(../images/reject-small-btn.png);
+
+                  &:hover {
+                    background-image: url(../images/reject-small-btn-on.png);
+                  }
                 }
               }
             }
@@ -1910,13 +2005,27 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border-radius: 8px;
+            background-color: #fff;
 
             p {
+              font-family: "NanumSquare";
               font-size: 16px;
+              letter-spacing: -0.08em;
+              color: $main-black;
+              position: relative;
 
               &::before {
+                content: "";
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
                 width: 24px;
                 height: 24px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
               }
 
               &:not(:first-child) {
@@ -1931,12 +2040,24 @@
 
             p {
               padding-left: 35px;
+
+              &::before {
+                background-image: url(../images/user-small-round-gray.png);
+              }
             }
           }
 
           .chat {
             p {
               padding-left: 33px;
+
+              &::before {
+                background-image: url(../images/user-small-round.png);
+              }
+
+              &.gray::before {
+                background-image: url(../images/user-small-round-gray.png);
+              }
             }
           }
         }
