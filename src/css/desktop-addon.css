@@ -63,6 +63,10 @@
   margin-top: 0;
 }
 
+.site-header .img-wrapper.on {
+  display: none;
+}
+
 .site-header .header-wrapper {
   background-color: #fff;
   margin-left: 0;
@@ -115,6 +119,7 @@
 
 .site-header .lnb .navbar {
   display: block;
+  height: auto;
 }
 
 .site-header .lnb .navbar-client,

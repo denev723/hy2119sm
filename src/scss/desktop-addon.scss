@@ -65,6 +65,10 @@
   padding: 11px 10px;
   margin-top: 0;
 
+  .img-wrapper.on {
+    display: none;
+  }
+
   .header-wrapper {
     background-color: #fff;
     margin-left: 0;
@@ -116,6 +120,7 @@
 
     .navbar {
       display: block;
+      height: auto;
     }
 
     .navbar-client,
