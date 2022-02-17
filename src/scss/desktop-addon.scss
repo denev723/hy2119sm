@@ -63,9 +63,12 @@
   width: 100%;
   margin: auto;
   padding: 11px 10px;
+  margin-top: 0;
 
   .header-wrapper {
     background-color: #fff;
+    margin-left: 0;
+    margin-right: 0;
 
     .main-logo {
       width: 206px;
@@ -109,6 +112,10 @@
 
     .navbar-employee {
       white-space: nowrap;
+    }
+
+    .navbar {
+      display: block;
     }
 
     .navbar-client,
@@ -271,10 +278,10 @@
     }
 
     .phone-content-img {
-      width: 419px;
-      height: 531px;
-      bottom: -13px;
-      left: calc(50% + 51px);
+      width: 409px;
+      height: 521px;
+      bottom: -5px;
+      left: calc(50% + 59px);
       right: auto;
     }
 
@@ -593,6 +600,7 @@
           padding: 24px;
           border-radius: 10px;
           display: flex;
+          flex-direction: row;
           justify-content: space-between;
           align-items: center;
 
@@ -604,6 +612,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            flex: 1;
 
             .badge {
               display: block;
@@ -635,6 +644,7 @@
           }
 
           .right {
+            display: block;
             text-align: right;
             width: auto;
             margin-bottom: 0;
@@ -1440,8 +1450,10 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-between;
+        margin-left: 0;
 
         .phone-img {
+          display: block;
           width: 18px;
           height: 26px;
         }

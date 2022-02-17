@@ -127,6 +127,38 @@ img {
   margin: auto;
   padding: 0;
   position: relative;
+  margin-top: -1px;
+}
+
+.site-header .img-wrapper {
+  display: none;
+}
+
+.site-header .img-wrapper.on {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.site-header .img-wrapper.on .scroll-img {
+  background-image: url(../images/arrows-img.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
 }
 
 .site-header .header-wrapper {
@@ -141,6 +173,8 @@ img {
           align-items: center;
   padding: 10px;
   background-color: #2e2e3c;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 
 .site-header .header-wrapper .main-logo {
@@ -189,11 +223,14 @@ img {
 
 .site-header .lnb {
   position: static;
-  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 10px;
-  margin-left: -15px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
 }
 
 .site-header .lnb::-webkit-scrollbar {
@@ -201,7 +238,15 @@ img {
 }
 
 .site-header .lnb .navbar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   white-space: nowrap;
+  margin: auto;
+  height: 50px;
 }
 
 .site-header .lnb .navbar-employee {
@@ -238,7 +283,7 @@ img {
   font-family: "NanumSquare";
   font-weight: 800;
   color: #00457c;
-  padding: 15px 18px;
+  padding: 15px;
 }
 
 .site-header .lnb .navbar-client .nav-item .nav-link:focus, .site-header .lnb .navbar-client .nav-item .nav-link:hover,
@@ -2733,15 +2778,7 @@ img {
   border-radius: 10px;
   padding: 15px;
   margin-top: 27px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
 }
 
 .page-apply-middle .conts-wrap .info .left {
@@ -2782,22 +2819,12 @@ img {
 }
 
 .page-apply-middle .conts-wrap .info .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
+  margin-left: 48px;
 }
 
 .page-apply-middle .conts-wrap .info .right .phone-img {
+  display: none;
   width: 14px;
   height: 20px;
   background-image: url(../images/apply-phone.png);

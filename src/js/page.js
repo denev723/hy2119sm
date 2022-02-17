@@ -23,7 +23,8 @@ $(document).ready(function () {
     speed: 1100,
     pager: true,
     pagerCustom: "#bx-pager",
-    touchEnabled: navigator.maxTouchPoints > 0
+    touchEnabled: navigator.maxTouchPoints > 0,
+    infiniteLoop: true
   });
 
   $("a[href='#secion-1']").click(function () {
@@ -52,21 +53,7 @@ $(document).ready(function () {
       autoplaySpeed: 3000,
       speed: 1000,
       centerMode: true,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 1270,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 1280,
-          settings: {
-            slidesToShow: 6
-          }
-        }
-      ]
+      arrows: false
     })
     .on("beforeChange", function () {
       var centerClasses = $(".center").attr("class").split(" ");
@@ -367,6 +354,19 @@ $(document).ready(function () {
   $("button.reject-btn").click(function () {
     $(".reject-box").addClass("on");
     $(window).scrollTop(0);
+  });
+
+  $(".navbar").each(function () {
+    var pageName = location.href.split("/")[3];
+    var pageNameFull = "navbar-" + pageName;
+    var lnbWidth = $(".lnb").width();
+
+    if ($(this).hasClass(pageNameFull)) {
+      if (lnbWidth < $(this).get(0).scrollWidth) {
+        $(".site-header .img-wrapper").addClass("on");
+        $(this).css({ "padding-right": "50px" });
+      }
+    }
   });
 
   var body = $("body");

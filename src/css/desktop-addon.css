@@ -60,10 +60,13 @@
   width: 100%;
   margin: auto;
   padding: 11px 10px;
+  margin-top: 0;
 }
 
 .site-header .header-wrapper {
   background-color: #fff;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .site-header .header-wrapper .main-logo {
@@ -108,6 +111,10 @@
 
 .site-header .lnb .navbar-employee {
   white-space: nowrap;
+}
+
+.site-header .lnb .navbar {
+  display: block;
 }
 
 .site-header .lnb .navbar-client,
@@ -274,10 +281,10 @@
 }
 
 .site-content .center .phone-content-img {
-  width: 419px;
-  height: 531px;
-  bottom: -13px;
-  left: calc(50% + 51px);
+  width: 409px;
+  height: 521px;
+  bottom: -5px;
+  left: calc(50% + 59px);
   right: auto;
 }
 
@@ -594,6 +601,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -617,6 +628,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .page-sub .site-content .conts-wrap .list-group-type1 .list-group-item .left .badge {
@@ -648,6 +662,7 @@
 }
 
 .page-sub .site-content .conts-wrap .list-group-type1 .list-group-item .right {
+  display: block;
   text-align: right;
   width: auto;
   margin-bottom: 0;
@@ -1419,9 +1434,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 0;
 }
 
 .page-apply-middle .conts-wrap .info .right .phone-img {
+  display: block;
   width: 18px;
   height: 26px;
 }
