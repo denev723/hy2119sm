@@ -867,8 +867,14 @@
   height: 98px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-login .site-content {
+    padding-top: 100px;
+  }
+}
+
 .page-login .site-content {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0;
   display: -webkit-box;
@@ -883,8 +889,10 @@
 }
 
 .page-login .site-content .conts-wrap {
-  max-width: 720px;
-  margin: 0 auto;
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 0;
   padding: 0;
 }
 

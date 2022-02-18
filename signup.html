@@ -1,473 +1,563 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>한양대학교 스마트 종합상황실</title>
-    <meta name="description" content="민원접수, 불편신고" />
-    <meta name="theme-color" content="#f3c412" />
-    <meta name="msapplication-navbutton-color" content="#f3c412" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="msapplication-TileColor" content="#f3c412" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="한양대학교 스마트 종합상황실" />
-    <meta property="og:description" content="민원접수, 불편신고" />
-    <meta property="al:ios:app_name" content="한양대학교 스마트 종합상황실" />
-    <meta
-      property="al:android:app_name"
-      content="한양대학교 스마트 종합상황실"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="한양대학교 스마트 종합상황실" />
-    <meta name="twitter:description" content="민원접수, 불편신고" />
-    <link
-      rel="apple-touch-startup-image"
-      href="./src/favicon/favicon-192x192.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./src/favicon/apple-touch-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./src/favicon/apple-touch-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./src/favicon/apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./src/favicon/apple-touch-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./src/favicon/apple-touch-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./src/favicon/apple-touch-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./src/favicon/apple-touch-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./src/favicon/apple-touch-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./src/favicon/apple-touch-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./src/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./src/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./src/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./src/favicon/favicon-192x192.png"
-    />
-    <link rel="shortcut icon" href="./src/favicon/favicon.ico" />
-    <meta
-      name="msapplication-TileImage"
-      content="./src/favicon/favicon-192x192.png"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>한양대학교 스마트 종합상황실</title>
+        <meta name="description" content="민원접수, 불편신고" />
+        <meta name="theme-color" content="#f3c412" />
+        <meta name="msapplication-navbutton-color" content="#f3c412" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="msapplication-TileColor" content="#f3c412" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="한양대학교 스마트 종합상황실" />
+        <meta property="og:description" content="민원접수, 불편신고" />
+        <meta
+            property="al:ios:app_name"
+            content="한양대학교 스마트 종합상황실"
+        />
+        <meta
+            property="al:android:app_name"
+            content="한양대학교 스마트 종합상황실"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="한양대학교 스마트 종합상황실" />
+        <meta name="twitter:description" content="민원접수, 불편신고" />
+        <link
+            rel="apple-touch-startup-image"
+            href="./src/favicon/favicon-192x192.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./src/favicon/apple-touch-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./src/favicon/apple-touch-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./src/favicon/apple-touch-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./src/favicon/apple-touch-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./src/favicon/apple-touch-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./src/favicon/apple-touch-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./src/favicon/apple-touch-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./src/favicon/apple-touch-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./src/favicon/apple-touch-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./src/favicon/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./src/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./src/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./src/favicon/favicon-192x192.png"
+        />
+        <link rel="shortcut icon" href="./src/favicon/favicon.ico" />
+        <meta
+            name="msapplication-TileImage"
+            content="./src/favicon/favicon-192x192.png"
+        />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
-    />
-    <link rel="stylesheet" href="./src/vendor/css/slick.css" />
-    <link rel="stylesheet" href="./src/vendor/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./src/css/phone-addon.min.css" />
-    <link
-      rel="stylesheet"
-      href="./src/css/desktop-addon.css"
-      media="screen and (min-width: 1280px)"
-    />
-  </head>
-  <body class="layout-primary page-sub">
-    <header class="site-header">
-      <div class="header-wrapper">
-        <div class="main-logo">
-          <a href="/" class="navbar-brand">
-            <span class="sr-only">한양대학교 스마트 종합상황실</span>
-          </a>
-        </div>
-        <div class="gnb">
-          <a href="#open" class="ico-my">
-            <span class="sr-only">프로필</span>
-          </a>
-          <a href="#notiOpen" class="ico-noti">
-            <span class="sr-only">알림</span>
-          </a>
-        </div>
-      </div>
-      <div class="container-fluid lnb">
-        <ul class="navbar navbar-client">
-          <li class="nav-item on">
-            <a href="./client/apply/apply-step.html" class="nav-link"
-              >민원접수</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./client/history/history.html" class="nav-link"
-              >접수내역</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="#nothing" class="nav-link">공지사항</a>
-          </li>
-        </ul>
-        <ul class="navbar navbar-employee">
-          <li class="nav-item on">
-            <a href="./employee/status/status-list.html" class="nav-link"
-              >민원콜</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./employee/doing/doing-list.html" class="nav-link"
-              >민원처리</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./employee/apply/apply-step.html" class="nav-link"
-              >민원접수</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./employee/history/history.html" class="nav-link"
-              >접수내역</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="#nothing" class="nav-link">공지사항</a>
-          </li>
-        </ul>
-        <ul class="navbar navbar-transfer">
-          <li class="nav-item on">
-            <a href="./transfer/apply/apply-step.html" class="nav-link"
-              >민원접수</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./transfer/history/history.html" class="nav-link"
-              >접수내역</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="./transfer/transcase/transcase-list.html" class="nav-link"
-              >이관민원</a
-            >
-          </li>
-          <li class="nav-item on">
-            <a href="#nothing" class="nav-link">공지사항</a>
-          </li>
-        </ul>
-      </div>
-      <div class="img-wrapper">
-        <span class="scroll-img"></span>
-      </div>
-    </header>
-    <main class="site-content container-fluid">
-      <div class="conts-wrap">
-        <div class="sub-wrap">
-          <header class="sub-header">
-            <div class="site-logo">
-              <span class="sr-only">사이트로고</span>
-            </div>
-          </header>
-          <div class="sub-content">
-            <h3 class="summary">
-              <span class="title">회원가입</span>
-              <p><strong>추가정보</strong>를 입력해주세요</p>
-            </h3>
-            <form class="cms-form">
-              <div class="box box-primary">
-                <div class="box-body form-horizontal">
-                  <input type="hidden" name="id" value="klasjhdfjkl18u231@" />
-                  <div class="form-group">
-                    <span class="control-label col-sm-3">이름</span>
-                    <div class="col-sm-9">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="이름을 입력해주세요."
-                        value="이민석"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <span class="control-label col-sm-3">이메일(필수)</span>
-                    <div class="col-sm-9">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="이메일 주소를 입력해주세요."
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <span class="control-label col-sm-3"
-                      >휴대폰 번호(선택)</span
-                    >
-                    <div class="col-sm-9">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="'-'없이 숫자만 입력해주세요."
-                      />
-                      <span class="important"
-                        >휴대폰번호 미 입력 시 민원처리 내역을 실시간 통보
-                        받으실 수 없습니다.</span
-                      >
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <span class="control-label col-sm-3"
-                      >개인정보 보유기간(년)</span
-                    >
-                    <div class="col-sm-9">
-                      <div>
-                        <label>
-                          <input type="radio" name="value-1" checked />
-                          1년
-                        </label>
-                        <label>
-                          <input type="radio" name="value-1" />
-                          3년
-                        </label>
-                        <label>
-                          <input type="radio" name="value-1" />
-                          5년
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+        />
+        <link rel="stylesheet" href="./src/vendor/css/slick.css" />
+        <link rel="stylesheet" href="./src/vendor/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./src/css/phone-addon.min.css" />
+        <link
+            rel="stylesheet"
+            href="./src/css/desktop-addon.css"
+            media="screen and (min-width: 1280px)"
+        />
+    </head>
+    <body class="layout-primary page-sub">
+        <header class="site-header">
+            <div class="header-wrapper">
+                <div class="main-logo">
+                    <a href="/" class="navbar-brand">
+                        <span class="sr-only"
+                            >한양대학교 스마트 종합상황실</span
+                        >
+                    </a>
                 </div>
-                <div class="box-body form-horizontal">
-                  <div>
-                    <strong>이용약관</strong>
-                    <div>
-                      <div class="wrapper">
-                        <p>제 1조 (목적)</p>
-                        <p>
-                          본 한양대학교 스마트종합상황실 규정 목적은 한양대학교
-                          내 공용 공간(체육관, 대단위 회의실, 세미나실,
-                          일반강의실 등) 및 부대시설 대관에 따른 원칙을 명확히
-                          하고, 이를 성실히 준수함으로서 효율적인 공간 운영 등
-                          소기의 목적을 달성하기 위함이다.
-                        </p>
-                        <br />
-                        <p>제 2조 (스마트종합상황실의 정의)</p>
-                        <p>
-                          1. 학술대회, 세미나, 국제회의, 공연, 설명회 등을
-                          위하여 시설·설비 및 부수장비를 소정의 절차를 거쳐
-                          사용하는 행위 를 “스마트종합상황실”이라고 한다. 2.
-                          스마트종합상황실 업무 및 공용공간의 유지관리,
-                          감독업무를 담당하는 자를 ‘운영자’라 한다. 3.
-                          종합상황실신청을 하여 승인을 받은 자를 ‘근무자’라
-                          한다. 4. 스마트종합상황실의 범위는 공용 공간 내
-                          기본시설 및 부대시설의 사용을 포함 한다.
-                        </p>
-                        <br />
-                        <p>제 1조 (목적)</p>
-                        <p>
-                          본 한양대학교 스마트종합상황실 규정 목적은 한양대학교
-                          내 공용 공간(체육관, 대단위 회의실, 세미나실,
-                          일반강의실 등) 및 부대시설 대관에 따른 원칙을 명확히
-                          하고, 이를 성실히 준수함으로서 효율적인 공간 운영 등
-                          소기의 목적을 달성하기 위함이다.
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <label>
-                        <input type="checkbox" />
-                        동의합니다.
-                      </label>
-                    </div>
-                  </div>
-                  <div>
-                    <strong>개인정보처리방침</strong>
-                    <div>
-                      <div class="wrapper">
-                        <p>
-                          한양대학교 스마트종합상황실은 개인정보 보호법 제30조에
-                          따라 정보주체의 개인정보를 보호하고 이와 관련한 고충
-                          을 신속하고 원활하게 처리하기 위하여 다음과 같이
-                          개인정보 처리방침을 수립·공개합니다.
-                        </p>
-                        <br />
-                        <p>제1조(개인정보의 처리목적)</p>
-                        <br />
-                        <p>
-                          ① 한양대학교 스마트종합상황실은 다음의 목적을 위하여
-                          개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의
-                          목적 이외의 용도로는 이용하지 않으며, 이용 목적이
-                          변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의
-                          동의 를 받는 등 필요한 조치를 이행할 예정입니다.
-                        </p>
-                        <br />
-                        <p>
-                          1. 홈페이지 게시판 관리 한양대학교 스마트종합상황실에
-                          관한 문의사항 등록 및 답변 서비스를 제공하기 위해
-                          개인정보(신청자 성명, e-mail)를
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <label>
-                        <input type="checkbox" />
-                        개인정보처리방침에 동의합니다.
-                      </label>
-                    </div>
-                  </div>
+                <div class="gnb">
+                    <a href="#open" class="ico-my">
+                        <span class="sr-only">프로필</span>
+                    </a>
+                    <a href="#notiOpen" class="ico-noti">
+                        <span class="sr-only">알림</span>
+                    </a>
                 </div>
-                <div class="box-footer with-border">
-                  <a href="./client/main.html" class="btn btn-success">
-                    <span class="sr-only">회원가입</span>
-                  </a>
-                  <a href="/" class="btn btn-warning">
-                    <span class="sr-only">취소</span>
-                  </a>
+            </div>
+            <div class="container-fluid lnb">
+                <ul class="navbar navbar-client">
+                    <li class="nav-item on">
+                        <a
+                            href="./client/apply/apply-step.html"
+                            class="nav-link"
+                            >민원접수</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a href="./client/history/history.html" class="nav-link"
+                            >접수내역</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a href="#nothing" class="nav-link">공지사항</a>
+                    </li>
+                </ul>
+                <ul class="navbar navbar-employee">
+                    <li class="nav-item on">
+                        <a
+                            href="./employee/status/status-list.html"
+                            class="nav-link"
+                            >민원콜</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a
+                            href="./employee/doing/doing-list.html"
+                            class="nav-link"
+                            >민원처리</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a
+                            href="./employee/apply/apply-step.html"
+                            class="nav-link"
+                            >민원접수</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a
+                            href="./employee/history/history.html"
+                            class="nav-link"
+                            >접수내역</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a href="#nothing" class="nav-link">공지사항</a>
+                    </li>
+                </ul>
+                <ul class="navbar navbar-transfer">
+                    <li class="nav-item on">
+                        <a
+                            href="./transfer/apply/apply-step.html"
+                            class="nav-link"
+                            >민원접수</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a
+                            href="./transfer/history/history.html"
+                            class="nav-link"
+                            >접수내역</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a
+                            href="./transfer/transcase/transcase-list.html"
+                            class="nav-link"
+                            >이관민원</a
+                        >
+                    </li>
+                    <li class="nav-item on">
+                        <a href="#nothing" class="nav-link">공지사항</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="img-wrapper">
+                <span class="scroll-img"></span>
+            </div>
+        </header>
+        <main class="site-content container-fluid">
+            <div class="conts-wrap">
+                <div class="sub-wrap">
+                    <header class="sub-header">
+                        <div class="site-logo">
+                            <span class="sr-only">사이트로고</span>
+                        </div>
+                    </header>
+                    <div class="sub-content">
+                        <h3 class="summary">
+                            <span class="title">회원가입</span>
+                            <p><strong>추가정보</strong>를 입력해주세요</p>
+                        </h3>
+                        <form class="cms-form">
+                            <div class="box box-primary">
+                                <div class="box-body form-horizontal">
+                                    <input
+                                        type="hidden"
+                                        name="id"
+                                        value="klasjhdfjkl18u231@"
+                                    />
+                                    <div class="form-group">
+                                        <span class="control-label col-sm-3"
+                                            >이름</span
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="이름을 입력해주세요."
+                                                value="이민석"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="control-label col-sm-3"
+                                            >이메일(필수)</span
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="이메일 주소를 입력해주세요."
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="control-label col-sm-3"
+                                            >휴대폰 번호(선택)</span
+                                        >
+                                        <div class="col-sm-9">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="'-'없이 숫자만 입력해주세요."
+                                            />
+                                            <span class="important"
+                                                >휴대폰번호 미 입력 시 민원처리
+                                                내역을 실시간 통보 받으실 수
+                                                없습니다.</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="control-label col-sm-3"
+                                            >개인정보 보유기간(년)</span
+                                        >
+                                        <div class="col-sm-9">
+                                            <div>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="value-1"
+                                                        checked
+                                                    />
+                                                    1년
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="value-1"
+                                                    />
+                                                    3년
+                                                </label>
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="value-1"
+                                                    />
+                                                    5년
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-body form-horizontal">
+                                    <div>
+                                        <strong>이용약관</strong>
+                                        <div>
+                                            <div class="wrapper">
+                                                <p>제 1조 (목적)</p>
+                                                <p>
+                                                    본 한양대학교
+                                                    스마트종합상황실 규정 목적은
+                                                    한양대학교 내 공용
+                                                    공간(체육관, 대단위 회의실,
+                                                    세미나실, 일반강의실 등) 및
+                                                    부대시설 대관에 따른 원칙을
+                                                    명확히 하고, 이를 성실히
+                                                    준수함으로서 효율적인 공간
+                                                    운영 등 소기의 목적을
+                                                    달성하기 위함이다.
+                                                </p>
+                                                <br />
+                                                <p>
+                                                    제 2조 (스마트종합상황실의
+                                                    정의)
+                                                </p>
+                                                <p>
+                                                    1. 학술대회, 세미나,
+                                                    국제회의, 공연, 설명회 등을
+                                                    위하여 시설·설비 및
+                                                    부수장비를 소정의 절차를
+                                                    거쳐 사용하는 행위 를
+                                                    “스마트종합상황실”이라고
+                                                    한다. 2. 스마트종합상황실
+                                                    업무 및 공용공간의 유지관리,
+                                                    감독업무를 담당하는 자를
+                                                    ‘운영자’라 한다. 3.
+                                                    종합상황실신청을 하여 승인을
+                                                    받은 자를 ‘근무자’라 한다.
+                                                    4. 스마트종합상황실의 범위는
+                                                    공용 공간 내 기본시설 및
+                                                    부대시설의 사용을 포함 한다.
+                                                </p>
+                                                <br />
+                                                <p>제 1조 (목적)</p>
+                                                <p>
+                                                    본 한양대학교
+                                                    스마트종합상황실 규정 목적은
+                                                    한양대학교 내 공용
+                                                    공간(체육관, 대단위 회의실,
+                                                    세미나실, 일반강의실 등) 및
+                                                    부대시설 대관에 따른 원칙을
+                                                    명확히 하고, 이를 성실히
+                                                    준수함으로서 효율적인 공간
+                                                    운영 등 소기의 목적을
+                                                    달성하기 위함이다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <input type="checkbox" />
+                                                동의합니다.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <strong>개인정보처리방침</strong>
+                                        <div>
+                                            <div class="wrapper">
+                                                <p>
+                                                    한양대학교
+                                                    스마트종합상황실은 개인정보
+                                                    보호법 제30조에 따라
+                                                    정보주체의 개인정보를
+                                                    보호하고 이와 관련한 고충 을
+                                                    신속하고 원활하게 처리하기
+                                                    위하여 다음과 같이 개인정보
+                                                    처리방침을 수립·공개합니다.
+                                                </p>
+                                                <br />
+                                                <p>
+                                                    제1조(개인정보의 처리목적)
+                                                </p>
+                                                <br />
+                                                <p>
+                                                    ① 한양대학교
+                                                    스마트종합상황실은 다음의
+                                                    목적을 위하여 개인정보를
+                                                    처리합니다. 처리하고 있는
+                                                    개인정보는 다음의 목적
+                                                    이외의 용도로는 이용하지
+                                                    않으며, 이용 목적이 변경되는
+                                                    경우에는 개인정보 보호법
+                                                    제18조에 따라 별도의 동의 를
+                                                    받는 등 필요한 조치를 이행할
+                                                    예정입니다.
+                                                </p>
+                                                <br />
+                                                <p>
+                                                    1. 홈페이지 게시판 관리
+                                                    한양대학교
+                                                    스마트종합상황실에 관한
+                                                    문의사항 등록 및 답변
+                                                    서비스를 제공하기 위해
+                                                    개인정보(신청자 성명,
+                                                    e-mail)를
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                <input type="checkbox" />
+                                                개인정보처리방침에 동의합니다.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer with-border">
+                                    <a
+                                        href="./client/main.html"
+                                        class="btn btn-success"
+                                    >
+                                        <span class="sr-only">회원가입</span>
+                                    </a>
+                                    <a href="/" class="btn btn-warning">
+                                        <span class="sr-only">취소</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <footer class="sub-footer">
+                        <div class="copyright">
+                            &copy;&nbsp;
+                            <span class="year">2020</span>
+                            &nbsp;Hanyang University. All Rights Reserved.
+                        </div>
+                    </footer>
                 </div>
-              </div>
-            </form>
-          </div>
-          <footer class="sub-footer">
-            <div class="copyright">
-              &copy;&nbsp;
-              <span class="year">2020</span>
-              &nbsp;Hanyang University. All Rights Reserved.
             </div>
-          </footer>
-        </div>
-      </div>
-    </main>
-    <footer class="site-footer">
-      <div class="container-fluid">
-        <div class="copyright">
-          &copy;&nbsp;
-          <span class="year">2020</span>
-          &nbsp;Hanyang University. All Rights Reserved.
-        </div>
-        <div class="btn-group">
-          <a href="javascript:void(0)" class="btn btn-link">
-            <span>이용약관</span>
-          </a>
-          <a href="javascript:void(0)" class="btn btn-link">
-            <span>개인정보처리방침</span>
-          </a>
-        </div>
-      </div>
-    </footer>
-    <div class="bottom-wrapper">
-      <div class="chatting-box nochat">
-        <div class="btn-wrapper">
-          <div class="hide-box">
-            <a href="#hide" class="btn hide-btn">
-              <span class="sr-only">채팅창 숨기기</span>
-            </a>
-          </div>
-          <div class="reload-box">
-            <a href="#reload" role="button" class="btn reload-btn disabled">
-              <span class="sr-only">새로고침</span>
-            </a>
-          </div>
-        </div>
-        <div class="list-commt">
-          <div class="box-type1">
-            <p>[이민석] 저의 업무가 아닌것 같습니다.</p>
-            <p>[관리자] 시설팀에 인원이 없어 진행요청 드립니다.</p>
-            <p>[이민석] 그럼 업무시작하겠습니다.</p>
-          </div>
-          <form action="cms-form">
-            <div class="input-group">
-              <input
-                type="text"
-                name="content"
-                class="form-control"
-                placeholder="문의내용을 입력해주세요"
-              />
-              <div class="input-group-btn">
-                <button class="btn btn-success .form-control" id="message">
-                  <span class="sr-only">문의</span>
-                </button>
-              </div>
+        </main>
+        <footer class="site-footer">
+            <div class="container-fluid">
+                <div class="copyright">
+                    &copy;&nbsp;
+                    <span class="year">2020</span>
+                    &nbsp;Hanyang University. All Rights Reserved.
+                </div>
+                <div class="btn-group">
+                    <a href="javascript:void(0)" class="btn btn-link">
+                        <span>이용약관</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btn btn-link">
+                        <span>개인정보처리방침</span>
+                    </a>
+                </div>
             </div>
-          </form>
+        </footer>
+        <div class="bottom-wrapper">
+            <div class="chatting-box nochat">
+                <div class="btn-wrapper">
+                    <div class="hide-box">
+                        <a href="#hide" class="btn hide-btn">
+                            <span class="sr-only">채팅창 숨기기</span>
+                        </a>
+                    </div>
+                    <div class="reload-box">
+                        <a
+                            href="#reload"
+                            role="button"
+                            class="btn reload-btn disabled"
+                        >
+                            <span class="sr-only">새로고침</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="list-commt">
+                    <div class="box-type1">
+                        <p>[이민석] 저의 업무가 아닌것 같습니다.</p>
+                        <p>[관리자] 시설팀에 인원이 없어 진행요청 드립니다.</p>
+                        <p>[이민석] 그럼 업무시작하겠습니다.</p>
+                    </div>
+                    <form action="cms-form">
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                name="content"
+                                class="form-control"
+                                placeholder="문의내용을 입력해주세요"
+                            />
+                            <div class="input-group-btn">
+                                <button
+                                    class="btn btn-success .form-control"
+                                    id="message"
+                                >
+                                    <span class="sr-only">문의</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="list-inquiry">
+                    <p class="text-truncate">
+                        이민석 (A조 1구역)&nbsp;
+                        <span>
+                            배정일시 :
+                            <span
+                                class="cms-type-internal-time-date-time-relative"
+                                >28분전</span
+                            >
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="employee-btn-wrapper btn btn-block" id="workTime">
+                <span class="text">근무시작&nbsp;&nbsp;</span>
+                <span class="timestamp">00:00:00</span>
+            </div>
         </div>
-        <div class="list-inquiry">
-          <p class="text-truncate">
-            이민석 (A조 1구역)&nbsp;
-            <span>
-              배정일시 :
-              <span class="cms-type-internal-time-date-time-relative"
-                >28분전</span
-              >
-            </span>
-          </p>
+        <div class="mypage-box">
+            <div class="my-dropdown">
+                <div class="btn-wrapper">
+                    <a href="#close" class="btn-close">닫기</a>
+                </div>
+                <div class="content">
+                    <span class="user-logo"></span>
+                    <p class="user-name">이민석 님</p>
+                    <p class="login-time">2022-01-03 14:33</p>
+                    <div class="btn-group">
+                        <a href="/" class="btn btn-primary logout-btn">
+                            <span class="sr-only">로그아웃</span>
+                        </a>
+                        <a
+                            href="./mypage.html"
+                            class="btn btn-primary myinfo-btn"
+                        >
+                            <span class="sr-only">내정보 보기</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="employee-btn-wrapper btn btn-block" id="workTime">
-        <span class="text">근무시작&nbsp;&nbsp;</span>
-        <span class="timestamp">00:00:00</span>
-      </div>
-    </div>
-    <div class="mypage-box">
-      <div class="my-dropdown">
-        <div class="btn-wrapper">
-          <a href="#close" class="btn-close">닫기</a>
-        </div>
-        <div class="content">
-          <span class="user-logo"></span>
-          <p class="user-name">이민석 님</p>
-          <p class="login-time">2022-01-03 14:33</p>
-          <div class="btn-group">
-            <a href="/" class="btn btn-primary logout-btn">
-              <span class="sr-only">로그아웃</span>
-            </a>
-            <a href="./mypage.html" class="btn btn-primary myinfo-btn">
-              <span class="sr-only">내정보 보기</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="./src/vendor/js/jquery-3.6.0.min.js"></script>
-    <script src="./src/vendor/js/bootstrap.min.js"></script>
-    <script src="./src/vendor/js/jquery.bxslider.js"></script>
-    <script src="./src/vendor/js/slick.min.js"></script>
-    <script src="./src/js/page.js"></script>
-  </body>
+        <script src="./src/vendor/js/jquery-3.6.0.min.js"></script>
+        <script src="./src/vendor/js/bootstrap.min.js"></script>
+        <script src="./src/vendor/js/jquery.bxslider.js"></script>
+        <script src="./src/vendor/js/slick.min.js"></script>
+        <script src="./src/js/page.js"></script>
+    </body>
 </html>

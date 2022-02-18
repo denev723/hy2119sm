@@ -12,6 +12,10 @@ body {
   position: relative;
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   width: 100%;
 }
@@ -29,6 +33,7 @@ img {
 
 .mypage-box.on {
   display: block;
+  z-index: 99;
 }
 
 .mypage-box .my-dropdown {
@@ -806,6 +811,7 @@ img {
   margin: 6px 0;
   -webkit-transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
   transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  overflow-x: hidden;
 }
 
 .bottom-wrapper .chatting-box .list-commt .box-type1 p {
@@ -3453,6 +3459,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 999;
 }
 
 .page-doing-detail .site-content .conts-wrap .complete-box .flex-wrapper {
